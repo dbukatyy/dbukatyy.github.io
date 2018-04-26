@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title> Главная
+    </title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Test">
+    <meta name="description" content="Test">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <!--header-->
+    <header class="header">
+      <div class="wrapper">
+        <div class="col-4">
+          <a class="logo" href="/">
+            <svg class="icon">
+              <use xlink:href="assets/img/sprite.svg#icon-ies"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="col-8">
+          <div class="header__control">
+            <nav class="menu">
+              <a class="menu__link" href="services.html">Услуги</a>
+              <a class="menu__link" href="">Портфолио</a>
+              <a class="menu__link" href="">Блог</a>
+              <a class="menu__link" href="">Вакансии</a>
+              <a class="menu__link" href="">Контакты</a>
+            </nav>
+            <form class="search" action="" name="search-form">
+              <input class="search__field" type="text">
+              <button class="btn search__btn">
+                <svg class="icon icon_close">
+                  <use xlink:href="assets/img/sprite.svg#icon-close"></use>
+                </svg>
+                <svg class="icon icon_search">
+                  <use xlink:href="assets/img/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="header__users"></div>
+        </div>
+      </div>
+    </header>
+    <!--main-->
+    <main class="main">
+      <!--portfolio-->
+      <div class="portfolio">
+        <div class="portfolio__slider">
+          <div class="portfolio-slide" style="background-image: url(assets/img/man.jpg)"></div>
+          <div class="portfolio-slide" style="background-image: url(assets/img/man.jpg)"></div>
+          <div class="portfolio-slide" style="background-image: url(assets/img/man.jpg)"></div>
+        </div>
+        <div class="portfolio__info">
+          <div class="wrapper">
+            <div class="col-4">
+              <!--contacts-->
+              <div class="contacts">
+                <div class="social">
+                  <a class="social__link" href="">
+                    <svg class="icon">
+                      <use xlink:href="assets/img/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                  <a class="social__link" href="">
+                    <svg class="icon">
+                      <use xlink:href="assets/img/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                  <a class="social__link" href="">
+                    <svg class="icon">
+                      <use xlink:href="assets/img/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="tabs">
+                  <div class="tabs-control">
+                    <a class="tabs-control__link active" href="" data-tab="1">Беларусь</a>
+                    <a class="tabs-control__link" href="" data-tab="2">Польша</a>
+                    <a class="tabs-control__link" href="" data-tab="3">Германия</a>
+                  </div>
+                  <div class="tabs-list">
+                    <address class="tab vcard active" data-tab="1">
+                      <a class="tel" href="tel:+375295484878">+375 29 548 48 78</a>
+                      <a class="tel" href="tel:+375333444052">+375 33 344 40 52</a>
+                      <a class="tel" href="tel:+375333444051">+375 33 344 40 51</a>
+                      <p class="address">
+                        <span class="postal-code">224000,</span>
+                        <span class="locality">Брест,</span>
+                        <span class="country-name">Беларусь,</span>
+                        <br>
+                        <span class="street-address">Московская 208А, оф. 1</span>
+                      </p>
+                    </address>
+                    <address class="tab vcard" data-tab="2">
+                      <a class="tel" href="tel:+375295484878">+375 29 548 48 78</a>
+                      <a class="tel" href="tel:+375333444052">+375 33 344 40 52</a>
+                      <a class="tel" href="tel:+375333444051">+375 33 344 40 51</a>
+                      <p class="address">
+                        <span class="postal-code">224000,</span>
+                        <span class="locality">Брест,</span>
+                        <span class="country-name">Беларусь 1,</span>
+                        <br>
+                        <span class="street-address">Московская 208А, оф. 1</span>
+                      </p>
+                    </address>
+                    <address class="tab vcard" data-tab="3">
+                      <a class="tel" href="tel:+375295484878">+375 29 548 48 78</a>
+                      <a class="tel" href="tel:+375333444052">+375 33 344 40 52</a>
+                      <a class="tel" href="tel:+375333444051">+375 33 344 40 51</a>
+                      <p class="address">
+                        <span class="postal-code">224000,</span>
+                        <span class="locality">Брест,</span>
+                        <span class="country-name">Беларусь 2,</span>
+                        <br>
+                        <span class="street-address">Московская 208А, оф. 1</span>
+                      </p>
+                    </address>
+                  </div>
+                  <button class="btn btn_default">Оставить заявку</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-8">
+              <!--portfolio-links-->
+              <div class="portfolio-links">
+                <div class="portfolio-links__item">
+                  <div class="preview">
+                    <div class="preview__img" style="background-image: url('assets/img/man.jpg')"></div>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" data-slide="0"></div>
+                  </div>
+                  <a class="portfolio__link" href="">
+                    <span class="bg_first">
+                      <i>Woody – экологичные материалы без</i>
+                    </span>
+                    <span class="bg_first">
+                      <i>вреда для повседневной жизни </i>
+                    </span>
+                  </a>
+                </div>
+                <div class="portfolio-links__item">
+                  <div class="preview">
+                    <div class="preview__img" style="background-image: url('assets/img/man.jpg')"></div>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" data-slide="1"></div>
+                  </div>
+                  <a class="portfolio__link" href="">
+                    <span class="bg_second">
+                      <i>Переосмысление реальной «Скалы»</i>
+                    </span>
+                    <br>
+                    <span class="bg_second">
+                      <i>с Fender News</i>
+                    </span>
+                  </a>
+                </div>
+                <div class="portfolio-links__item">
+                  <div class="preview">
+                    <div class="preview__img" style="background-image: url('assets/img/man.jpg')"></div>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress" data-slide="2"></div>
+                  </div>
+                  <a class="portfolio__link" href="">
+                    <span class="bg_therd">
+                      <i>An eCommerce experience where brand</i>
+                    </span>
+                    <span class="bg_therd">
+                      <i>fans can shop and play?</i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--footer-->
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>
