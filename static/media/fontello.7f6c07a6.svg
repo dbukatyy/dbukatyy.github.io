@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2018 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="pencil" unicode="&#xe800;" d="M203-7l50 51-131 131-51-51v-60h72v-71h60z m291 518q0 12-12 12-5 0-9-4l-303-302q-4-4-4-10 0-12 13-12 5 0 9 4l303 302q3 4 3 10z m-30 107l232-232-464-465h-232v233z m381-54q0-29-20-50l-93-93-232 233 93 92q20 21 50 21 29 0 51-21l131-131q20-22 20-51z" horiz-adv-x="857.1" />
+
+<glyph glyph-name="floppy" unicode="&#xe801;" d="M658 750l142-156 0-544q0-40-29-70t-71-30l-600 0q-40 0-70 30t-30 70l0 600q0 42 30 71t70 29l558 0z m-58-300l0 250-400 0 0-250q0-20 15-35t35-15l300 0q20 0 35 15t15 35z m-50 200l0-200-100 0 0 200 100 0z" horiz-adv-x="800" />
+
+<glyph glyph-name="check-empty" unicode="&#xe802;" d="M0-150l0 1000 1000 0 0-1000-1000 0z m164 164l672 0 0 672-672 0 0-672z" horiz-adv-x="1000" />
+
+<glyph glyph-name="check" unicode="&#xe803;" d="M0-150l0 1000 646 0-164-164-318 0 0-672 672 0 0 319 164 164 0-647-1000 0z m234 623l133 131 129-129 361 363 133-132-361-364-133-133z" horiz-adv-x="1000" />
+
+<glyph glyph-name="trash" unicode="&#xe83d;" d="M275 825c-14 0-25-11-25-25l0-75-200 0c-28 0-50-22-50-50 0-28 22-50 50-50l650 0c28 0 50 22 50 50 0 28-22 50-50 50l-200 0 0 75c0 14-11 25-25 25l-200 0z m25-50l150 0 0-50-150 0 0 50z m-250-200c-28 0-54-23-49-50l99-600c5-27 22-50 50-50l450 0c28 0 45 23 50 50l99 600c5 27-21 50-49 50l-650 0z" horiz-adv-x="750" />
+</font>
+</defs>
+</svg>
