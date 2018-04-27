@@ -1,6 +1,6 @@
 <template>
 	<nav>
-   <router-link to='/'>Blogs</router-link>
+   <router-link to='/vue'>Blogs</router-link>
    <router-link to='/add'>Add Blog</router-link>
   </nav>
 </template>

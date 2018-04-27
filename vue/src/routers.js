@@ -3,6 +3,6 @@ import AddBlog from './components/AddBlog.vue'
 
 
 export default [
-	{path:'/', component: Blogs},
+	{path:'/vue', component: Blogs},
 	{path:'/add', component: AddBlog}
 ]
