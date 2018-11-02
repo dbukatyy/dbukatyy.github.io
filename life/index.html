@@ -23,6 +23,14 @@
           <a class="js-scroll-link" href="" data-section="#usefulls">материалы</a>
           <a class="js-scroll-link" href="" data-section="#contacts">контакты</a>
         </nav>
+        <button class="menu__control">
+          <svg class="icon icon_close">
+            <use xlink:href="assets/img/sprite.svg#icon-close"></use>
+          </svg>
+          <svg class="icon icon_open">
+            <use xlink:href="assets/img/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!--main-->
@@ -117,7 +125,7 @@
         </div>
       </section>
       <!--life-->
-      <section class="life" id="life">
+      <section class="life">
         <div class="wrapper">
           <div class="life__descr">
             <p> <strong>Мыслинг «Лучшая Life» </strong>- это полтора месяца твоей жизни, посвящённые переходу от одного качества жизни, которое тебя не удовлетворяет, к другому, к лучшему!</p>
@@ -128,7 +136,7 @@
             <p>Полезные свойства мышления человека повышают эффективность приспосабливаемости, адаптации к изменениям окружающей и внутренней среды за счет убыстрения имеющихся возможностей и формирования новых.</p>
             <p class="text-att">** Опасные (тупиковые, конфликтные) свойства мышления человека формируют психоэмоцинальное напряжение, которое оказывает дезорганизующее влияние на приспосабливаемость, на результативную деятельность человека и его организма.</p>
             <button class="button button_info js-btn-popup" data-wind="#data">Запиcаться на мыслинг</button>
-            <div class="attention">
+            <div class="attention" id="life">
               <img src="assets/img/attention.png" alt="attention">
               <p> <span>ВНИМАНИЕ!</span>ЗАВИСИМОСТЬ</p>
             </div>
@@ -177,7 +185,7 @@
               </div>
               <button class="button js-btn-popup" data-wind="#participate">подробнее</button>
             </div>
-            <div class="price">
+            <div class="price active">
               <div class="price__head">
                 <div class="h3 price__title">групповая on-line</div>
               </div>
@@ -287,12 +295,12 @@
               <figcaption>Самодиагностика <br>на darvin-da.ru</figcaption>
               <a class="usefull__link" href="http://darvin-da.ru" target="_blank"></a>
             </figure>
-            <figure class="usefull">
+            <figure class="usefull delay-1s">
               <img src="assets/img/presentation.png" alt="presentation">
               <figcaption>Презентация <br>после Самодиагностики</figcaption>
               <a class="usefull__link" href="docs/samodiagn.pdf" target="_blank"></a>
             </figure>
-            <figure class="usefull">
+            <figure class="usefull delay-2s">
               <img src="assets/img/abaot.png" alt="people">
               <figcaption>Кратко <br>о тренинге</figcaption>
               <a class="usefull__link" href="docs/short.ppt" target="_blank"></a>
@@ -436,11 +444,22 @@
       <!--contacts-->
       <div class="contacts" id="contacts">
         <div class="wrapper">
-          <a class="tel" href="tel:+79257084835">
-            <svg class="icon">
-              <use xlink:href="assets/img/sprite.svg#icon-call"></use>
-            </svg><span>+7 925 708-48-35</span>
-          </a>
+          <div class="contacts__line">
+            <a class="tel" href="tel:+79257084835">
+              <svg class="icon">
+                <use xlink:href="assets/img/sprite.svg#icon-call"></use>
+              </svg><span>+7 925 708-48-35</span>
+            </a>
+            <a class="tel" href="mailto:L-L@npifm.ru">
+              <svg class="icon">
+                <use xlink:href="assets/img/sprite.svg#icon-mail"></use>
+              </svg><span>L-L@npifm.ru</span>
+            </a>
+          </div>
+          <div class="contacts__line">
+            <p>ИП Николаев Антон Борисович</p>
+            <p>ИНН 772909479518</p>
+          </div>
           <div class="social">
             <a class="social__link" href="" target="_blank">
               <svg class="icon">
@@ -473,7 +492,16 @@
               <use xlink:href="assets/img/sprite.svg#icon-close"></use>
             </svg>
           </button>
-          <div class="pop-up__inner"></div>
+          <div class="baron baron__root baron__clipper scroll-v">
+            <div class="baron__scroller pop-up__inner"></div>
+            <div class="baron__track">
+              <div class="baron__control baron__up">▲</div>
+              <div class="baron__free">
+                <div class="baron__bar"></div>
+              </div>
+              <div class="baron__control baron__down">▼</div>
+            </div>
+          </div>
         </div>
       </div>
       <!--windows-->
@@ -542,7 +570,9 @@
       <div class="window" id="send">
         <div class="window__inner">
           <div class="send">
-            <img src="assets/img/send.png" alt="send">
+            <div class="send__img">
+              <img src="assets/img/send.png" alt="send">
+            </div>
             <h2 class="title">ваше сообщение успешно отправлено</h2>
             <p class="subtitle">в ближайшее время мы свяжеся с вами</p>
           </div>
@@ -603,7 +633,7 @@
           </article>
         </div>
       </div>
-      <div class="window" id="data">
+      <div class="window colored" id="data">
         <div class="window__inner">
           <article class="data">
             <h2 class="title">Оставьте свои данные,</h2>
@@ -720,13 +750,13 @@
               <div class="checkboxes">
                 <p class="head-title">Укажите форму участия*</p>
                 <label class="checkbox">
-                  <input type="checkbox" name="on-line"><span class="ring"><i></i></span><span>On-line</span>
+                  <input type="radio" name="form" value="on-line"><span class="ring"><i></i></span><span>On-line</span>
                 </label>
                 <label class="checkbox">
-                  <input type="checkbox" name="team"><span class="ring"><i></i></span><span>Групповая очная</span>
+                  <input type="radio" name="form" value="team"><span class="ring"><i></i></span><span>Групповая очная</span>
                 </label>
                 <label class="checkbox">
-                  <input type="checkbox" name="self"><span class="ring"><i></i></span><span>Индивидуальная очная</span>
+                  <input type="radio" name="form" value="self"><span class="ring"><i></i></span><span>Индивидуальная очная</span>
                 </label>
               </div>
               <div class="date-block">
@@ -747,13 +777,13 @@
               <div class="checkboxes">
                 <p class="head-title">Укажите удобную для Вас форму оплаты*</p>
                 <label class="checkbox">
-                  <input type="checkbox" name="on-line"><span class="ring"><i></i></span><span>Банковская карта</span>
+                  <input type="radio" name="pay" value="on-line"><span class="ring"><i></i></span><span>Банковская карта</span>
                 </label>
                 <label class="checkbox">
-                  <input type="checkbox" name="team"><span class="ring"><i></i></span><span>Наличные</span>
+                  <input type="radio" name="pay" value="team"><span class="ring"><i></i></span><span>Наличные</span>
                 </label>
                 <label class="checkbox">
-                  <input type="checkbox" name="self"><span class="ring"><i></i></span><span>Безналичный расчет на р/c</span>
+                  <input type="radio" name="pay" value="self"><span class="ring"><i></i></span><span>Безналичный расчет на р/c</span>
                 </label>
               </div>
               <p class="txt-center">* Поля обязательные для заполнения</p>
