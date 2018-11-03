@@ -1589,6 +1589,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 14px;
   color: #6e6e6e;
+  background-color: #fff;
 }
 .hide {
   opacity: 0 !important;
@@ -2472,6 +2473,7 @@ a {
 }
 .attention span {
   font-weight: bold;
+  display: block;
   color: #f8873d;
   font-size: 68px;
 }
@@ -2530,8 +2532,8 @@ a {
 }
 .targets__img {
   border-radius: 50%;
-  background: #fff;
   position: relative;
+  z-index: 2;
 }
 .targets__item {
   font-weight: bold;
@@ -2546,7 +2548,7 @@ a {
 }
 .targets__item:nth-of-type(2) {
   top: 8%;
-  right: calc(15% - 80px);
+  right: calc(15% - 90px);
   padding: 0 50px 5px 9px;
 }
 .targets__item:nth-of-type(3) {
