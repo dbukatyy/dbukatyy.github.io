@@ -1627,11 +1627,21 @@ a {
   z-index: 10;
   transition: all .5s;
 }
+@media all and (max-width: 576px) {
+  .header {
+    padding: 30px 20px;
+  }
+}
 .header .wrapper {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
+}
+@media all and (max-width: 576px) {
+  .header .wrapper {
+    padding: 0;
+  }
 }
 .header.active {
   background: #f8d56b;
@@ -1855,6 +1865,11 @@ a {
   background: #a7dbd7;
   padding: 70px 0 90px;
 }
+@media all and (max-width: 576px) {
+  .about {
+    padding: 50px 0 30px;
+  }
+}
 .about_clear {
   background: transparent;
 }
@@ -1909,6 +1924,11 @@ a {
 .reasons {
   padding: 100px 0 10px;
   line-height: 1.7em;
+}
+@media all and (max-width: 576px) {
+  .reasons {
+    padding: 50px 0 10px;
+  }
 }
 .reasons-list {
   display: -ms-flexbox;
@@ -1966,12 +1986,20 @@ a {
   }
 }
 .reason__info_attention {
-  padding: 30px 40px;
+  padding: 30px 35px;
   background: #f8873d;
   width: 100%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+@media all and (max-width: 576px) {
+  .reason__info_attention {
+    padding: 20px;
+  }
+  .reason__info_attention .reason__title {
+    font-size: 14px;
+  }
 }
 .reason__note {
   width: 100%;
@@ -1984,6 +2012,11 @@ a {
 .usefulls {
   padding: 80px 0;
   background: #f8d56b;
+}
+@media all and (max-width: 576px) {
+  .usefulls {
+    padding: 60px 0;
+  }
 }
 .usefull {
   animation-fill-mode: forwards;
@@ -2043,6 +2076,11 @@ a {
 .prices {
   padding: 80px 0 105px;
   background: url(../img/bg1.jpg) repeat;
+}
+@media all and (max-width: 576px) {
+  .prices {
+    padding: 80px 0 50px;
+  }
 }
 .prices-list {
   display: -ms-flexbox;
@@ -2323,6 +2361,11 @@ a {
 .life {
   padding: 85px 0 75px;
 }
+@media all and (max-width: 576px) {
+  .life {
+    padding: 50px 0 40px;
+  }
+}
 .life .wrapper {
   display: -ms-flexbox;
   display: flex;
@@ -2382,6 +2425,7 @@ a {
   line-height: 1.7em;
 }
 .text-lg {
+  font-weight: normal;
   font-size: 30px;
   text-transform: uppercase;
   max-width: 320px;
@@ -2389,14 +2433,26 @@ a {
   text-align: center;
   line-height: 1em;
 }
+@media all and (max-width: 460px) {
+  .text-lg {
+    font-size: 28px;
+    line-height: 1.2em;
+  }
+}
 .text-lg strong {
   font-size: 32px;
+}
+@media all and (max-width: 460px) {
+  .text-lg strong {
+    font-size: 30px;
+  }
 }
 .text-sm {
   font-size: 16px;
 }
 .attention {
   font-size: 54px;
+  font-weight: bold;
   text-align: center;
 }
 @media all and (max-width: 576px) {
@@ -2417,7 +2473,7 @@ a {
 .attention span {
   font-weight: bold;
   color: #f8873d;
-  font-size: 62px;
+  font-size: 68px;
 }
 @media all and (max-width: 576px) {
   .attention span {
@@ -2517,6 +2573,11 @@ a {
 .reviews {
   padding: 80px 0 10px;
 }
+@media all and (max-width: 576px) {
+  .reviews {
+    padding: 50px 0 10px;
+  }
+}
 .reviews__inner {
   margin-top: 70px;
   display: -ms-flexbox;
@@ -2528,6 +2589,11 @@ a {
   -ms-flex-align: center;
       align-items: center;
   position: relative;
+}
+@media all and (max-width: 576px) {
+  .reviews__inner {
+    margin-top: 40px;
+  }
 }
 .reviews__img {
   max-width: 505px;
@@ -2698,7 +2764,6 @@ a {
   left: 0;
   right: 0;
   top: 0;
-  max-height: 100%;
   background: #dee4f5;
   z-index: 5;
   padding: 25px 60px 25px 30px;
@@ -2706,8 +2771,17 @@ a {
   opacity: 0;
   pointer-events: none;
 }
+.review-full .review__inner {
+  margin-top: 10px;
+  width: 100%;
+}
 .review-full .review__txt {
   column-count: 2;
+}
+@media all and (max-width: 576px) {
+  .review-full .review__txt {
+    column-count: 1;
+  }
 }
 .review-full .review__txt p:first-of-type {
   margin-top: 0;
@@ -2722,6 +2796,12 @@ a {
       align-items: flex-start;
   -ms-flex-pack: justify;
       justify-content: space-between;
+}
+@media all and (max-width: 576px) {
+  .review-full__inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 .review-full.active {
   opacity: 1;
@@ -2836,6 +2916,11 @@ a {
   position: relative;
   padding: 40px;
   overflow: hidden;
+}
+@media all and (max-width: 576px) {
+  .pop-up {
+    padding: 50px 10px 30px;
+  }
 }
 .pop-up_colored {
   background: #dee5f5;
@@ -2985,6 +3070,11 @@ a {
 .send img {
   width: 100%;
   margin-bottom: 20px;
+}
+@media all and (max-width: 576px) {
+  .send img {
+    height: auto;
+  }
 }
 .att {
   width: 75px;
