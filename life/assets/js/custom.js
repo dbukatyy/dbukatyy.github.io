@@ -2,8 +2,11 @@
 
 jQuery(document).ready(function () {
 
+  var email = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  var tel = /[^0-9\s-+()]/;
   var bottomNav = document.querySelector('.bottom-nav');
   var usefulls = document.querySelector('.usefulls');
+  var about = document.querySelector('#about');
   var $header = $('.header');
 
   // animation
@@ -33,7 +36,9 @@ jQuery(document).ready(function () {
 
   // scroll events
   $(document).on('scroll', function (e) {
+
     window.scrollY > 260 ? $header.addClass('active') : $header.removeClass('active');
+    about.getBoundingClientRect().top < 350 ? $('.to-top').addClass('active') : $('.to-top').removeClass('active');
 
     if (usefulls.getBoundingClientRect().top < window.innerHeight / 2) {
       $('.usefull').addClass('animated flipInX');
@@ -57,13 +62,21 @@ jQuery(document).ready(function () {
     $(e.currentTarget).closest('.review-full').removeClass('active');
   });
 
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest('.review').hasClass('review') && !$(e.target).closest('.review-full').hasClass('active') && $('.review-full').hasClass('active')) {
+      $('.review-full').removeClass('active');
+    }
+  });
+
   // navigation scroll
   $('.js-scroll-link').on('click', function (e) {
     e.preventDefault();
     var section = $(e.currentTarget).data('section');
+    var space = 55;
+    if (section === '#life') space = 95;
 
     $('body, html').animate({
-      scrollTop: $('' + section).offset().top - 55
+      scrollTop: $('' + section).offset().top - space
     }, 1000);
 
     $('.header .menu').removeClass('active');
@@ -91,7 +104,7 @@ jQuery(document).ready(function () {
   function initRange() {
     $('.range input[type="range"]').rangeslider({
       polyfill: false,
-      onSlide: function onSlide(value) {
+      onSlide: function onSlide(position, value) {
         var block = $('#' + this.$element[0].name),
             steps = block.find('.range__step'),
             step = block.find('.range__step[data-val="' + value + '"]');
@@ -124,11 +137,32 @@ jQuery(document).ready(function () {
           data = $('' + window).html(),
           popUp = $('.pop-up__wrapper');
 
+      $('.baron__track').hide();
       popUp.find('.pop-up__inner').html(data);
       popUp.addClass('active');
     });
   }
   sendListener();
+
+  function addValidation() {
+
+    $('input[type="tel"]').on('keyup', function (e) {
+      if (tel.test($(e.currentTarget).val())) {
+        $(e.currentTarget).addClass('error');
+      } else {
+        $(e.currentTarget).removeClass('error');
+      }
+    });
+
+    $('input[type="email"]').on('keyup', function (e) {
+
+      if (!email.test($(e.currentTarget).val())) {
+        $(e.currentTarget).addClass('error');
+      } else {
+        $(e.currentTarget).removeClass('error');
+      }
+    });
+  }
 
   $('.js-btn-popup').on('click', function (e) {
     var $this = $(e.currentTarget),
@@ -147,9 +181,12 @@ jQuery(document).ready(function () {
     initRange();
     initScroll();
     sendListener();
+    addValidation();
+    $('.baron__track').show();
     $('.date').datepicker({
       autoClose: true
     });
+
     popUp.addClass('active');
   });
 });

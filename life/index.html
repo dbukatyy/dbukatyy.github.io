@@ -421,7 +421,7 @@
       </section>
       <!--faq-->
       <section class="faq">
-        <div class="wrapper">
+        <div class="wrapper" id="contacts">
           <h2 class="title">остались вопросы?</h2>
           <p class="subtitle">оставьте свои контактные данные, и мы ответим вам</p>
           <form class="form" action="" id="faq">
@@ -450,7 +450,6 @@
       <!-- bottom-nav-->
       <div class="bottom-nav">
         <nav class="menu">
-          <a class="js-scroll-link" href="" data-section="#banner">вверх</a>
           <a class="js-scroll-link" href="" data-section="#reasons">для кого</a>
           <a class="js-scroll-link" href="" data-section="#about">о мыслинге</a>
           <a class="js-scroll-link" href="" data-section="#life">зависимость</a>
@@ -460,7 +459,7 @@
         </nav>
       </div>
       <!--contacts-->
-      <div class="contacts" id="contacts">
+      <div class="contacts">
         <div class="wrapper">
           <div class="contacts__line">
             <a class="tel" href="tel:+79257084835">
@@ -502,6 +501,11 @@
           </div>
         </div>
       </div>
+      <a class="to-top js-scroll-link" href="" data-section="#banner">
+        <svg class="icon">
+          <use xlink:href="assets/img/sprite.svg#icon-rarrow"></use>
+        </svg>
+      </a>
       <!--pop-up-->
       <div class="pop-up__wrapper">
         <div class="pop-up">
@@ -617,7 +621,7 @@
                 <div class="circle circle_att">
                   <div class="circle__inner"><strong>7</strong><span>дней</span></div>
                 </div>
-                <p class="circle__title">неделя занятий</p>
+                <p class="circle__title">неделя воздержания от употребления</p>
               </div>
               <div class="circles__item">
                 <div class="circle circle_def">
@@ -681,7 +685,8 @@
                 </div>
               </div>
               <label class="agree">
-                <input type="checkbox" name="agree"><span class="square"><i></i></span><span>Добровольно даю согласие на обработку персональных данных</span>
+                <input type="checkbox" name="agree"><span class="square"><i></i></span>
+                <a href="docs/agree.doc" target="_blank">Ознакомлен и принимаю Соглашение  об условиях  оказания услуг и использовании сайта</a>
               </label>
               <div class="ranges">
                 <p class="ranges__title">испытываете ли Вы следующие эмоции и как часто отметтье по шкале от 1 до 5 </p>
@@ -762,7 +767,7 @@
                   <svg class="icon">
                     <use xlink:href="assets/img/sprite.svg#icon-mail"></use>
                   </svg>
-                  <input type="email" name="email" placeholder="Ваш email">
+                  <input type="email" name="email" placeholder="Ваш email*">
                 </div>
               </div>
               <div class="checkboxes">
@@ -778,9 +783,9 @@
                 </label>
               </div>
               <div class="date-block">
-                <p class="head-title">Укажите дату прохождения самодиагностики на сайте darvin-da.ru</p>
+                <p class="head-title">Укажите дату прохождения Самодиагностики на сайте darvin-da.ru</p>
                 <div class="input input_md">
-                  <input class="date" type="text" name="bdate" placeholder="Дата рождения">
+                  <input class="date" type="text" name="bdate" placeholder="Дата прохождения*">
                 </div>
               </div>
               <div class="date-block">
@@ -806,7 +811,8 @@
               </div>
               <p class="txt-center">* Поля обязательные для заполнения</p>
               <label class="agree">
-                <input type="checkbox" name="agree"><span class="square"><i></i></span><span>Добровольно даю согласие на обработку персональных данных</span>
+                <input type="checkbox" name="agree"><span class="square"><i></i></span>
+                <a href="docs/agree.doc" target="_blank">Ознакомлен и принимаю Соглашение  об условиях  оказания услуг и использовании сайта</a>
               </label>
               <button class="button js-btn-send" type="submit" data-wind="#send">отправить</button>
             </form>

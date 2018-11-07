@@ -1245,6 +1245,9 @@ template {
   color: #6e6e6e;
   max-width: 420px;
 }
+input.error {
+  outline: 2px solid red !important;
+}
 .form {
   max-width: 715px;
   margin: 0 auto;
@@ -1589,6 +1592,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 14px;
   color: #6e6e6e;
+  background-color: #fff;
 }
 .hide {
   opacity: 0 !important;
@@ -1612,6 +1616,35 @@ a {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+.to-top {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9;
+  background: #71c4c0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s;
+}
+.to-top.active {
+  opacity: 1;
+  pointer-events: initial;
+}
+.to-top .icon {
+  width: 60%;
+  height: 60%;
+  fill: #f8873d;
+  transform: rotate(-90deg);
 }
 .main {
   padding-top: 96px;
@@ -1736,6 +1769,11 @@ a {
   position: relative;
   overflow: hidden;
 }
+@media all and (max-width: 1500px) {
+  .banner {
+    padding-top: 50px;
+  }
+}
 @media all and (max-width: 992px) {
   .banner {
     min-height: 525px;
@@ -1762,8 +1800,8 @@ a {
   left: -20%;
   right: -20%;
   bottom: -20%;
-  top: -20%;
-  box-shadow: inset 0 0 0 150px rgba(248, 193, 107, 0.97);
+  top: -5%;
+  box-shadow: inset 0 0 0 300px rgba(248, 193, 107, 0.97);
   filter: blur(50px);
   z-index: 0;
 }
@@ -2472,6 +2510,7 @@ a {
 }
 .attention span {
   font-weight: bold;
+  display: block;
   color: #f8873d;
   font-size: 68px;
 }
@@ -2530,8 +2569,8 @@ a {
 }
 .targets__img {
   border-radius: 50%;
-  background: #fff;
   position: relative;
+  z-index: 2;
 }
 .targets__item {
   font-weight: bold;
@@ -2546,7 +2585,7 @@ a {
 }
 .targets__item:nth-of-type(2) {
   top: 8%;
-  right: calc(15% - 80px);
+  right: calc(15% - 90px);
   padding: 0 50px 5px 9px;
 }
 .targets__item:nth-of-type(3) {
@@ -2741,6 +2780,7 @@ a {
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
+  margin-right: 15px;
 }
 @media all and (max-width: 460px) {
   .review__img {
