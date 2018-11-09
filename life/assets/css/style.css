@@ -508,6 +508,10 @@ input.error {
    display: block;
 }
 
+.error input {
+  outline: 2px solid red !important;
+}
+
 .input__msg {
   position: absolute;
   top: 110%;
