@@ -143,12 +143,11 @@ jQuery(document).ready(function () {
     });
   }
   sendListener();
-  
-   $('.date').on('keyup', function (e) {
-     $(this).val('');
-    });
 
   function addValidation() {
+    $('.date').on('keyup', function (e) {
+     $(this).val('');
+    });
 
     $('input[type="tel"]').on('keyup', function (e) {
       if (tel.test($(e.currentTarget).val())) {
