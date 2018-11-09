@@ -429,13 +429,15 @@
               <svg class="icon">
                 <use xlink:href="assets/img/sprite.svg#icon-user"></use>
               </svg>
-              <input type="text" name="name" placeholder="Ваше имя">
+              <input type="text" name="name" placeholder="Ваше имя*">
+              <span class="input__msg">неверно введены данные</span>  
             </div>
             <div class="input input_md">
               <svg class="icon">
                 <use xlink:href="assets/img/sprite.svg#icon-mail"></use>
               </svg>
-              <input type="email" name="email" placeholder="Ваш email">
+              <input type="email" name="email" placeholder="Ваш email*">
+              <span class="input__msg">неверно введены данные</span>
             </div>
             <div class="textarea">
               <svg class="icon">
@@ -666,27 +668,31 @@
                   <svg class="icon">
                     <use xlink:href="assets/img/sprite.svg#icon-user"></use>
                   </svg>
-                  <input type="text" name="name" placeholder="Ваше имя">
+                  <input type="text" name="name" placeholder="Ваше имя*">
+                  <span class="input__msg">неверно введены данные</span>
                 </div>
                 <div class="input input_md">
                   <svg class="icon">
                     <use xlink:href="assets/img/sprite.svg#icon-mail"></use>
                   </svg>
-                  <input type="email" name="email" placeholder="Ваш email">
+                  <input type="email" name="email" placeholder="Ваш email*">
+                  <span class="input__msg">неверно введены данные</span>
                 </div>
                 <div class="input input_sm">
                   <svg class="icon">
                     <use xlink:href="assets/img/sprite.svg#icon-call"></use>
                   </svg>
-                  <input type="tel" name="tel" placeholder="Ваш телефон">
+                  <input type="tel" name="tel" placeholder="Ваш телефон*">
+                  <span class="input__msg">неверно введены данные</span>
                 </div>
                 <div class="input input_md">
-                  <input class="date" type="text" name="bdate" placeholder="Дата рождения">
+                  <input class="date" type="text" name="bdate" placeholder="Дата рождения*">
+                  <span class="input__msg">неверно введены данные</span>
                 </div>
               </div>
               <label class="agree">
                 <input type="checkbox" name="agree"><span class="square"><i></i></span>
-                <a href="docs/agree.doc" target="_blank">Ознакомлен и принимаю Соглашение  об условиях  оказания услуг и использовании сайта</a>
+                Ознакомлен и принимаю <a href="docs/agree.pdf" target="_blank"> Соглашение  об условиях  оказания услуг и использовании сайта</a>
               </label>
               <div class="ranges">
                 <p class="ranges__title">испытываете ли Вы следующие эмоции и как часто отметтье по шкале от 1 до 5 </p>
@@ -749,12 +755,14 @@
                     <use xlink:href="assets/img/sprite.svg#icon-user"></use>
                   </svg>
                   <input type="text" name="name" placeholder="Ваше имя*">
+                  <span class="input__msg">неверно введены данные</span>
                 </div>
                 <div class="input input_md">
                   <svg class="icon">
                     <use xlink:href="assets/img/sprite.svg#icon-call"></use>
                   </svg>
                   <input type="tel" name="tel" placeholder="Ваш телефон*">
+                  <span class="input__msg">неверно введены данные</span>
                 </div>
                 <div class="input input_sm">
                   <select name="city">
@@ -768,6 +776,7 @@
                     <use xlink:href="assets/img/sprite.svg#icon-mail"></use>
                   </svg>
                   <input type="email" name="email" placeholder="Ваш email*">
+                  <span class="input__msg">неверно введены данные</span>
                 </div>
               </div>
               <div class="checkboxes">
@@ -786,6 +795,7 @@
                 <p class="head-title">Укажите дату прохождения Самодиагностики на сайте darvin-da.ru</p>
                 <div class="input input_md">
                   <input class="date" type="text" name="bdate" placeholder="Дата прохождения*">
+                  <span class="input__msg">неверно введены данные</span>
                 </div>
               </div>
               <div class="date-block">
@@ -812,7 +822,7 @@
               <p class="txt-center">* Поля обязательные для заполнения</p>
               <label class="agree">
                 <input type="checkbox" name="agree"><span class="square"><i></i></span>
-                <a href="docs/agree.doc" target="_blank">Ознакомлен и принимаю Соглашение  об условиях  оказания услуг и использовании сайта</a>
+                Ознакомлен и принимаю <a href="docs/agree.pdf" target="_blank"> Соглашение  об условиях  оказания услуг и использовании сайта</a>
               </label>
               <button class="button js-btn-send" type="submit" data-wind="#send">отправить</button>
             </form>
