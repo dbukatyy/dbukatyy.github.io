@@ -143,6 +143,10 @@ jQuery(document).ready(function () {
     });
   }
   sendListener();
+  
+   $('.date').on('keyup', function (e) {
+     $(this).val('');
+    });
 
   function addValidation() {
 
