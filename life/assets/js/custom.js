@@ -166,6 +166,8 @@ jQuery(document).ready(function () {
       }
     });
   }
+  
+  addValidation();
 
   $('.js-btn-popup').on('click', function (e) {
     var $this = $(e.currentTarget),
