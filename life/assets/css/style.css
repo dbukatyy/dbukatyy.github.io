@@ -22,6 +22,17 @@ html {
 body {
   margin: 0;
 }
+.overlay:before {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 11;
+  pointer-events: none;
+}
 /**
  * Add the correct display in IE 9-.
  */
@@ -382,6 +393,10 @@ template {
   display: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 @font-face {
   font-family: "Lato";
   src: url("../fonts/LATO-REGULAR.ttf") format("truetype");
@@ -515,6 +530,7 @@ input.error {
 .input__msg {
   position: absolute;
   top: 110%;
+  left: 0;
   font-size: 12px;
   color: red;
   display: none;
@@ -527,7 +543,13 @@ input.error {
 .input_sm {
   max-width: 310px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 780px) {
+  .input_sm {
+    max-width: 48%;
+    width: 100%;
+  }
+}
+@media all and (max-width: 670px) {
   .input_sm {
     max-width: 100%;
     width: 100%;
@@ -537,7 +559,12 @@ input.error {
   max-width: 390px;
   width: 100%;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 780px) {
+  .input_md {
+    max-width: 48%;
+  }
+}
+@media all and (max-width: 670px) {
   .input_md {
     max-width: 100%;
   }
@@ -606,6 +633,13 @@ input.error {
   overflow: hidden;
   cursor: pointer;
 }
+
+@media all and (max-width: 600px) {
+  .checkbox {
+    margin: 10px 20px 20px 0;
+  }
+}
+
 .checkbox input {
   opacity: 0;
   position: absolute;
@@ -1057,6 +1091,7 @@ a {
   }
 }
 .images {
+  width: 100%;
   margin: auto;
   max-width: 1630px;
   display: -ms-flexbox;
@@ -1842,6 +1877,7 @@ a {
 }
 .reviews__img {
   max-width: 505px;
+  width: 100%;
 }
 @media all and (max-width: 1500px) {
   .reviews__img img {
@@ -2011,12 +2047,13 @@ a {
   right: 0;
   top: 0;
   background: #dee4f5;
-  z-index: 5;
+  z-index: 12;
   padding: 25px 60px 25px 30px;
   transition: all .5s;
   opacity: 0;
   pointer-events: none;
 }
+
 .review-full .review__inner {
   margin-top: 10px;
   width: 100%;
@@ -2033,6 +2070,7 @@ a {
   margin-top: 0;
 }
 .review-full__inner {
+  position: relative;
   overflow-y: auto;
   height: 100%;
   width: 100%;
@@ -2115,6 +2153,7 @@ a {
   .contacts__line {
     -ms-flex-direction: column;
         flex-direction: column;
+    font-size: 19px;
   }
   .contacts__line p,
   .contacts__line a {
@@ -2163,9 +2202,17 @@ a {
   padding: 40px;
   overflow: hidden;
 }
+
+.pop-up_min {
+  width: 50%;
+}
 @media all and (max-width: 576px) {
   .pop-up {
     padding: 50px 10px 30px;
+  }
+
+  .pop-up_min {
+    width: 98%;
   }
 }
 .pop-up_colored {
@@ -2215,7 +2262,7 @@ a {
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 20;
+  z-index: -1;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
@@ -2224,6 +2271,7 @@ a {
 .pop-up__wrapper.active {
   opacity: 1;
   pointer-events: initial;
+  z-index: 20;
 }
 .window {
   display: none;
@@ -2388,6 +2436,7 @@ a {
   display: block;
   text-align: center;
   cursor: pointer;
+  color: red;
 }
 .agree input {
   opacity: 0;
@@ -2396,9 +2445,14 @@ a {
 .agree a {
    display: inline-block;
    border-bottom: 1px solid #ccc;
+   color: #6e6e6e;
 }
-.agree input:checked + .square i {
+.agree input:checked + p .square i {
   background: #71c4c0;
+}
+
+.agree input:checked + p {
+  color: #6e6e6e;
 }
 .square {
   display: inline-block;

@@ -55,16 +55,19 @@ jQuery(document).ready(function () {
   $('.review').on('click', function (e) {
     var inner = $(e.currentTarget).html();
     $('.review-full__inner').html(inner);
+    $('body').addClass('overlay');
     $('.review-full').addClass('active');
   });
 
   $('.review-full__close').on('click', function (e) {
     $(e.currentTarget).closest('.review-full').removeClass('active');
+    $('body').removeClass('overlay');
   });
 
   $(document).on('click', function (e) {
     if (!$(e.target).closest('.review').hasClass('review') && !$(e.target).closest('.review-full').hasClass('active') && $('.review-full').hasClass('active')) {
       $('.review-full').removeClass('active');
+      $('body').removeClass('overlay');
     }
   });
 
@@ -120,6 +123,10 @@ jQuery(document).ready(function () {
       $(e.currentTarget).removeClass('active');
       $('.range input[type="range"]').rangeslider('destroy');
       $('.scroll').baron().dispose();
+      $('body').removeClass('no-scroll');
+      setTimeout(function() {
+        $('.pop-up').removeClass('pop-up_min');
+      },1000);
     }
   });
 
@@ -127,6 +134,10 @@ jQuery(document).ready(function () {
     $(e.currentTarget).closest('.pop-up__wrapper').removeClass('active');
     $('.range input[type="range"]').rangeslider('destroy');
     $('.scroll').baron().dispose();
+    $('body').removeClass('no-scroll');
+    setTimeout(function() {
+      $('.pop-up').removeClass('pop-up_min');
+    },1000);
   });
 
   function sendListener() {
@@ -139,6 +150,7 @@ jQuery(document).ready(function () {
 
       $('.baron__track').hide();
       popUp.find('.pop-up__inner').html(data);
+      $('.pop-up').addClass('pop-up_min');
       popUp.addClass('active');
     });
   }
@@ -183,6 +195,7 @@ jQuery(document).ready(function () {
     }
 
     popUp.find('.pop-up__inner').html(data);
+    $('body').addClass('no-scroll');
     initRange();
     initScroll();
     sendListener();
