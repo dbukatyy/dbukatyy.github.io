@@ -204,8 +204,10 @@ jQuery(document).ready(function () {
     $('.date').datepicker({
       autoClose: true,
       onRenderCell: function(date, cellType) {
-        if (cellType == 'day' && date.getDate() == 11) {
-           console.log(date.getDate());
+        if (cellType == 'day' && (new Date() - date < 0)) {
+           return {
+                disabled: true
+            }
         }
     }
     });
