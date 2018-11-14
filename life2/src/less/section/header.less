@@ -1,0 +1,37 @@
+.header {
+  background: @c-white;
+  padding: 17px 0;
+  box-shadow: 0 4px 16px rgba(0, 54, 117, 0.15);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.logo {
+  text-align: right;
+  margin-right: 50px;
+  &__top {
+    color: @c-prim;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+.menu {
+  margin-right: auto;
+  &__link {
+    font-size: 16px;
+    font-family: 'Lato-bold';
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}

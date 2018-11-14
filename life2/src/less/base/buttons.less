@@ -1,0 +1,72 @@
+//-------------------------------------
+// BUTTONS
+//-------------------------------------
+.btn {
+  cursor: pointer;
+  text-align: center;
+  transition: all .3s;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: 'Lato-bold';
+  border-radius: 60px;
+  .icon {
+    width: 8px;
+    height: 13px;
+    vertical-align: middle;
+  }
+  
+  &_primery {
+    padding: 10px 25px;
+    color: @c-white;
+    border: none;
+    background: @c-gradient no-repeat;
+    background-size: cover;
+    box-shadow: 0 6px 25px -5px @c-prim;
+
+    &:hover {
+      box-shadow: 0 9px 35px -5px @c-prim;
+    }
+
+    .icon {
+      fill: @c-white;
+      transform: translateX(8px);
+    }
+  }
+
+  &_att {
+    min-width: 240px;
+    padding: 15px 25px;
+    color: @c-white;
+    border: none;
+    background: @c-gradient2 no-repeat;
+    background-size: cover;
+    box-shadow: 0 6px 25px -5px @c-att;
+
+    &:hover {
+      box-shadow: 0 9px 35px -5px @c-att;
+    }
+
+  }
+
+  &_empty {
+    background-image:  @c-gradient2;
+    padding: 2px;
+    overflow: hidden;
+    border: none;
+
+    span {
+      background:  @c-gradient2;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      min-width: 240px;
+      margin: 0;
+      display: block;
+      background: @c-white;
+      padding: 12px 32px;
+      border-radius: 60px;
+    }
+  }
+}
