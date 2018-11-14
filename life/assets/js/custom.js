@@ -202,7 +202,14 @@ jQuery(document).ready(function () {
     addValidation();
     $('.baron__track').show();
     $('.date').datepicker({
-      autoClose: true
+      autoClose: true,
+      onRenderCell: function(date, cellType) {
+        if (cellType == 'day' && (new Date() - date < 0)) {
+           return {
+                disabled: true
+            }
+        }
+    }
     });
 
     popUp.addClass('active');
