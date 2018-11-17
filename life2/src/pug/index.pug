@@ -36,7 +36,7 @@ block content
 
 	//thinks
 	section.thinks
-		.to
+		button.to
 			svg.icon
 				use(xlink:href="assets/img/sprite.svg#icon-arr-b")
 		.container_min
@@ -85,3 +85,66 @@ block content
 					button.btn.btn_att Участвовать в игре
 				.stress__img
 					img(src="assets/img/thinks.png", alt="thinks")
+
+	//form-block
+	section.form-block
+		.form-block__inner
+			h2.h2 Измерь свой стресс
+			p Став участником “Живой игры” можно узнать величину своего стресса - 
+				strong психоэмоционального напряжения
+				| , и понять, почему ты слаб. Тебя ожидает соревнование по “эффективности” твоих Жизненных сил!
+			form.form(action="")
+				label.form__field
+					p Имя
+					input.input(type="text" name="name")
+				label.form__field
+					p Электронная почта
+					input.input(type="email" name="email")
+				label.form__field.form__field_half
+					p Пол
+					.select
+						select(name="sex")
+							option(value="m") Мужчина
+							option(value="fm") Женщина
+						svg.icon
+							use(xlink:href="assets/img/sprite.svg#icon-arr-b")
+				label.form__field.form__field_half
+					p Регоин
+					.select
+						select(name="locale")
+							option(value="brest") Брест
+							option(value="minsk") Минск
+						svg.icon
+							use(xlink:href="assets/img/sprite.svg#icon-arr-b")
+							
+				button(type="submit").btn.btn_att Начать Самодиагностику
+
+	//training
+	section.training
+		.container_min
+			header.training__head
+				h2.h2 Тренинг-мыслинг
+				img(src="assets/img/logo.png", alt="best life")
+			
+			p
+				strong
+					span.tooltip Мыслинг
+						span.tooltip__inner тренировка свойств мышления человека, направленная на реорганизацию опасных свойств с целью совершенствования полезных свойств и повышения психоэмоциональной стабильности.
+					| «Лучшая Life» 
+				| это полтора месяца твоей жизни, посвящённые  переходу от одного качества жизни, которое тебя не удовлетворяет, к другому, к лучшему! Это каждодневное совершенствование свойств мышления.
+			p
+				strong Полуторамесячная тренировка свойств мышления проходит
+				| по методике, которую постепенно, этап за этапом участник осваивает двумя взаимодополняющими способами занятий:
+				strong со специалистом и самостоятельно.
+			p За полтора месяца следует освоить 
+				strong одиннадцать последовательных тем методики 
+				| плюс завершающее занятие – обсуждение достигнутых результатов на основе твоего мнения,  первичного и итогового результатов Самодиагностики.  
+			p
+				strong Итого,
+					span.tooltip мыслинг
+						span.tooltip__inner тренировка свойств мышления человека, направленная на реорганизацию опасных свойств с целью совершенствования полезных свойств и повышения психоэмоциональной стабильности.
+					| «Лучшая Life»: шесть недель совершенстования! 72 часа тренировок! 12 занятий со специалистами!
+			button.btn.btn_att Перейти к мыслингу
+		button.to
+			svg.icon
+				use(xlink:href="assets/img/sprite.svg#icon-arr-b")

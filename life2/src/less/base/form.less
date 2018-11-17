@@ -1,3 +1,81 @@
 //-------------------------------------
 // MFORM
 //-------------------------------------
+
+
+.form {
+  margin-top: 30px;
+  padding: 38px 56px 48px;
+  text-align: left;
+  position: relative;
+  background: @c-white;
+  border-radius: 15px;
+  box-shadow:  0px 16px 32px rgba(0, 54, 117, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__field {
+    margin-bottom: 22px;
+    display: inline-block;
+    width: 100%;
+
+    &_half {
+      width: 48%;
+    }
+
+    p {
+      margin: 0 0 5px;
+    }
+  }
+
+  .btn {
+    position: absolute;
+    bottom: -20px;
+    width: 55%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.input() {
+  padding: 13px 16px;
+  background: #F9FBFF;
+  border: 1px solid #D8E2F0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.input {
+  .input;
+}
+
+.select {
+  position: relative;
+
+  .icon {
+    width: 13px;
+    height: 8px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  select::-ms-expand {
+    display: none; /*убираем галочку в IE*/
+  }
+
+  select {
+    .input;
+    padding-right: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0.01px; 
+    text-overflow: '';
+    -ms-appearance: none;
+    appearance: none!important;
+  }
+
+}
