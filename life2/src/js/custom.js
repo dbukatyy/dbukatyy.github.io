@@ -1,8 +1,10 @@
 jQuery(document).ready(function () {
 
-  $('.tooltip').tooltipster({
-    side: ['bottom', 'right'],
-    maxWidth: 740
+  $('.sloder-items').slick({
+    dots: true,
+    slidesToShow: 2,
+    prevArrow: ".slider .slick__prev",
+    nextArrow: ".slider .slick__next",
   });
 });
 
