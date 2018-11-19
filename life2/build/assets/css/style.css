@@ -893,7 +893,7 @@ p {
 }
 .review {
   background: #fff;
-  box-shadow: 0 16px 24px rgba(0, 54, 117, 0.05);
+  box-shadow: 0 16px 24px rgba(0, 54, 117, 0.1);
   margin: 50px 10px;
   border: 1px solid #E1E6F5;
   border-radius: 15px;
@@ -925,7 +925,7 @@ p {
   width: 85px;
   height: 85px;
   border-radius: 50%;
-  box-shadow: 0 16px 24px rgba(0, 54, 117, 0.05);
+  box-shadow: 0 16px 24px rgba(0, 54, 117, 0.1);
   overflow: hidden;
   margin-right: 25px;
 }
@@ -946,4 +946,93 @@ p {
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
+}
+.idea {
+  border-radius: 30px;
+  padding: 48px 70px 32px;
+  background: #fff;
+  box-shadow: 0 16px 24px rgba(0, 54, 117, 0.1);
+  z-index: 2;
+  position: relative;
+}
+.idea-wrapp {
+  border-radius: 30px;
+  text-align: center;
+  width: 44%;
+  max-width: 620px;
+  margin: auto;
+  background: #fff;
+  position: relative;
+}
+.idea-wrapp .info {
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -50px;
+  box-shadow: 0 -15px 54px -20px rgba(0, 54, 117, 0.1);
+}
+.idea__item {
+  content: '';
+  position: absolute;
+  width: 89%;
+  height: 100%;
+  background: #FAFAFA;
+  opacity: .9;
+  bottom: -24px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  box-shadow: 0 16px 24px rgba(0, 54, 117, 0.1);
+  border-radius: 30px;
+  z-index: 1;
+  display: block;
+}
+.idea__item_sm {
+  bottom: -48px;
+  width: 79%;
+  z-index: 0;
+}
+.idea-block {
+  padding: 125px 15px 180px;
+  background: url("../img/bg7.png") 50% no-repeat, url("../img/bg8.png") 50% no-repeat, #F9FBFF;
+  background-size: 100% auto, auto;
+}
+.idea__title {
+  margin: 0;
+}
+.idea__txt {
+  margin: 20px 0;
+}
+.info {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: url("../img/info.png") 50% no-repeat, #fff;
+}
+.footer {
+  padding-top: 25px;
+}
+.footer .container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.footer .container > .caption {
+  width: 80%;
+  margin-left: auto;
+  padding: 15px 0;
+  color: #69758C;
+  border-top: 1px solid #E4E4E4;
+}
+.copy {
+  background: #F6F8FF;
+  text-align: center;
+  margin: 0;
+  color: #69758C;
+  padding: 8px;
 }
