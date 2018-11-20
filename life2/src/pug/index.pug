@@ -206,3 +206,40 @@ block content
 					p
 						span ознакомиться
 			.info
+
+	//modal-contact
+	#modal-contact.modal-block
+		.modal-inner
+			.modal.contacts
+				h2.h2.contacts__title Контакты
+				.contact
+					strong.contact__name Телефон:
+					a.contact__val.link(href="tel:+79250467998 ") +7 925 046 79 98 
+				.contact
+					strong.contact__name E-mail:
+					a.contact__val.link(href="mailto:life@npifm.ru") life@npifm.ru 
+
+				button.modal__close
+					img(src="assets/img/close.svg", alt="close")
+
+	//modal-login
+	#modal-login.modal-block
+		.modal-inner
+			.modal
+				form(action="").login
+					h2.h2.login__title Войти в личный кабент
+					label.form__field
+						p E-mail
+						input.input(type="email" name="email")
+					label.form__field
+						p Пароль
+						.password
+							input.input(type="password" name="pass")
+							button.password__toggle
+								img(src="assets/img/eay.svg", alt="eay")
+								span Показать пароль
+					a.link.link_prim(href="") Забыли пароль?
+					button.btn.btn_primery Войти
+
+				button.modal__close
+					img(src="assets/img/close.svg", alt="close")

@@ -23,9 +23,9 @@
           <a class="menu__link link" href="">Самодиагностика</a>
           <a class="menu__link link txt_att" href="">“Лучшая Life”</a>
           <a class="menu__link link" href="">Отзывы</a>
-          <a class="menu__link link" href="">Контакты</a>
+          <a class="menu__link link js-modal" href="" data-modal="modal-contact">Контакты</a>
         </nav>
-        <button class="btn btn_primery">Войти
+        <button class="btn btn_primery js-modal" data-modal="modal-login">Войти
           <svg class="icon">
             <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
           </svg>
@@ -301,6 +301,54 @@
             </button>
           </section>
           <div class="info"></div>
+        </div>
+      </div>
+      <!--modal-contact-->
+      <div class="modal-block" id="modal-contact">
+        <div class="modal-inner">
+          <div class="modal contacts">
+            <h2 class="h2 contacts__title">Контакты</h2>
+            <div class="contact">
+              <strong class="contact__name">Телефон:</strong>
+              <a class="contact__val link" href="tel:+79250467998 ">+7 925 046 79 98 </a>
+            </div>
+            <div class="contact">
+              <strong class="contact__name">E-mail:</strong>
+              <a class="contact__val link" href="mailto:life@npifm.ru">life@npifm.ru </a>
+            </div>
+            <button class="modal__close">
+              <img src="assets/img/close.svg" alt="close">
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--modal-login-->
+      <div class="modal-block" id="modal-login">
+        <div class="modal-inner">
+          <div class="modal">
+            <form class="login" action="">
+              <h2 class="h2 login__title">Войти в личный кабент</h2>
+              <label class="form__field">
+                <p>E-mail</p>
+                <input class="input" type="email" name="email">
+              </label>
+              <label class="form__field">
+                <p>Пароль</p>
+                <div class="password">
+                  <input class="input" type="password" name="pass">
+                  <button class="password__toggle">
+                    <img src="assets/img/eay.svg" alt="eay">
+                    <span>Показать пароль</span>
+                  </button>
+                </div>
+              </label>
+              <a class="link link_prim" href="">Забыли пароль?</a>
+              <button class="btn btn_primery">Войти</button>
+            </form>
+            <button class="modal__close">
+              <img src="assets/img/close.svg" alt="close">
+            </button>
+          </div>
         </div>
       </div>
     </main>
