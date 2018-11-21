@@ -54,7 +54,7 @@ block content
 				p.example__txt Примеры 
 					strong "опасных" 
 					| свойств мышления человека
-				button.btn.btn_empty
+				button.btn.btn_empty.js-modal(data-modal="modal-think")
 					p
 						span Ознакомиться
 
@@ -160,7 +160,7 @@ block content
 				button.slick__next
 					svg.icon
 						use(xlink:href="assets/img/sprite.svg#icon-arr-b")
-				.sloder-items
+				.slider-items
 					section.review
 						header.review__header
 							.review__author
@@ -171,7 +171,7 @@ block content
 						.review__txt
 							p Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст- заполнитель или же текст-наполнитель. Иногда текст- «рыба» также используется композиторами при написании музыки. Они напевают его перед тем, как сочинены соответствующие слова. Рыбный ...
 							.review__btn
-								button.btn.btn_att Читать полностью
+								button.btn.btn_att.js-modal(data-modal="modal-slider" data-slide="0") Читать полностью
 					section.review
 						header.review__header
 							.review__author
@@ -182,7 +182,7 @@ block content
 						.review__txt
 							p Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст- заполнитель или же текст-наполнитель. Иногда текст- «рыба» также используется композиторами при написании музыки. Они напевают его перед тем, как сочинены соответствующие слова. Рыбный ...
 							.review__btn
-								button.btn.btn_att Читать полностью
+								button.btn.btn_att.js-modal(data-modal="modal-slider" data-slide="1") Читать полностью
 					section.review
 						header.review__header
 							.review__author
@@ -193,7 +193,7 @@ block content
 						.review__txt
 							p Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст- заполнитель или же текст-наполнитель. Иногда текст- «рыба» также используется композиторами при написании музыки. Они напевают его перед тем, как сочинены соответствующие слова. Рыбный ...
 							.review__btn
-								button.btn.btn_att Читать полностью
+								button.btn.btn_att.js-modal(data-modal="modal-slider" data-slide="2") Читать полностью
 
 	.idea-block
 		.idea-wrapp
@@ -209,37 +209,115 @@ block content
 
 	//modal-contact
 	#modal-contact.modal-block
-		.modal-inner
-			.modal.contacts
-				h2.h2.contacts__title Контакты
-				.contact
-					strong.contact__name Телефон:
-					a.contact__val.link(href="tel:+79250467998 ") +7 925 046 79 98 
-				.contact
-					strong.contact__name E-mail:
-					a.contact__val.link(href="mailto:life@npifm.ru") life@npifm.ru 
+		.modal-wrapp
+			.modal
+				.modal__inner
+					.contacts
+						h2.h2.contacts__title Контакты
+						.contact
+							strong.contact__name Телефон:
+							a.contact__val.link(href="tel:+79250467998 ") +7 925 046 79 98 
+						.contact
+							strong.contact__name E-mail:
+							a.contact__val.link(href="mailto:life@npifm.ru") life@npifm.ru 
 
+				button.modal__close
+					img(src="assets/img/close.svg", alt="close")
+
+	//modal-think
+	#modal-think.modal-block
+		.modal-wrapp
+			.modal
+				.modal__inner
+					.examples
+						h2.h2.examples__title Примеры "опасных" свойств мышления человека
+						.examples-item
+							span.examples-item__num.h1 1
+							p.examples-item__txt Например, подростковый
+								strong "зацепинг",
+								| когда дети прицепляются к поездам, или группы смерти, в которых детям прививают такой ход мышления, который приводит к их добровольному самоубийству. 
+						.examples-item
+							span.examples-item__num.h1 2
+							p.examples-item__txt Крикливая вечно недовольная медсестра в регистратуре в поликлинике. Посетители не любят этих женщин в регистратуре, они вечно вас шпыняют. Они недовольная всем. Такой человек в регистратуре постоянно общается с измученными болезнями людьми, они не самые приветливые среди людей. В такой стрессовой ситуации 
+								strong мозг ищет самый простой и короткий путь прекратить этот стресс: 
+								| дать раздраженному посетителю "отворот-поворот". Постоянное повторение такого хода реакции закрепляет ее автоматизм. В итоге человек в регистратуре не просто сам находится в постоянном стрессе, но еще и отшивает больных, которые приходят за помощью.
+								br
+								strong Итог: человек находятся в постоянном стрессе и загоняет туда других. 
+						.examples-item
+							span.examples-item__num.h1 3
+							p.examples-item__txt 
+								strong Конфликт с собственными родителями, или с родителями жены.
+								| Таких конфликтов много и многие семьи сталкивались с бесконечными взаимными претензиями, за которыми уже нет желаемых простых и радостных отношений.
 				button.modal__close
 					img(src="assets/img/close.svg", alt="close")
 
 	//modal-login
 	#modal-login.modal-block
-		.modal-inner
+		.modal-wrapp
 			.modal
-				form(action="").login
-					h2.h2.login__title Войти в личный кабент
-					label.form__field
-						p E-mail
-						input.input(type="email" name="email")
-					label.form__field
-						p Пароль
-						.password
-							input.input(type="password" name="pass")
-							button.password__toggle
-								img(src="assets/img/eay.svg", alt="eay")
-								span Показать пароль
-					a.link.link_prim(href="") Забыли пароль?
-					button.btn.btn_primery Войти
+				.modal__inner
+					form(action="").login
+						h2.h2.login__title Войти в личный кабент
+						label.form__field
+							p E-mail
+							input.input(type="email" name="email")
+						label.form__field
+							p Пароль
+							.password
+								input.input(type="password" name="pass")
+								button.password__toggle
+									img(src="assets/img/eay.svg", alt="eay")
+									span Показать пароль
+						a.link.link_prim(href="") Забыли пароль?
+						button.btn.btn_primery Войти
 
+				button.modal__close
+					img(src="assets/img/close.svg", alt="close")
+
+	//modal-slider
+	#modal-slider.modal-block
+		.modal-wrapp
+			.modal.modal_md
+				.slider
+					button.slick__prev
+						svg.icon
+							use(xlink:href="assets/img/sprite.svg#icon-arr-b")
+					button.slick__next
+						svg.icon
+							use(xlink:href="assets/img/sprite.svg#icon-arr-b")
+					.slider-items
+						section.review.review_full
+							header.review__header
+								.review__author
+									img(src="assets/img/author.png", alt="author")
+								.review__titles
+									h3.h3.review__title Антонов Михаил
+									p.review__subtitle Боксер, участник MMA
+							.review__txt
+								p Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.
+								p В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения текста на странице (макет или площадь набора). Поэтому большинство рыбных текстов состоят из более или менее произвольного набора слов и слогов. 
+								p Таким образом образцы повторения не отвлекают от общей картины, а шрифты имеют лучшую базу сравнения. Преимущественно конечно, если рыбный текст кажется в некоторой степени реалистичным, не искажая тем самым воздействие макета финальной публикации.
+						section.review.review_full
+							header.review__header
+								.review__author
+									img(src="assets/img/author2.png", alt="author")
+								.review__titles
+									h3.h3.review__title Флексова Анастасия
+									p.review__subtitle Учитель в престижной школе
+							.review__txt
+								p Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.
+								p В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения текста на странице (макет или площадь набора). Поэтому большинство рыбных текстов состоят из более или менее произвольного набора слов и слогов. 
+								p Таким образом образцы повторения не отвлекают от общей картины, а шрифты имеют лучшую базу сравнения. Преимущественно конечно, если рыбный текст кажется в некоторой степени реалистичным, не искажая тем самым воздействие макета финальной публикации.
+						section.review.review_full
+							header.review__header
+								.review__author
+									img(src="assets/img/author.png", alt="author")
+								.review__titles
+									h3.h3.review__title Антонов Михаил
+									p.review__subtitle Боксер, участник MMA
+							.review__txt
+								p Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.
+								p В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения текста на странице (макет или площадь набора). Поэтому большинство рыбных текстов состоят из более или менее произвольного набора слов и слогов. 
+								p Таким образом образцы повторения не отвлекают от общей картины, а шрифты имеют лучшую базу сравнения. Преимущественно конечно, если рыбный текст кажется в некоторой степени реалистичным, не искажая тем самым воздействие макета финальной публикации.
 				button.modal__close
 					img(src="assets/img/close.svg", alt="close")

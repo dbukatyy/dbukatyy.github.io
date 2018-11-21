@@ -92,7 +92,7 @@
             <p class="example__txt">Примеры 
               <strong>"опасных" </strong>свойств мышления человека
             </p>
-            <button class="btn btn_empty">
+            <button class="btn btn_empty js-modal" data-modal="modal-think">
               <p>
                 <span>Ознакомиться</span>
               </p>
@@ -231,7 +231,7 @@
                 <use xlink:href="assets/img/sprite.svg#icon-arr-b"></use>
               </svg>
             </button>
-            <div class="sloder-items">
+            <div class="slider-items">
               <section class="review">
                 <header class="review__header">
                   <div class="review__author">
@@ -245,7 +245,7 @@
                 <div class="review__txt">
                   <p>Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст- заполнитель или же текст-наполнитель. Иногда текст- «рыба» также используется композиторами при написании музыки. Они напевают его перед тем, как сочинены соответствующие слова. Рыбный ...</p>
                   <div class="review__btn">
-                    <button class="btn btn_att">Читать полностью</button>
+                    <button class="btn btn_att js-modal" data-modal="modal-slider" data-slide="0">Читать полностью</button>
                   </div>
                 </div>
               </section>
@@ -262,7 +262,7 @@
                 <div class="review__txt">
                   <p>Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст- заполнитель или же текст-наполнитель. Иногда текст- «рыба» также используется композиторами при написании музыки. Они напевают его перед тем, как сочинены соответствующие слова. Рыбный ...</p>
                   <div class="review__btn">
-                    <button class="btn btn_att">Читать полностью</button>
+                    <button class="btn btn_att js-modal" data-modal="modal-slider" data-slide="1">Читать полностью</button>
                   </div>
                 </div>
               </section>
@@ -279,7 +279,7 @@
                 <div class="review__txt">
                   <p>Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст- заполнитель или же текст-наполнитель. Иногда текст- «рыба» также используется композиторами при написании музыки. Они напевают его перед тем, как сочинены соответствующие слова. Рыбный ...</p>
                   <div class="review__btn">
-                    <button class="btn btn_att">Читать полностью</button>
+                    <button class="btn btn_att js-modal" data-modal="modal-slider" data-slide="2">Читать полностью</button>
                   </div>
                 </div>
               </section>
@@ -305,16 +305,55 @@
       </div>
       <!--modal-contact-->
       <div class="modal-block" id="modal-contact">
-        <div class="modal-inner">
-          <div class="modal contacts">
-            <h2 class="h2 contacts__title">Контакты</h2>
-            <div class="contact">
-              <strong class="contact__name">Телефон:</strong>
-              <a class="contact__val link" href="tel:+79250467998 ">+7 925 046 79 98 </a>
+        <div class="modal-wrapp">
+          <div class="modal">
+            <div class="modal__inner">
+              <div class="contacts">
+                <h2 class="h2 contacts__title">Контакты</h2>
+                <div class="contact">
+                  <strong class="contact__name">Телефон:</strong>
+                  <a class="contact__val link" href="tel:+79250467998 ">+7 925 046 79 98 </a>
+                </div>
+                <div class="contact">
+                  <strong class="contact__name">E-mail:</strong>
+                  <a class="contact__val link" href="mailto:life@npifm.ru">life@npifm.ru </a>
+                </div>
+              </div>
             </div>
-            <div class="contact">
-              <strong class="contact__name">E-mail:</strong>
-              <a class="contact__val link" href="mailto:life@npifm.ru">life@npifm.ru </a>
+            <button class="modal__close">
+              <img src="assets/img/close.svg" alt="close">
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--modal-think-->
+      <div class="modal-block" id="modal-think">
+        <div class="modal-wrapp">
+          <div class="modal">
+            <div class="modal__inner">
+              <div class="examples">
+                <h2 class="h2 examples__title">Примеры "опасных" свойств мышления человека</h2>
+                <div class="examples-item">
+                  <span class="examples-item__num h1">1</span>
+                  <p class="examples-item__txt">Например, подростковый
+                    <strong>"зацепинг",</strong>когда дети прицепляются к поездам, или группы смерти, в которых детям прививают такой ход мышления, который приводит к их добровольному самоубийству. 
+                  </p>
+                </div>
+                <div class="examples-item">
+                  <span class="examples-item__num h1">2</span>
+                  <p class="examples-item__txt">Крикливая вечно недовольная медсестра в регистратуре в поликлинике. Посетители не любят этих женщин в регистратуре, они вечно вас шпыняют. Они недовольная всем. Такой человек в регистратуре постоянно общается с измученными болезнями людьми, они не самые приветливые среди людей. В такой стрессовой ситуации 
+                    <strong>мозг ищет самый простой и короткий путь прекратить этот стресс: </strong>дать раздраженному посетителю "отворот-поворот". Постоянное повторение такого хода реакции закрепляет ее автоматизм. В итоге человек в регистратуре не просто сам находится в постоянном стрессе, но еще и отшивает больных, которые приходят за помощью.
+                    <br>
+                    <strong>Итог: человек находятся в постоянном стрессе и загоняет туда других. </strong>
+                  </p>
+                </div>
+                <div class="examples-item">
+                  <span class="examples-item__num h1">3</span>
+                  <p class="examples-item__txt"> 
+                    <strong>Конфликт с собственными родителями, или с родителями жены.</strong>Таких конфликтов много и многие семьи сталкивались с бесконечными взаимными претензиями, за которыми уже нет желаемых простых и радостных отношений.
+                  </p>
+                </div>
+              </div>
             </div>
             <button class="modal__close">
               <img src="assets/img/close.svg" alt="close">
@@ -324,27 +363,101 @@
       </div>
       <!--modal-login-->
       <div class="modal-block" id="modal-login">
-        <div class="modal-inner">
+        <div class="modal-wrapp">
           <div class="modal">
-            <form class="login" action="">
-              <h2 class="h2 login__title">Войти в личный кабент</h2>
-              <label class="form__field">
-                <p>E-mail</p>
-                <input class="input" type="email" name="email">
-              </label>
-              <label class="form__field">
-                <p>Пароль</p>
-                <div class="password">
-                  <input class="input" type="password" name="pass">
-                  <button class="password__toggle">
-                    <img src="assets/img/eay.svg" alt="eay">
-                    <span>Показать пароль</span>
-                  </button>
-                </div>
-              </label>
-              <a class="link link_prim" href="">Забыли пароль?</a>
-              <button class="btn btn_primery">Войти</button>
-            </form>
+            <div class="modal__inner">
+              <form class="login" action="">
+                <h2 class="h2 login__title">Войти в личный кабент</h2>
+                <label class="form__field">
+                  <p>E-mail</p>
+                  <input class="input" type="email" name="email">
+                </label>
+                <label class="form__field">
+                  <p>Пароль</p>
+                  <div class="password">
+                    <input class="input" type="password" name="pass">
+                    <button class="password__toggle">
+                      <img src="assets/img/eay.svg" alt="eay">
+                      <span>Показать пароль</span>
+                    </button>
+                  </div>
+                </label>
+                <a class="link link_prim" href="">Забыли пароль?</a>
+                <button class="btn btn_primery">Войти</button>
+              </form>
+            </div>
+            <button class="modal__close">
+              <img src="assets/img/close.svg" alt="close">
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--modal-slider-->
+      <div class="modal-block" id="modal-slider">
+        <div class="modal-wrapp">
+          <div class="modal modal_md">
+            <div class="slider">
+              <button class="slick__prev">
+                <svg class="icon">
+                  <use xlink:href="assets/img/sprite.svg#icon-arr-b"></use>
+                </svg>
+              </button>
+              <button class="slick__next">
+                <svg class="icon">
+                  <use xlink:href="assets/img/sprite.svg#icon-arr-b"></use>
+                </svg>
+              </button>
+              <div class="slider-items">
+                <section class="review review_full">
+                  <header class="review__header">
+                    <div class="review__author">
+                      <img src="assets/img/author.png" alt="author">
+                    </div>
+                    <div class="review__titles">
+                      <h3 class="h3 review__title">Антонов Михаил</h3>
+                      <p class="review__subtitle">Боксер, участник MMA</p>
+                    </div>
+                  </header>
+                  <div class="review__txt">
+                    <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.</p>
+                    <p>В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения текста на странице (макет или площадь набора). Поэтому большинство рыбных текстов состоят из более или менее произвольного набора слов и слогов. </p>
+                    <p>Таким образом образцы повторения не отвлекают от общей картины, а шрифты имеют лучшую базу сравнения. Преимущественно конечно, если рыбный текст кажется в некоторой степени реалистичным, не искажая тем самым воздействие макета финальной публикации.</p>
+                  </div>
+                </section>
+                <section class="review review_full">
+                  <header class="review__header">
+                    <div class="review__author">
+                      <img src="assets/img/author2.png" alt="author">
+                    </div>
+                    <div class="review__titles">
+                      <h3 class="h3 review__title">Флексова Анастасия</h3>
+                      <p class="review__subtitle">Учитель в престижной школе</p>
+                    </div>
+                  </header>
+                  <div class="review__txt">
+                    <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.</p>
+                    <p>В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения текста на странице (макет или площадь набора). Поэтому большинство рыбных текстов состоят из более или менее произвольного набора слов и слогов. </p>
+                    <p>Таким образом образцы повторения не отвлекают от общей картины, а шрифты имеют лучшую базу сравнения. Преимущественно конечно, если рыбный текст кажется в некоторой степени реалистичным, не искажая тем самым воздействие макета финальной публикации.</p>
+                  </div>
+                </section>
+                <section class="review review_full">
+                  <header class="review__header">
+                    <div class="review__author">
+                      <img src="assets/img/author.png" alt="author">
+                    </div>
+                    <div class="review__titles">
+                      <h3 class="h3 review__title">Антонов Михаил</h3>
+                      <p class="review__subtitle">Боксер, участник MMA</p>
+                    </div>
+                  </header>
+                  <div class="review__txt">
+                    <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения.</p>
+                    <p>В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения текста на странице (макет или площадь набора). Поэтому большинство рыбных текстов состоят из более или менее произвольного набора слов и слогов. </p>
+                    <p>Таким образом образцы повторения не отвлекают от общей картины, а шрифты имеют лучшую базу сравнения. Преимущественно конечно, если рыбный текст кажется в некоторой степени реалистичным, не искажая тем самым воздействие макета финальной публикации.</p>
+                  </div>
+                </section>
+              </div>
+            </div>
             <button class="modal__close">
               <img src="assets/img/close.svg" alt="close">
             </button>

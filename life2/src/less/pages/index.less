@@ -373,6 +373,18 @@ p {
 	border-radius: 15px;
 	padding: 30px 40px;
 
+	&_full {
+		box-shadow: none;
+		border: none;
+		margin: 0 10px;
+		padding: 0;
+
+		.review__txt {
+			margin-left: 110px;
+			max-height: initial;
+		}
+	}
+
 	p {
 		margin-bottom: 0;
 	}
@@ -411,6 +423,8 @@ p {
 
 	&__txt {
 		position: relative;
+		max-height: 210px;
+		overflow: hidden;
 	}
 
 	&__btn {
@@ -532,9 +546,19 @@ p {
 	background: @c-white;
 	border-radius: 32px;
 	min-width: 550px;
+	max-width: 96%;
+	max-height: 96vh;
 	.shadow;
 	position: relative;
 	padding: 32px 56px;
+
+	&_md {
+		max-width: 1120px;
+	}
+
+	.slider {
+		width: 98%;
+	}
 
 	&__close {
 		background: none;
@@ -555,7 +579,7 @@ p {
 		display: none;
 	}
 
-	&-inner {
+	&-wrapp {
 		position: fixed;
 		left: 0;
 		right: 0;
@@ -603,5 +627,38 @@ p {
 		right: 0;
 		bottom: -24px;
 		line-height: 28px;
+	}
+}
+
+// examples
+.examples {
+	max-width: 740px;
+	margin: 0 40px;
+	max-height: 86vh;
+	overflow-y: auto;
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 42px;
+	}
+
+	&-item {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-bottom: 15px;
+
+		&__num {
+			background:  @c-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+		}
+
+		&__txt {
+			max-width: 94%;
+			margin-top: 5px;
+			margin-bottom: 0;
+		}
 	}
 }

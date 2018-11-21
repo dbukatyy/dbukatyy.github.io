@@ -941,6 +941,16 @@ p {
   border-radius: 15px;
   padding: 30px 40px;
 }
+.review_full {
+  box-shadow: none;
+  border: none;
+  margin: 0 10px;
+  padding: 0;
+}
+.review_full .review__txt {
+  margin-left: 110px;
+  max-height: initial;
+}
 .review p {
   margin-bottom: 0;
 }
@@ -973,6 +983,8 @@ p {
 }
 .review__txt {
   position: relative;
+  max-height: 210px;
+  overflow: hidden;
 }
 .review__btn {
   transition: all .3s;
@@ -1082,9 +1094,17 @@ p {
   background: #fff;
   border-radius: 32px;
   min-width: 550px;
+  max-width: 96%;
+  max-height: 96vh;
   box-shadow: 0 16px 24px rgba(0, 54, 117, 0.1);
   position: relative;
   padding: 32px 56px;
+}
+.modal_md {
+  max-width: 1120px;
+}
+.modal .slider {
+  width: 98%;
 }
 .modal__close {
   background: none;
@@ -1102,7 +1122,7 @@ p {
 .modal-block {
   display: none;
 }
-.modal-inner {
+.modal-wrapp {
   position: fixed;
   left: 0;
   right: 0;
@@ -1147,4 +1167,35 @@ p {
   right: 0;
   bottom: -24px;
   line-height: 28px;
+}
+.examples {
+  max-width: 740px;
+  margin: 0 40px;
+  max-height: 86vh;
+  overflow-y: auto;
+}
+.examples__title {
+  margin-top: 0;
+  margin-bottom: 42px;
+}
+.examples-item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-bottom: 15px;
+}
+.examples-item__num {
+  background: linear-gradient(to right, #4A75F8 0%, #94AFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.examples-item__txt {
+  max-width: 94%;
+  margin-top: 5px;
+  margin-bottom: 0;
 }
