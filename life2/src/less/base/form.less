@@ -121,3 +121,48 @@
     padding-right: 50px;
   }
 }
+
+.checkbox {
+  input[type="checkbox"] {
+    display: none;
+    
+    &:checked + .checkbox__inner {
+      color: @c-prim;
+      span {
+        background: transparent;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  
+  &-view {
+    background: @c-gradient_bot;
+    display: inline-block;
+    padding: 1px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-right: 10px;
+    
+    .icon {
+      fill: #fff;
+      width: 15px;
+      height: 10px;
+      vertical-align: middle;
+    }
+    
+    span {
+      cursor: pointer;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border-radius: 6px;
+      text-align: center;
+    }
+  }
+}
+	

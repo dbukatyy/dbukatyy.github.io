@@ -9,7 +9,7 @@ jQuery(document).ready(function () {
     const isClose = el.hasClass('modal__close') || el.closest('.modal__close').hasClass('modal__close');
     if (!insideModal || isClose) {
       reInitModalSlide();
-      modal.fadeOut(300);
+      modal.hide(300);
     }
   })
 
@@ -21,7 +21,7 @@ jQuery(document).ready(function () {
     initModalSlide();
     $('.modal .slider-items').slick('slickGoTo', +slide);
 
-    $(`#${wind}`).fadeIn(300);
+    $(`#${wind}`).show();
   })
 
   $('.password__toggle').on('click', function (e) {
