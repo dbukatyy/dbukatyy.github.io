@@ -774,7 +774,7 @@ p {
 	display: inline-block;
 	padding: 6px;
 	.shadow_c;
-
+	
 	&__item {
 		padding: 0;
 		position: relative;
@@ -789,11 +789,22 @@ p {
 		background:  @c-gradient;
     -webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+		
+		.icon {
+			width: 14px;
+			margin-bottom: -2px;
+			height: 14px;
+			fill: @c-prim;
+		}
 
 		&_att {
 			background: @c-gradient2;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
+
+			.icon {
+				fill: @c-att;
+			}
 		}
 
 		&:before {
@@ -817,24 +828,18 @@ p {
 				background: @c-gradient;
 				.shadow;
 			}
-
+			
 			span {
 				display: block;
 				position: relative;
 				z-index: 2;
 			}
-
+			
 			.icon {
 				fill: @c-white;
 			}
 		}
 
-		.icon {
-			width: 14px;
-			margin-bottom: -2px;
-			height: 14px;
-			fill: @c-prim;
-		}
 	}
 
 }
@@ -950,4 +955,129 @@ p {
 	img {
 		margin-bottom: 10px;
 	}
+}
+
+.page {
+	display:none;
+
+	&_active {
+		display: block;
+	}
+}
+
+.results {
+	background: @c-white;
+	.shadow;
+	max-width: 990px;
+	margin: auto;
+	padding: 40px 0;
+	border-radius: 15px;
+}
+
+.radial {
+
+	&__chart {
+		margin: auto;
+		width: 80%;
+	}
+}
+
+.bars {
+  margin: 0 auto 150px;
+  width: 90%; 
+  height: 300px;
+  position: relative;
+  
+  &__axis-y {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -30px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  &-y {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    
+    span {
+      position: absolute;
+      right: 100%;
+      width: 20px;
+      text-align: right;
+      margin-right: 5px;
+    }
+    
+    i {
+       width: 100%;
+       border-bottom: 1px solid #000;
+    }
+  }
+  
+  &__axis-x {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &-x {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    span {
+      position: absolute;
+      top: 100%;
+    }
+    i {
+      display: inline-block;
+      height: 15px;
+      border-right: 1px solid #000;
+    }
+  }
+  
+  &__chart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.bar {
+  background: @c-gradient2;
+  position: relative;
+	z-index: 1;
+	opacity: 0.95;
+  
+  &:nth-child(2n) {
+    background: @c-gradient_bot;
+  }
+  
+  &__info {
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #000;
+    text-align: center;
+  }
+}
+
+.deadline {
+  position: absolute;
+  top: 30%;
+  left: -30px;
+  right: 0;
+  z-index: 2;
+  border-bottom: 4px solid #000;
 }

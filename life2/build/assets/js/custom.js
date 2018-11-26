@@ -50,4 +50,246 @@ jQuery(document).ready(function () {
   function reInitModalSlide() {
     $('.modal .slider-items').slick('unslick');
   }
+
+  $('.pagination__item').on('click', function (e) {
+    e.preventDefault();
+    var page = $(this).data('page');
+    var selectPage = $('.page[data-page=' + page + ']');
+
+    $('.pagination__item').removeClass('pagination__item_att');
+    $(this).addClass('pagination__item_att');
+
+    if (selectPage.length) {
+      $('.page').removeClass('page_active');
+      selectPage.addClass('page_active');
+    }
+  });
+
+  $('.js-page-next').on('click', function (e) {
+    e.preventDefault();
+    var currentPage = $('.page_active');
+    var nextPage = currentPage.next();
+    var nextNumber = nextPage.data('page');
+
+    if (nextPage.hasClass('page')) {
+      currentPage.removeClass('page_active');
+      nextPage.addClass('page_active');
+      $('.pagination__item').removeClass('pagination__item_att');
+      $('.pagination__item[data-page=' + nextNumber + ']').addClass('pagination__item_att');
+    }
+  });
+
+  $('.js-page-prev').on('click', function (e) {
+    e.preventDefault();
+    var currentPage = $('.page_active');
+    var nextPage = currentPage.prev();
+    var nextNumber = nextPage.data('page');
+
+    if (nextPage.hasClass('page')) {
+      currentPage.removeClass('page_active');
+      nextPage.addClass('page_active');
+      $('.pagination__item').removeClass('pagination__item_att');
+      $('.pagination__item[data-page=' + nextNumber + ']').addClass('pagination__item_att');
+    }
+  });
+
+  $('.bar').each(function (i, el) {
+    var bar = $(el),
+        width = bar.data('x') + '%',
+        height = bar.data('y') + '%';
+    bar.css({ width: width, height: height });
+  });
+
+  function initRadialChart() {
+    var ctx = document.getElementById('myChart').getContext('2d');
+
+    var gradient = ctx.createLinearGradient(0, 0, 0, 600);
+    gradient.addColorStop(0, 'rgba(255,91,77,.5)');
+    gradient.addColorStop(1, 'rgba(255,121,26,.5)');
+
+    var gradient2 = ctx.createLinearGradient(0, 0, 0, 500);
+    gradient2.addColorStop(0, 'rgb(255,91,77)');
+    gradient2.addColorStop(.5, 'rgb(255,121,26)');
+
+    var myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        datasets: [{
+          datalabels: {
+            font: {
+              size: "22"
+            },
+            color: '#fff'
+          },
+          data: [4, 8.5, 5, 4.5],
+          borderWidth: 0,
+          hoverBackgroundColor: [gradient, gradient, gradient, gradient],
+          backgroundColor: [gradient, gradient2, gradient, gradient2]
+        }]
+      },
+      options: {
+        tooltips: {
+          enabled: false
+        }
+      }
+    });
+  }
+
+  initRadialChart();
+
+  function initLineChart() {
+    var arr = [16, 4, 17, 15, 16, 10, 8, 20, 16];
+    var visible = true;
+    $('#add').on('click', function () {
+      visible ? myChart2.data.datasets[1].data = arr : myChart2.data.datasets[1].data = [];
+      visible = !visible;
+      myChart2.update();
+    });
+    var ctx2 = document.getElementById('lineChart').getContext('2d');
+
+    var myChart2 = new Chart(ctx2, {
+      type: 'line',
+      data: {
+        labels: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        datasets: [{
+          datalabels: {
+            display: false
+          },
+          lineTension: 0,
+          label: "Data",
+          borderColor: "#000",
+          pointBackgroundColor: 'transparent',
+          pointHoverBackgroundColor: '#fff',
+          pointBorderWidth: 0,
+          pointBorderColor: 'transparent',
+          pointHoverBorderColor: "#000",
+          pointHoverRadius: 5,
+          pointHoverBorderWidth: 3,
+          pointRadius: 10,
+          fill: false,
+          borderWidth: 5,
+          data: [6, 14, 7, 15, 16, 12, 18, 22, 16]
+        }, {
+          datalabels: {
+            display: false
+          },
+          lineTension: 0,
+          label: "Data",
+          borderColor: "#355",
+          pointBackgroundColor: 'transparent',
+          pointHoverBackgroundColor: '#fff',
+          pointBorderColor: 'transparent',
+          pointHoverBorderColor: "#355",
+          pointBorderWidth: 0,
+          pointHoverRadius: 5,
+          pointHoverBorderWidth: 3,
+          pointRadius: 10,
+          fill: false,
+          borderWidth: 5,
+          data: []
+        }]
+      },
+      options: {
+        legend: {
+          display: false,
+          position: "bottom"
+        },
+        tooltips: {
+          intersect: false,
+          yPadding: 15,
+          enabled: false,
+          custom: function custom(tooltipModel) {
+            // Tooltip Element
+            var tooltipEl = document.getElementById('chartjs-tooltip');
+
+            // Create element on first render
+            if (!tooltipEl) {
+              tooltipEl = document.createElement('div');
+              tooltipEl.id = 'chartjs-tooltip';
+              // tooltipEl.innerHTML = "<table></table>";
+              document.body.appendChild(tooltipEl);
+            }
+
+            // Hide if no tooltip
+            if (tooltipModel.opacity === 0) {
+              tooltipEl.style.opacity = 0;
+              return;
+            }
+
+            // Set caret Position
+            tooltipEl.classList.remove('above', 'below', 'no-transform');
+            if (tooltipModel.yAlign) {
+              tooltipEl.classList.add(tooltipModel.yAlign);
+            } else {
+              tooltipEl.classList.add('no-transform');
+            }
+
+            function getBody(bodyItem) {
+              return bodyItem.lines;
+            }
+
+            // Set Text
+            if (tooltipModel.body) {
+              var titleLines = tooltipModel.title || [];
+              var bodyLines = tooltipModel.body.map(getBody);
+
+              var innerHtml;
+
+              //                     titleLines.forEach(function(title) {
+              //                         innerHtml += '<span>' + title + '</span>';
+              //                     });
+              //                     innerHtml += '</p>';
+
+              bodyLines.forEach(function (body, i) {
+                var colors = tooltipModel.labelColors[i];
+                var style = 'background:' + colors.backgroundColor;
+                style += '; border-color:' + colors.borderColor;
+                style += '; border-width: 2px';
+                var span = '<span style="' + style + '"></span>';
+                innerHtml = '<p>' + parseInt(body[0].replace(/\D+/g, "")) + '</p><span>\u0423\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u043E \u043D\u0430 1.8</span>';
+              });
+
+              var tableRoot = tooltipEl.querySelector('table');
+              tooltipEl.innerHTML = innerHtml;
+            }
+
+            // `this` will be the overall tooltip
+            var position = this._chart.canvas.getBoundingClientRect();
+
+            // Display, position, and set styles for font
+            tooltipEl.style.opacity = 1;
+            tooltipEl.style.position = 'absolute';
+            tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
+            tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
+            tooltipEl.style.fontFamily = tooltipModel._bodyFontFamily;
+            tooltipEl.style.fontSize = tooltipModel.bodyFontSize + 'px';
+            tooltipEl.style.fontStyle = tooltipModel._bodyFontStyle;
+            tooltipEl.style.padding = tooltipModel.yPadding + 'px ' + tooltipModel.xPadding + 'px';
+            tooltipEl.style.pointerEvents = 'none';
+          }
+
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+              // display: false,
+              beginAtZero: true,
+              maxTicksLimit: 5
+            },
+            gridLines: {
+              display: false
+            }
+          }],
+          xAxes: [{
+            gridLines: {
+              display: false
+            },
+            ticks: {
+              // display: false
+            }
+          }]
+        }
+      }
+    });
+  }
 });

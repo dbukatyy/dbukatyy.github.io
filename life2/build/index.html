@@ -182,27 +182,27 @@
         <!--tests-->
         <div class="tests">
           <div class="pagination">
-            <button class="pagination__item">
+            <button class="pagination__item" data-page="0">
               <span>
                 <svg class="icon">
                   <use xlink:href="assets/img/sprite.svg#icon-user"></use>
                 </svg>
               </span>
             </button>
-            <button class="pagination__item"> 
+            <button class="pagination__item" data-page="1"> 
               <span>1</span>
             </button>
-            <button class="pagination__item"> 
+            <button class="pagination__item" data-page="2"> 
               <span>2</span>
             </button>
-            <button class="pagination__item"> 
+            <button class="pagination__item" data-page="3"> 
               <span>3</span>
             </button>
-            <button class="pagination__item pagination__item_att"> 
+            <button class="pagination__item pagination__item_att" data-page="4"> 
               <span>4</span>
             </button>
           </div>
-          <section class="test">
+          <section class="test page page_active" data-page="4">
             <header class="test__head">
               <h2 class="h2 test__title">Рассогласование IV типа</h2>
               <h4 class="h4 test__subtitle">переживание “страха неудачи”</h4>
@@ -792,10 +792,122 @@
             </form>
           </section>
           <div class="tests__control">
-            <button class="btn btn_primery" type="submit">Назад</button>
-            <button class="btn btn_att" type="submit">Далее</button>
+            <button class="btn btn_primery js-page-prev" type="submit">Назад</button>
+            <button class="btn btn_att js-page-next" type="submit">Далее</button>
           </div>
         </div>
+        <!--results-->
+        <section class="results">
+          <div class="container_min">
+            <h2 class="h2 results__title">Результаты Самодиагностики</h2>
+            <div class="results__value">Величина психоэмоционального напряжения:
+              <span class="txt_gradient-att">22</span>
+            </div>
+            <div class="structure">
+              <h3 class="txt_gradient txt_centr">Струткура</h3>
+              <div class="radial">
+                <div class="radial__chart">
+                  <canvas id="myChart"></canvas>
+                </div>
+                <div class="radial__lable">I-тип рассогласования
+                  <strong>(обида)</strong>
+                </div>
+                <div class="radial__lable">II-тип рассогласования
+                  <strong>(страх)</strong>
+                </div>
+                <div class="radial__lable">III-тип рассогласования
+                  <strong>(вина)</strong>
+                </div>
+                <div class="radial__lable">IV-тип рассогласования
+                  <strong>(стыд)</strong>
+                </div>
+              </div>
+            </div>
+            <div class="relation">
+              <h3 class="txt_gradient txt_centr">соотношения неприятных переживаний</h3>
+              <div class="bars">
+                <div class="deadline"></div>
+                <div class="bars__axis-y">
+                  <p class="bars-y">
+                    <span>1</span>
+                    <i></i>
+                  </p>
+                  <p class="bars-y">
+                    <span>0.8</span>
+                    <i></i>
+                  </p>
+                  <p class="bars-y"> 
+                    <span>0.6</span>
+                    <i></i>
+                  </p>
+                  <p class="bars-y">
+                    <span>0.4</span>
+                    <i></i>
+                  </p>
+                  <p class="bars-y"> 
+                    <span>0.2</span>
+                    <i></i>
+                  </p>
+                  <p class="bars-y"> 
+                    <span>0</span>
+                    <i></i>
+                  </p>
+                </div>
+                <div class="bars__axis-x">
+                  <p class="bars-x">
+                    <span>0</span>
+                    <i></i>
+                  </p>
+                  <p class="bars-x">
+                    <span>20%</span>
+                    <i></i>
+                  </p>
+                  <p class="bars-x"> 
+                    <span>40%</span>
+                    <i></i>
+                  </p>
+                  <p class="bars-x">
+                    <span>60%</span>
+                    <i></i>
+                  </p>
+                  <p class="bars-x"> 
+                    <span>80%</span>
+                    <i></i>
+                  </p>
+                  <p class="bars-x"> 
+                    <span>100%</span>
+                    <i></i>
+                  </p>
+                </div>
+                <div class="bars__chart">
+                  <div class="bar" data-y="65" data-x="28">
+                    <div class="bar__info">sds</div>
+                  </div>
+                  <div class="bar" data-y="75" data-x="22">
+                    <div class="bar__info">sds</div>
+                  </div>
+                  <div class="bar" data-y="50" data-x="24">
+                    <div class="bar__info">sds</div>
+                  </div>
+                  <div class="bar" data-y="73" data-x="26">
+                    <div class="bar__info">sds</div>
+                  </div>
+                </div>
+              </div>
+              <p> 
+                <strong>Угрожающее состояние мышления (психики) </strong>патологически влияющее на жизненные физиологические процессы организма. Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан.
+              </p>
+              <div class="toggle">
+                <div class="toggle__head">Подробнее
+                  <svg class="icon">
+                    <use xlink:href="assets/img/sprite.svg#icon-arr-b"></use>
+                  </svg>
+                </div>
+                <div class="toggle__body"></div>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
       <!--training-->
       <section class="training">
