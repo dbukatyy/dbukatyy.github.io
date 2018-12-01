@@ -1,0 +1,79 @@
+extends layout/inner
+
+block title
+  | Личный кабинет
+
+block content
+  include ./section/panel
+  .ratings-block
+    .container
+      .ratings
+        a(href="profile.html").ratings__title.ratings__title_reverse.link.h4
+          svg.icon
+            use(xlink:href="assets/img/sprite.svg#icon-shape")
+          | Рейтинг Ваших участников
+        .ratings__items
+          a(href="").rating
+            .trend.trend_md
+              span 14,2
+              svg.icon
+                use(xlink:href="assets/img/sprite.svg#icon-arr-t")
+            .rating__info
+              p.rating__title Участник №1
+              p.caption Увеличено на 1,8
+          a(href="").rating
+            .trend.trend_md.trend_less
+              span 18,4
+              svg.icon
+                use(xlink:href="assets/img/sprite.svg#icon-arr-t")
+            .rating__info
+              p.rating__title Участник №4
+              p.caption Уменьшено на 2
+          a(href="").rating
+            .trend.trend_md
+              span 10,8
+              svg.icon
+                use(xlink:href="assets/img/sprite.svg#icon-arr-t")
+            .rating__info
+              p.rating__title Участник №3
+              p.caption Увеличено на 1,8
+          a(href="").rating
+            .trend.trend_md.trend_less
+              span 18,4
+              svg.icon
+                use(xlink:href="assets/img/sprite.svg#icon-arr-t")
+            .rating__info
+              p.rating__title Участник №4
+              p.caption Уменьшено на 2
+          a(href="").rating
+            .trend.trend_md
+              span 10,8
+              svg.icon
+                use(xlink:href="assets/img/sprite.svg#icon-arr-t")
+            .rating__info
+              p.rating__title Участник №3
+              p.caption Увеличено на 1,8
+          a(href="").rating
+            .trend.trend_md
+              span 10,8
+              svg.icon
+                use(xlink:href="assets/img/sprite.svg#icon-arr-t")
+            .rating__info
+              p.rating__title Участник №3
+              p.caption Увеличено на 1,8
+          a(href="").rating
+            .trend.trend_md.trend_less
+              span 18,4
+              svg.icon
+                use(xlink:href="assets/img/sprite.svg#icon-arr-t")
+            .rating__info
+              p.rating__title Участник №4
+              p.caption Уменьшено на 2
+          a(href="").rating
+            .trend.trend_md
+              span 10,8
+              svg.icon
+                use(xlink:href="assets/img/sprite.svg#icon-arr-t")
+            .rating__info
+              p.rating__title Участник №3
+              p.caption Увеличено на 1,8

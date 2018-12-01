@@ -12,6 +12,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    position: relative;
   }
 }
 
@@ -32,6 +33,101 @@
     font-family: 'Lato-bold';
     &:not(:last-child) {
       margin-right: 30px;
+    }
+  }
+}
+
+.login {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background: #F5F7FF;
+  border-radius: 16px;
+  padding: 5px 12px;
+  min-width: 190px;
+
+  &__name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 8px;
+  }
+
+  &__nav {
+    display: none;
+    max-width: 165px;
+    border-top: 1px solid @c-base3;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    a {
+      display: block;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+  }
+
+  &__toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    padding: 0;
+
+    &.active {
+      .icon {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &:hover {
+      .icon {
+        fill: @c-prim;
+      }
+    }
+
+    .icon {
+      width: 10px;
+      height: 13px;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.trend {
+  font-size: 14px;
+  display: inline-block;
+
+  .icon {
+    fill: @c-green;
+    width: 10px;
+    height: 12px;
+  }
+
+  &_md {
+    font-size: 30px;
+    font-weight: bold;
+
+    .icon {
+      fill: @c-green;
+      width: 13px;
+      height: 16px;
+    }
+  }
+
+  &_xl {
+    font-size: 42px;
+    font-weight: 800;
+
+    .icon {
+      fill: @c-green;
+      width: 16px;
+      height: 20px;
+    }
+  }
+
+  &_less {
+    .icon {
+      transform: rotate(180deg);
+      fill: #E51D29;
     }
   }
 }

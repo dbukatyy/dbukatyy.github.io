@@ -93,11 +93,26 @@ jQuery(document).ready(function () {
     }
   });
 
+  $('.toggle__head .icon').on('click', function () {
+    var topSpace = document.querySelector('.toggle').getBoundingClientRect().top;
+    $(this).toggleClass('active');
+    $('.toggle__body').slideToggle(0, function () {
+      $('html, body').animate({
+        scrollTop: $(".toggle").offset().top - topSpace
+      }, 0);
+    });
+  });
+
   $('.bar').each(function (i, el) {
     var bar = $(el),
         width = bar.data('x') + '%',
         height = bar.data('y') + '%';
     bar.css({ width: width, height: height });
+  });
+
+  $('.login__toggle').on('click', function () {
+    $(this).toggleClass('active');
+    $('.login__nav').slideToggle();
   });
 
   function initRadialChart() {
@@ -123,7 +138,7 @@ jQuery(document).ready(function () {
           },
           data: [4, 8.5, 5, 4.5],
           borderWidth: 0,
-          hoverBackgroundColor: [gradient, gradient, gradient, gradient],
+          hoverBackgroundColor: [gradient, gradient2, gradient, gradient2],
           backgroundColor: [gradient, gradient2, gradient, gradient2]
         }]
       },

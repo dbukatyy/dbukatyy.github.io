@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title> Личный кабинет
+    </title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Test">
+    <meta name="description" content="Test">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body class="bg-colored">
+    <!--header-->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <h1 class="h3 logo__top">живая игра</h1>
+          <span class="caption">выбывает слабейший</span>
+        </div>
+        <nav class="menu">
+          <a class="menu__link link" href="">Правила участия</a>
+          <a class="menu__link link" href="">Самодиагностика</a>
+          <a class="menu__link link txt_att" href="">“Лучшая Life”</a>
+          <a class="menu__link link" href="">Отзывы</a>
+          <a class="menu__link link js-modal" href="" data-modal="modal-contact">Контакты</a>
+        </nav>
+        <div class="login">
+          <div class="login__head">
+            <div class="trend">
+              <span>19,2</span>
+              <svg class="icon">
+                <use xlink:href="assets/img/sprite.svg#icon-arr-t"></use>
+              </svg>
+            </div>
+            <a class="link login__name" href="">Константин</a>
+            <button class="login__toggle">
+              <svg class="icon">
+                <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+              </svg>
+            </button>
+          </div>
+          <nav class="login__nav">
+            <a class="link" href="">Личный кабинет</a>
+            <a class="link" href="">Результаты самодиагностики</a>
+            <a class="link" href="">Настройки профиля</a>
+            <a class="link" href="">Выйти</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!--main-->
+    <main class="main">
+      <div class="control-panel">
+        <div class="container">
+          <nav class="breadcrumbs">
+            <a href="">Главная</a>
+            <a class="breadcrumbs_active" href="">Личный кабинет</a>
+          </nav>
+          <div class="panels">
+            <div class="profile">
+              <div class="profile__trend">
+                <div class="trend trend_xl">
+                  <span>19,2</span>
+                  <svg class="icon">
+                    <use xlink:href="assets/img/sprite.svg#icon-arr-t"></use>
+                  </svg>
+                </div>
+                <p class="caption">Увеличено на 1,8</p>
+              </div>
+              <div class="profile__info">
+                <h3 class="h3 profile__name">Филатов Константин</h3>
+                <a class="profile__mail" href="mailto:filatov224@mail.ru">filatov224@mail.ru</a>
+                <p class="caption">Приглашено: 4</p>
+              </div>
+            </div>
+            <a class="panel" href="">
+              <img class="panel__img" src="assets/img/workers.svg" alt="workers">
+              <p class="panel__title">Ваши участники</p>
+            </a>
+            <div class="panel-block">
+              <a class="panel" href="">
+                <img class="panel__img" src="assets/img/hired.svg" alt="hired">
+                <p class="panel__title">Пригласить участников</p>
+              </a>
+              <a class="panel panel_off" href="">
+                <img class="panel__img" src="assets/img/podium.svg" alt="podium">
+                <p class="panel__title">Чемпионат «Живая Игра»</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ratings-block">
+        <div class="container">
+          <div class="ratings">
+            <a class="ratings__title link h4" href="rating.html">Рейтинг Ваших участников
+              <svg class="icon">
+                <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+              </svg>
+            </a>
+            <div class="ratings__items">
+              <a class="rating" href="">
+                <div class="trend trend_md">
+                  <span>14,2</span>
+                  <svg class="icon">
+                    <use xlink:href="assets/img/sprite.svg#icon-arr-t"></use>
+                  </svg>
+                </div>
+                <div class="rating__info">
+                  <p class="rating__title">Участник №1</p>
+                  <p class="caption">Увеличено на 1,8</p>
+                </div>
+              </a>
+              <a class="rating" href="rating.html">
+                <div class="trend trend_md trend_less">
+                  <span>18,4</span>
+                  <svg class="icon">
+                    <use xlink:href="assets/img/sprite.svg#icon-arr-t"></use>
+                  </svg>
+                </div>
+                <div class="rating__info">
+                  <p class="rating__title">Участник №4</p>
+                  <p class="caption">Уменьшено на 2</p>
+                </div>
+              </a>
+              <a class="rating" href="rating.html">
+                <div class="trend trend_md">
+                  <span>10,8</span>
+                  <svg class="icon">
+                    <use xlink:href="assets/img/sprite.svg#icon-arr-t"></use>
+                  </svg>
+                </div>
+                <div class="rating__info">
+                  <p class="rating__title">Участник №3</p>
+                  <p class="caption">Увеличено на 1,8</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="ratings">
+            <a class="ratings__title link h4" href="">Общий рейтинг</a>
+            <div class="ratings__items">
+              <a class="rating" href="">
+                <div class="trend trend_md trend_less">
+                  <span>14,2</span>
+                  <svg class="icon">
+                    <use xlink:href="assets/img/sprite.svg#icon-arr-t"></use>
+                  </svg>
+                </div>
+                <div class="rating__info">
+                  <p class="rating__title">Общий</p>
+                  <p class="caption">Уменьшено на 2</p>
+                </div>
+              </a>
+              <a class="rating" href="">
+                <div class="trend trend_md">
+                  <span>18,4</span>
+                  <svg class="icon">
+                    <use xlink:href="assets/img/sprite.svg#icon-arr-t"></use>
+                  </svg>
+                </div>
+                <div class="rating__info">
+                  <p class="rating__title">Мужчины</p>
+                  <p class="caption">Увеличено на 1,8</p>
+                </div>
+              </a>
+              <a class="rating" href="">
+                <div class="trend trend_md">
+                  <span>10,8</span>
+                  <svg class="icon">
+                    <use xlink:href="assets/img/sprite.svg#icon-arr-t"></use>
+                  </svg>
+                </div>
+                <div class="rating__info">
+                  <p class="rating__title">Женщины</p>
+                  <p class="caption">Увеличено на 1,8</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="ratings">
+            <a class="ratings__title link h4" href="">Рейтинг по облостям
+              <svg class="icon">
+                <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+              </svg>
+            </a>
+            <div class="ratings__items">
+              <a class="rating" href="">
+                <div class="trend trend_md">
+                  <span>14,2</span>
+                  <svg class="icon">
+                    <use xlink:href="assets/img/sprite.svg#icon-arr-t"></use>
+                  </svg>
+                </div>
+                <div class="rating__info">
+                  <p class="rating__title">Московская</p>
+                  <p class="caption">Увеличено на 1,8</p>
+                </div>
+              </a>
+              <a class="rating" href="">
+                <div class="trend trend_md">
+                  <span>18,4</span>
+                  <svg class="icon">
+                    <use xlink:href="assets/img/sprite.svg#icon-arr-t"></use>
+                  </svg>
+                </div>
+                <div class="rating__info">
+                  <p class="rating__title">Самарская</p>
+                  <p class="caption">Увеличено на 1,8</p>
+                </div>
+              </a>
+              <a class="rating" href="">
+                <div class="trend trend_md trend_less">
+                  <span>10,8</span>
+                  <svg class="icon">
+                    <use xlink:href="assets/img/sprite.svg#icon-arr-t"></use>
+                  </svg>
+                </div>
+                <div class="rating__info">
+                  <p class="rating__title">Нижегородская</p>
+                  <p class="caption">Уменьшено на 2</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--footer-->
+    <footer class="footer">
+      <div class="container">
+        <div class="logo">
+          <h1 class="h3 logo__top">живая игра</h1>
+          <span class="caption">выбывает слабейший</span>
+        </div>
+        <nav class="menu">
+          <a class="menu__link link" href="">Правила участия</a>
+          <a class="menu__link link" href="">Самодиагностика</a>
+          <a class="menu__link link txt_att" href="">“Лучшая Life”</a>
+          <a class="menu__link link" href="">Отзывы</a>
+          <a class="menu__link link" href="">Контакты</a>
+        </nav>
+        <button class="btn btn_primery">Войти
+          <svg class="icon">
+            <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+          </svg>
+        </button>
+        <p class="caption">Идея и воплощение АНО "НПИ ФМ" в рамках гуманитарного проекта "Школа долгожития и здравомыслия"</p>
+      </div>
+      <p class="copy caption">© 2000 – 2016 Самодиагностика организма. Все права защищены</p>
+    </footer>
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>
