@@ -1,0 +1,33 @@
+extends layout/inner
+
+block title
+  | Показатели участника
+
+block content
+  include ./section/panel
+  .indicators
+    .container
+      a(href="profile.html").members__title.link.h4
+        svg.icon
+          use(xlink:href="assets/img/sprite.svg#icon-shape")
+        | Участник №3
+      .indicators__blocks
+        .indicators__panels
+          p.indicators__panel
+            span.h1 12
+            | приглашенных участников
+          p.indicators__panel
+            span.h1 19,2
+            | средний рейтинг участников
+          button#add.btn.btn_att
+            span.txt-show Сравнить рейтинг
+            span.txt-hide Скрыть сравнение
+        .indicators__chart
+          canvas#lineChart.lineChart
+          .legends
+            .legend
+              img(src="assets/img/line-att.svg", alt="line")
+              | Ваш рейтинг
+            .legend
+              img(src="assets/img/line-prim.svg", alt="line")
+              | Рейтинг участника

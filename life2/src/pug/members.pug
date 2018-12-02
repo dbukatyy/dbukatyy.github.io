@@ -1,0 +1,41 @@
+extends layout/inner
+
+block title
+  | Ваши участники
+
+block content
+  include ./section/panel
+  .members
+    .container
+      .members__head
+        a(href="profile.html").members__title.link.h4
+          svg.icon
+            use(xlink:href="assets/img/sprite.svg#icon-shape")
+          | Ваши участники
+        .members__control
+          button.btn.btn_primery.js-modal
+            svg.icon
+              use(xlink:href="assets/img/sprite.svg#icon-list") 
+            | Списки участников
+      .members__items
+        .member
+          p.member__title Петров Максим
+          a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+        .member
+          p.member__title Петров Максим
+          a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+        .member
+          p.member__title Петров Максим
+          a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+        .member
+          p.member__title Петров Максим
+          a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+        .member
+          p.member__title Петров Максим
+          a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+        .member
+          p.member__title Петров Максим
+          a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+        .member
+          p.member__title Петров Максим
+          a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com

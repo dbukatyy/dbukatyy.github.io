@@ -307,6 +307,10 @@ p {
 	position: relative;
 	margin-bottom: 200px;
 
+	.results {
+		display: none;
+	}
+
 	&:before {
 		content: '';
     display: inline-block;
@@ -972,7 +976,6 @@ p {
 }
 
 .results {
-	display: none;
 	background: @c-white;
 	.shadow;
 	max-width: 990px;
@@ -1403,6 +1406,7 @@ p {
 			.icon {
 				transform: rotate(180deg);
 				margin-right: 10px;
+				vertical-align: unset;
 			}
 		}
 	}
@@ -1451,5 +1455,172 @@ p {
 
 	.trend {
 		margin-right: 30px;
+	}
+}
+
+.members {
+	padding: 65px 0 100px;
+
+	&__head {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 24px;
+
+		.btn {
+			text-transform: none;
+		}
+	}
+
+	&__title {
+		font-weight: bold;
+		.icon {
+			transform: rotate(180deg);
+			margin-right: 10px;
+			vertical-align: unset;
+			fill: @c-prim;
+			width: 13px;
+			height: 13px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.member {
+	padding: 18px 24px;
+	border-radius: 5px;
+	.shadow;
+	background: @c-white;
+	width: 265px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+
+	&:nth-of-type(4n) {
+		margin-right: 0;
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 16px;
+		margin: 0;
+	}
+
+	.caption {
+		color: #A3A3A3;
+		text-decoration: none;
+	}
+}
+
+
+#chartjs-tooltip {
+	color: @c-base;
+	border-radius: 5px;
+	background-color: @c-base3;
+	text-align: center;
+}
+
+#chartjs-tooltip p {
+  margin: 0 0 5px;
+  font-weight: bold;
+  font-size: 34px;
+}
+
+.lineChart {
+	width: 100% !important;
+}
+
+.indicators {
+	padding: 80px 0;
+
+	&__chart {
+		width: 75%;
+		background: @c-white;
+		border-radius: 5px;
+		.shadow;
+		padding: 24px;
+	}
+
+	&__blocks {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-top: 24px;
+	}
+
+	&__panels {
+		background: @c-white;
+		border-radius: 5px;
+		.shadow;
+		padding: 0 32px;
+		max-width: 265px;
+		text-align: center;
+		position: relative;
+		.btn {
+			width: 230px;
+			min-width: 230px;
+			margin: auto;
+			left: 0;
+			right: 0;
+			bottom: -20px;
+			position: absolute;
+			padding: 10px 25px;
+
+			.txt-hide {
+				display: none;
+			}
+			
+			.txt-show {
+				display: inline;
+			}
+
+			&_att.active {
+				background: @c-gradient no-repeat;
+				box-shadow: 0 6px 25px -5px @c-prim;
+
+				.txt-hide {
+					display: inline;
+				}
+
+				.txt-show {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__panel {
+		line-height: 20px;
+		padding: 52px 0;
+
+		&:first-of-type {
+			border-bottom: 1px solid @c-base3;
+		}
+		span {
+			display: block;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.legends {
+	text-align: center;
+	display: none;
+}
+
+.legend {
+	display: inline-block;
+	margin-right: 30px;
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 20px;
+	img {
+		margin-right: 5px;
+		vertical-align: middle;
 	}
 }

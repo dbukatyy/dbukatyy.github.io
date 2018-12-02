@@ -114,9 +114,13 @@ jQuery(document).ready(function () {
   })
 
 
+  initRadialChart();
+  initLineChart();
 
   function initRadialChart() {
-    var ctx = document.getElementById('myChart').getContext('2d');
+    const chart = document.getElementById('myChart');
+    if (!chart) return null;
+    var ctx = chart.getContext('2d');
 
     var gradient = ctx.createLinearGradient(0, 0, 0, 600);
     gradient.addColorStop(0, 'rgba(255,91,77,.5)');
@@ -150,19 +154,28 @@ jQuery(document).ready(function () {
     });
   }
 
-  initRadialChart();
-
   function initLineChart() {
+    const chart = document.getElementById('lineChart');
+    if (!chart) return null;
     var arr = [16, 4, 17, 15, 16, 10, 8, 20, 16];
     var visible = true;
-    $('#add').on('click', () => {
+    var ctx2 = chart.getContext('2d');
+    var gradient = ctx2.createLinearGradient(0, 0, 0, 600);
+    gradient.addColorStop(0, 'rgb(255,91,77)');
+    gradient.addColorStop(.5, 'rgb(255,121,26)');
+    var gradient2 = ctx2.createLinearGradient(0, 0, 0, 600);
+    gradient2.addColorStop(0, 'rgb(74,117,248)');
+    gradient2.addColorStop(.5, 'rgb(148,175,255)');
+
+    $('#add').on('click', (e) => {
+      e.preventDefault();
       visible ? myChart2.data.datasets[1].data = arr : myChart2.data.datasets[1].data = [];
       visible = !visible;
       myChart2.update();
+      $(e.currentTarget).toggleClass('active');
+      $('.legends').fadeToggle();
     });
-    var ctx2 = document.getElementById('lineChart').getContext('2d');
-  
-  
+    
     var myChart2 = new Chart(ctx2, {
         type: 'line',
         data: {
@@ -173,12 +186,12 @@ jQuery(document).ready(function () {
                 },
                 lineTension: 0,
                 label: "Data",
-                borderColor: "#000",
+                borderColor: gradient,
                 pointBackgroundColor: 'transparent',
                 pointHoverBackgroundColor: '#fff',
                 pointBorderWidth: 0,
                 pointBorderColor: 'transparent',
-                pointHoverBorderColor: "#000",
+                pointHoverBorderColor: gradient,
                 pointHoverRadius: 5,
                 pointHoverBorderWidth: 3,
                 pointRadius: 10,
@@ -191,11 +204,11 @@ jQuery(document).ready(function () {
                 },
                 lineTension: 0,
                 label: "Data",
-                borderColor: "#355",
+                borderColor: gradient2,
                 pointBackgroundColor: 'transparent',
                 pointHoverBackgroundColor: '#fff',
                 pointBorderColor: 'transparent',
-                pointHoverBorderColor: "#355",
+                pointHoverBorderColor: gradient2,
                 pointBorderWidth: 0,
                 pointHoverRadius: 5,
                 pointHoverBorderWidth: 3,
@@ -222,7 +235,6 @@ jQuery(document).ready(function () {
                     if (!tooltipEl) {
                         tooltipEl = document.createElement('div');
                         tooltipEl.id = 'chartjs-tooltip';
-                        // tooltipEl.innerHTML = "<table></table>";
                         document.body.appendChild(tooltipEl);
                     }
   
@@ -248,25 +260,12 @@ jQuery(document).ready(function () {
                     if (tooltipModel.body) {
                         var titleLines = tooltipModel.title || [];
                         var bodyLines = tooltipModel.body.map(getBody);
-  
                         var innerHtml;
-  
-    //                     titleLines.forEach(function(title) {
-    //                         innerHtml += '<span>' + title + '</span>';
-    //                     });
-    //                     innerHtml += '</p>';
-  
+
                         bodyLines.forEach(function(body, i) {
-                            var colors = tooltipModel.labelColors[i];
-                            var style = 'background:' + colors.backgroundColor;
-                            style += '; border-color:' + colors.borderColor;
-                            style += '; border-width: 2px';
-                            var span = '<span style="' + style + '"></span>';
-                            innerHtml = `<p>${parseInt(body[0].replace(/\D+/g,""))}</p><span>Увеличено на 1.8</span>`
+                          innerHtml = `<p>${parseInt(body[0].replace(/\D+/g,""))}</p><span>Увеличено на 1.8</span>`
                         });
                   
-  
-                        var tableRoot = tooltipEl.querySelector('table');
                         tooltipEl.innerHTML = innerHtml;
                     }
   
@@ -294,12 +293,12 @@ jQuery(document).ready(function () {
                         maxTicksLimit: 5,
                     },
                     gridLines: {
-                        display: false
+                        display: true
                     }
                 }],
                 xAxes: [{
                     gridLines: {
-                      display: false
+                      display: true
                     },
                     ticks: {
                       // display: false
@@ -310,8 +309,6 @@ jQuery(document).ready(function () {
     });
 
   }
-
-
 
 });
 
