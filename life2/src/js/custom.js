@@ -1,5 +1,7 @@
 jQuery(document).ready(function () {
 
+  new ClipboardJS('.js-copy');
+
   // modal
   const modal = $('.modal-block');
 
@@ -8,7 +10,9 @@ jQuery(document).ready(function () {
     const insideModal = el.closest('.modal').hasClass('modal');
     const isClose = el.hasClass('modal__close') || el.closest('.modal__close').hasClass('modal__close');
     if (!insideModal || isClose) {
-      reInitModalSlide();
+      if (modal.hasClass('modal-block_hided')) {
+        modal.removeClass('active');
+      } 
       modal.hide(300);
     }
   })
@@ -16,12 +20,23 @@ jQuery(document).ready(function () {
   $('.js-modal').on('click', function (e) {
     e.preventDefault();
     const wind = $(this).data('modal');
+    const modal = $(`#${wind}`);
     const slide = $(this).data('slide');
 
-    initModalSlide();
-    $('.modal .slider-items').slick('slickGoTo', +slide);
+    if (modal.hasClass('modal-block_hided')) {
+      $('.modal .slider-items').slick('slickGoTo', +slide);
+      modal.addClass('active');
+    } else {
+      $(`#${wind}`).show(300);
+    }
+  })
 
-    $(`#${wind}`).show();
+  $('.js-scroll').on('click', function (e) {
+    e.preventDefault();
+    const section = $(this).data('section');
+    $('html, body').animate({
+      scrollTop: $(section).offset().top - 150
+    }, 1000);
   })
 
   $('.password__toggle').on('click', function (e) {
@@ -36,18 +51,14 @@ jQuery(document).ready(function () {
     nextArrow: ".slider .slick__next",
   });
 
-  function initModalSlide() {
+  // function initModalSlide() {
     $('.modal .slider-items').slick({
       dots: false,
       slidesToShow: 1,
       prevArrow: ".modal .slick__prev",
       nextArrow: ".modal .slick__next",
     });
-  }
-
-  function reInitModalSlide() {
-    $('.modal .slider-items').slick('unslick');
-  }
+  // }
 
   $('.pagination__item').on('click', function (e) {
     e.preventDefault();
@@ -74,6 +85,13 @@ jQuery(document).ready(function () {
       nextPage.addClass('page_active');
       $('.pagination__item').removeClass('pagination__item_att');
       $(`.pagination__item[data-page=${nextNumber}]`).addClass('pagination__item_att');
+    } else {
+      const scroll = $('.tests').offset().top;
+      $('.tests').hide();
+      $('.results').show();
+      $('html, body').animate({
+        scrollTop: scroll
+      }, 0);
     }
   })
 
@@ -92,13 +110,13 @@ jQuery(document).ready(function () {
   })
 
   $('.toggle__head .icon').on('click', function() {
-    const topSpace = document.querySelector('.toggle').getBoundingClientRect().top;
+    const topSpace = document.querySelector('.toggle').getBoundingClientRect().top + scrollY;
+    console.log(topSpace);
     $(this).toggleClass('active');
-    $('.toggle__body').slideToggle(0, function() {
-			$('html, body').animate({
-			  scrollTop: $(".toggle").offset().top - topSpace
-      }, 0);
-    });
+    $('.toggle__body').slideToggle();
+    // $('html, body').animate({
+    //   scrollTop: 0
+    // }, 0);
   })
 
   $('.bar').each((i, el) => {
@@ -108,11 +126,40 @@ jQuery(document).ready(function () {
     bar.css({ width, height })
   })
 
-  $('.login__toggle').on('click', function() {
+  $('.signin__toggle').on('click', function() {
     $(this).toggleClass('active');
-    $('.login__nav').slideToggle();
+    $('.signin__nav').slideToggle();
   })
 
+  $('.js-test').on('click', function(e) {
+    e.preventDefault();
+    const scroll = window.scrollY;
+    $(this).closest('.form-block__inner').hide();
+    $('.tests').show();
+    $('html, body').animate({
+      scrollTop: scroll
+    }, 0);
+  })
+
+  $('.collapse__head').on('click', function() {
+    $(this).toggleClass('active');
+    $(this).siblings('.collapse__body').slideToggle();
+  })
+
+  $('.members__add').on('click', function(e) {
+    e.preventDefault();
+    $(this).hide().siblings('.members__items_active').hide();
+    $(this).siblings('.members__items_all').add('.members-save').show();
+  })
+
+  $('.members-category').on('click', function(e) {
+    e.preventDefault();
+    const category = $(this);
+    const categoryId = $(this).data('category');
+    $('.members-category, .members__items').removeClass('active');
+    category.add(categoryId).addClass('active');
+    $('.members-save').hide();
+  })
 
   initRadialChart();
   initLineChart();
@@ -224,8 +271,8 @@ jQuery(document).ready(function () {
                 position: "bottom"
             },
           tooltips: {
-              intersect: false,
-              yPadding: 15,
+              intersect: true,
+              yPadding: 10,
               enabled: false,
               custom: function(tooltipModel) {
                     // Tooltip Element

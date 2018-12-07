@@ -20,10 +20,22 @@
         p.panel__title Ваши участники
       
       .panel-block
-        a(href="").panel
+        a(href="invite.html").panel
           img(src="assets/img/hired.svg", alt="hired").panel__img
           p.panel__title Пригласить участников
-        a(href="").panel.panel_off
+        a(href="" data-modal="modal-develop").panel.panel_off.js-modal
           img(src="assets/img/podium.svg", alt="podium").panel__img
           p.panel__title Чемпионат «Живая Игра»
+  
+  //modal-develop
+  #modal-develop.modal-block
+    .modal-wrapp
+      .modal
+        .modal__inner
+          .contacts
+            h2.h2.contacts__title Чемпионат «Живая Игра»
+            p Данный раздел находится в разработке!
+
+        button.modal__close
+          img(src="assets/img/close.svg", alt="close")
       

@@ -16,7 +16,7 @@ block content
 				button.btn.btn_att Участвовать в игре
 	
 	//rules
-	section.rules
+	section#rules.rules
 		.container
 			.rules__info
 				h2.h2.rules__title Правило игры: вышибают слабейшего
@@ -87,7 +87,7 @@ block content
 					img(src="assets/img/thinks.png", alt="thinks")
 
 	//form-block
-	section.form-block
+	section#diagnostic.form-block
 		.form-block__inner
 			h2.h2 Измерь свой стресс
 			p Став участником “Живой игры” можно узнать величину своего стресса - 
@@ -117,7 +117,7 @@ block content
 						svg.icon
 							use(xlink:href="assets/img/sprite.svg#icon-arr-b")
 							
-				button(type="submit").btn.btn_att Начать Самодиагностику
+				button(type="submit").btn.btn_att.js-test Начать Самодиагностику
 
 		//tests
 		.tests
@@ -135,6 +135,14 @@ block content
 				button.pagination__item.pagination__item_att(data-page="4") 
 					span 4
 
+			section.page(data-page="0")
+				p page 0
+			section.page(data-page="1")
+				p page 1
+			section.page(data-page="2")
+				p page 2
+			section.page(data-page="3")
+				p page 3
 			section.test.page.page_active(data-page="4")
 				header.test__head
 					h2.h2.test__title Рассогласование IV типа
@@ -582,13 +590,14 @@ block content
 					span.tooltip мыслинг
 						span.tooltip__inner тренировка свойств мышления человека, направленная на реорганизацию опасных свойств с целью совершенствования полезных свойств и повышения психоэмоциональной стабильности.
 					| «Лучшая Life»: шесть недель совершенстования! 72 часа тренировок! 12 занятий со специалистами!
-			button.btn.btn_att Перейти к мыслингу
+			.txt_centr
+				button.btn.btn_att Перейти к мыслингу
 		button.to
 			svg.icon
 				use(xlink:href="assets/img/sprite.svg#icon-arr-b")
 
 	//reviews
-	section.reviews
+	section#reviews.reviews
 		.container
 			h2.h2.reviews__title Отзывы участников Живой игры
 			.slider
@@ -707,13 +716,14 @@ block content
 									img(src="assets/img/eay.svg", alt="eay")
 									span Показать пароль
 						a.link.link_prim(href="") Забыли пароль?
-						button.btn.btn_primery Войти
+						button.btn.btn_primery
+							a(href="profile.html") Войти
 
 				button.modal__close
 					img(src="assets/img/close.svg", alt="close")
 
 	//modal-slider
-	#modal-slider.modal-block
+	#modal-slider.modal-block.modal-block_hided
 		.modal-wrapp
 			.modal.modal_md
 				.modal__inner

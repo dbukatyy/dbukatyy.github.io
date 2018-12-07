@@ -13,11 +13,11 @@ block content
             use(xlink:href="assets/img/sprite.svg#icon-shape")
           | Ваши участники
         .members__control
-          button.btn.btn_primery.js-modal
+          button.btn.btn_primery.js-modal(data-modal="modal-members")
             svg.icon
               use(xlink:href="assets/img/sprite.svg#icon-list") 
             | Списки участников
-      .members__items
+      .members__panels
         .member
           p.member__title Петров Максим
           a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
@@ -39,3 +39,176 @@ block content
         .member
           p.member__title Петров Максим
           a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+
+    //modal-members
+    #modal-members.modal-block
+      .modal-wrapp
+        .modal.modal_colored
+          .modal__inner
+            .members-control
+              h2.h4.members-control__title Списки участников
+              .members-categories
+                button(data-category="#members-relatives").members-category
+                  span.members-category__count 5
+                  | Родственники
+                button(data-category="#members-colleague").members-category.active
+                  span.members-category__count 3
+                  | Коллеги
+                button(data-category="#members-groupmates").members-category
+                  span.members-category__count 2
+                  | Одногруппники
+                button(data-category="#members-neighborhood").members-category
+                  | Соседи
+                button(data-category="#members-frends").members-category
+                  | Друзья
+                button(data-category="#members-comrads").members-category
+                  | Товарищи
+                button(data-category="#members-school").members-category
+                  | Школьные друзья
+                button(data-category="#members-university").members-category
+                  | Друзья по вузу
+
+                button.btn.btn_primery.members-save Сохранить
+
+              .members__list
+                form(action="")#members-colleague.members__items.active
+                  button.members__add + Добавить участников в список
+                  .members__items_active
+                    .member.member_full
+                      .member__control
+                        label.checkbox
+                          input(type="checkbox" name="" value="" checked)
+                          .checkbox__inner
+                            .checkbox-view.checkbox-view_circle
+                              span
+                                svg.icon
+                                  use(xlink:href="assets/img/sprite.svg#icon-check")
+                      .member__info
+                        p.member__title Петров Максим
+                        a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+                    .member.member_full
+                      .member__control
+                        label.checkbox
+                          input(type="checkbox" name="" value="" checked)
+                          .checkbox__inner
+                            .checkbox-view.checkbox-view_circle
+                              span
+                                svg.icon
+                                  use(xlink:href="assets/img/sprite.svg#icon-check")
+                      .member__info
+                        p.member__title Петров Максим
+                        a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+                    .member.member_full
+                      .member__control
+                        label.checkbox
+                          input(type="checkbox" name="" value="" checked)
+                          .checkbox__inner
+                            .checkbox-view.checkbox-view_circle
+                              span
+                                svg.icon
+                                  use(xlink:href="assets/img/sprite.svg#icon-check")
+                      .member__info
+                        p.member__title Петров Максим
+                        a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+                  .members__items_all
+                    .member.member_full
+                      .member__control
+                        label.checkbox
+                          input(type="checkbox" name="" value="")
+                          .checkbox__inner
+                            .checkbox-view.checkbox-view_circle
+                              span
+                                svg.icon
+                                  use(xlink:href="assets/img/sprite.svg#icon-check")
+                      .member__info
+                        p.member__title Петров Максим
+                        a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+                    .member.member_full
+                      .member__control
+                        label.checkbox
+                          input(type="checkbox" name="" value="")
+                          .checkbox__inner
+                            .checkbox-view.checkbox-view_circle
+                              span
+                                svg.icon
+                                  use(xlink:href="assets/img/sprite.svg#icon-check")
+                      .member__info
+                        p.member__title Петров Максим
+                        a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+                    .member.member_full
+                      .member__control
+                        label.checkbox
+                          input(type="checkbox" name="" value="")
+                          .checkbox__inner
+                            .checkbox-view.checkbox-view_circle
+                              span
+                                svg.icon
+                                  use(xlink:href="assets/img/sprite.svg#icon-check")
+                      .member__info
+                        p.member__title Петров Максим
+                        a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+                    .member.member_full
+                      .member__control
+                        label.checkbox
+                          input(type="checkbox" name="" value="")
+                          .checkbox__inner
+                            .checkbox-view.checkbox-view_circle
+                              span
+                                svg.icon
+                                  use(xlink:href="assets/img/sprite.svg#icon-check")
+                      .member__info
+                        p.member__title Петров Максим
+                        a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+                    .member.member_full
+                      .member__control
+                        label.checkbox
+                          input(type="checkbox" name="" value="")
+                          .checkbox__inner
+                            .checkbox-view.checkbox-view_circle
+                              span
+                                svg.icon
+                                  use(xlink:href="assets/img/sprite.svg#icon-check")
+                      .member__info
+                        p.member__title Петров Максим
+                        a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+                    .member.member_full
+                      .member__control
+                        label.checkbox
+                          input(type="checkbox" name="" value="")
+                          .checkbox__inner
+                            .checkbox-view.checkbox-view_circle
+                              span
+                                svg.icon
+                                  use(xlink:href="assets/img/sprite.svg#icon-check")
+                      .member__info
+                        p.member__title Петров Максим
+                        a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+                    .member.member_full
+                      .member__control
+                        label.checkbox
+                          input(type="checkbox" name="" value="")
+                          .checkbox__inner
+                            .checkbox-view.checkbox-view_circle
+                              span
+                                svg.icon
+                                  use(xlink:href="assets/img/sprite.svg#icon-check")
+                      .member__info
+                        p.member__title Петров Максим
+                        a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
+                form(action="")#members-relatives.members__items
+                  p Родственники
+                form(action="")#members-groupmates.members__items
+                  p Одногруппники
+                form(action="")#members-neighborhood.members__items
+                  p Соседи
+                form(action="")#members-frends.members__items
+                  p Друзья
+                form(action="")#members-comrads.members__items
+                  p Товарищи
+                form(action="")#members-school.members__items
+                  p Школьные друзья
+                form(action="")#members-university.members__items
+                  p Друзья по вузу
+
+          button.modal__close
+            img(src="assets/img/close.svg", alt="close")

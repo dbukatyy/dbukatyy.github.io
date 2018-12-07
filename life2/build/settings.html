@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title> Показатели участника
+    <title> Личный кабинет
     </title>
     <meta charset="UTF-8">
     <meta name="keywords" content="Test">
@@ -58,88 +58,85 @@
             <a href="">Главная</a>
             <a class="breadcrumbs_active" href="">Личный кабинет</a>
           </nav>
-          <div class="panels">
-            <div class="profile">
-              <div class="profile__trend">
-                <div class="trend trend_xl">
-                  <span>19,2</span>
-                  <svg class="icon">
-                    <use xlink:href="assets/img/sprite.svg#icon-arr-t"></use>
-                  </svg>
-                </div>
-                <p class="caption">Увеличено на 1,8</p>
-              </div>
-              <div class="profile__info">
-                <h3 class="h3 profile__name">Филатов Константин</h3>
-                <a class="profile__mail" href="mailto:filatov224@mail.ru">filatov224@mail.ru</a>
-                <p class="caption">Приглашено: 4</p>
-              </div>
-            </div>
-            <a class="panel" href="members.html">
-              <img class="panel__img" src="assets/img/workers.svg" alt="workers">
-              <p class="panel__title">Ваши участники</p>
-            </a>
-            <div class="panel-block">
-              <a class="panel" href="invite.html">
-                <img class="panel__img" src="assets/img/hired.svg" alt="hired">
-                <p class="panel__title">Пригласить участников</p>
-              </a>
-              <a class="panel panel_off js-modal" href="" data-modal="modal-develop">
-                <img class="panel__img" src="assets/img/podium.svg" alt="podium">
-                <p class="panel__title">Чемпионат «Живая Игра»</p>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!--modal-develop-->
-        <div class="modal-block" id="modal-develop">
-          <div class="modal-wrapp">
-            <div class="modal">
-              <div class="modal__inner">
-                <div class="contacts">
-                  <h2 class="h2 contacts__title">Чемпионат «Живая Игра»</h2>
-                  <p>Данный раздел находится в разработке!</p>
-                </div>
-              </div>
-              <button class="modal__close">
-                <img src="assets/img/close.svg" alt="close">
-              </button>
-            </div>
-          </div>
         </div>
       </div>
-      <div class="indicators">
-        <div class="container">
-          <a class="members__title link h4" href="profile.html">
-            <svg class="icon">
-              <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
-            </svg>Участник №3
-          </a>
-          <div class="indicators__blocks">
-            <div class="indicators__panels">
-              <p class="indicators__panel">
-                <span class="h1">12</span>приглашенных участников
-              </p>
-              <p class="indicators__panel">
-                <span class="h1">19,2</span>средний рейтинг участников
-              </p>
-              <button class="btn btn_att" id="add">
-                <span class="txt-show">Сравнить рейтинг</span>
-                <span class="txt-hide">Скрыть сравнение</span>
-              </button>
-            </div>
-            <div class="indicators__chart">
-              <canvas class="lineChart" id="lineChart"></canvas>
-              <div class="legends">
-                <div class="legend">
-                  <img src="assets/img/line-att.svg" alt="line">Ваш рейтинг
-                </div>
-                <div class="legend">
-                  <img src="assets/img/line-prim.svg" alt="line">Рейтинг участника
-                </div>
+      <div class="settings-block">
+        <div class="container_min">
+          <h1 class="h4">
+            <a class="settings-block__title link" href="profile.html">
+              <svg class="icon">
+                <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+              </svg>Настройки профиля
+            </a>
+          </h1>
+          <form class="settings" action="" id="settings-form">
+            <div class="settings__item">
+              <h2 class="h4 settings__title">Личные данные</h2>
+              <div class="settings__fields">
+                <label class="form__field form__field_half">
+                  <p>Имя</p>
+                  <input class="input" type="text" name="name">
+                </label>
+                <label class="form__field form__field_half">
+                  <p>Фамилия</p>
+                  <input class="input" type="text" name="second-name">
+                </label>
+                <label class="form__field form__field_half">
+                  <p>Пол</p>
+                  <div class="select">
+                    <select name="sex">
+                      <option value="m">Мужской</option>
+                      <option value="fm">Женский</option>
+                    </select>
+                    <svg class="icon">
+                      <use xlink:href="assets/img/sprite.svg#icon-arr-b"></use>
+                    </svg>
+                  </div>
+                </label>
+                <label class="form__field form__field_half">
+                  <p>E-mail</p>
+                  <input class="input" type="email" name="email">
+                </label>
               </div>
             </div>
-          </div>
+            <div class="settings__item">
+              <h2 class="h4 settings__title">Место проживания</h2>
+              <div class="settings__fields">
+                <label class="form__field form__field_half">
+                  <p>Область</p>
+                  <div class="select">
+                    <select name="sex">
+                      <option value="m">Московская</option>
+                      <option value="fm">Минская</option>
+                    </select>
+                    <svg class="icon">
+                      <use xlink:href="assets/img/sprite.svg#icon-arr-b"></use>
+                    </svg>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="settings__item">
+              <h2 class="h4 settings__title">Смена пароля</h2>
+              <div class="settings__fields">
+                <div class="full-block">
+                  <label class="form__field form__field_half">
+                    <p>Старый пароль</p>
+                    <input class="input" type="password" name="password">
+                  </label>
+                </div>
+                <label class="form__field form__field_half">
+                  <p>Новый пароль</p>
+                  <input class="input" type="password" name="new-password">
+                </label>
+                <label class="form__field form__field_half">
+                  <p>Повторите пароль</p>
+                  <input class="input" type="password" name="new-password-repeat">
+                </label>
+              </div>
+            </div>
+            <button class="btn btn_att" type="submit" disabled>Сохранить изменения</button>
+          </form>
         </div>
       </div>
     </main>

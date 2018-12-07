@@ -1,0 +1,61 @@
+extends layout/inner
+
+block title
+  | Личный кабинет
+
+block content
+  include ./section/bredcrumbs
+  .settings-block
+    .container_min
+      h1.h4
+        a(href="profile.html").settings-block__title.link
+          svg.icon
+            use(xlink:href="assets/img/sprite.svg#icon-shape")
+          | Настройки профиля
+      
+      form(action="")#settings-form.settings
+        .settings__item
+          h2.h4.settings__title Личные данные
+          .settings__fields
+            label.form__field.form__field_half
+              p Имя
+              input.input(type="text" name="name")
+            label.form__field.form__field_half
+              p Фамилия
+              input.input(type="text" name="second-name")
+            label.form__field.form__field_half
+              p Пол
+              .select
+                select(name="sex")
+                  option(value="m") Мужской
+                  option(value="fm") Женский
+                svg.icon
+                  use(xlink:href="assets/img/sprite.svg#icon-arr-b")
+            label.form__field.form__field_half
+              p E-mail
+              input.input(type="email" name="email")
+        .settings__item
+          h2.h4.settings__title Место проживания
+          .settings__fields
+            label.form__field.form__field_half
+              p Область
+              .select
+                select(name="sex")
+                  option(value="m") Московская
+                  option(value="fm") Минская
+                svg.icon
+                  use(xlink:href="assets/img/sprite.svg#icon-arr-b")
+        .settings__item
+          h2.h4.settings__title Смена пароля
+          .settings__fields
+            .full-block
+              label.form__field.form__field_half
+                p Старый пароль
+                input.input(type="password" name="password")
+            label.form__field.form__field_half
+              p Новый пароль
+              input.input(type="password" name="new-password")
+            label.form__field.form__field_half
+              p Повторите пароль
+              input.input(type="password" name="new-password-repeat")
+        button(type="submit" disabled).btn.btn_att Сохранить изменения

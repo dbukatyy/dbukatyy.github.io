@@ -19,31 +19,32 @@
           <span class="caption">выбывает слабейший</span>
         </div>
         <nav class="menu">
-          <a class="menu__link link" href="">Правила участия</a>
-          <a class="menu__link link" href="">Самодиагностика</a>
-          <a class="menu__link link txt_att" href="">“Лучшая Life”</a>
-          <a class="menu__link link" href="">Отзывы</a>
-          <a class="menu__link link js-modal" href="" data-modal="modal-contact">Контакты</a>
+          <a class="menu__link link js-scroll" href="" data-section="#rules">Правила участия
+            <a class="menu__link link js-scroll" href="" data-section="#diagnostic">Самодиагностика</a>
+            <a class="menu__link link txt_att" href="https://l-life.ru/">“Лучшая Life”</a>
+            <a class="menu__link link js-scroll" href="" data-section="#reviews">Отзывы</a>
+            <a class="menu__link link js-modal" href="" data-modal="modal-contact">Контакты</a>
+          </a>
         </nav>
-        <div class="login">
-          <div class="login__head">
+        <div class="signin">
+          <div class="signin__head">
             <div class="trend">
               <span>19,2</span>
               <svg class="icon">
                 <use xlink:href="assets/img/sprite.svg#icon-arr-t"></use>
               </svg>
             </div>
-            <a class="link login__name" href="profile.html">Константин</a>
-            <button class="login__toggle">
+            <a class="link signin__name" href="profile.html">Константин</a>
+            <button class="signin__toggle">
               <svg class="icon">
                 <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
               </svg>
             </button>
           </div>
-          <nav class="login__nav">
+          <nav class="signin__nav">
             <a class="link" href="profile.html">Личный кабинет</a>
             <a class="link" href="results.html">Результаты самодиагностики</a>
-            <a class="link" href="">Настройки профиля</a>
+            <a class="link" href="settings.html">Настройки профиля</a>
             <a class="link" href="">Выйти</a>
           </nav>
         </div>
@@ -79,14 +80,30 @@
               <p class="panel__title">Ваши участники</p>
             </a>
             <div class="panel-block">
-              <a class="panel" href="">
+              <a class="panel" href="invite.html">
                 <img class="panel__img" src="assets/img/hired.svg" alt="hired">
                 <p class="panel__title">Пригласить участников</p>
               </a>
-              <a class="panel panel_off" href="">
+              <a class="panel panel_off js-modal" href="" data-modal="modal-develop">
                 <img class="panel__img" src="assets/img/podium.svg" alt="podium">
                 <p class="panel__title">Чемпионат «Живая Игра»</p>
               </a>
+            </div>
+          </div>
+        </div>
+        <!--modal-develop-->
+        <div class="modal-block" id="modal-develop">
+          <div class="modal-wrapp">
+            <div class="modal">
+              <div class="modal__inner">
+                <div class="contacts">
+                  <h2 class="h2 contacts__title">Чемпионат «Живая Игра»</h2>
+                  <p>Данный раздел находится в разработке!</p>
+                </div>
+              </div>
+              <button class="modal__close">
+                <img src="assets/img/close.svg" alt="close">
+              </button>
             </div>
           </div>
         </div>
@@ -209,17 +226,12 @@
           <span class="caption">выбывает слабейший</span>
         </div>
         <nav class="menu">
-          <a class="menu__link link" href="">Правила участия</a>
-          <a class="menu__link link" href="">Самодиагностика</a>
-          <a class="menu__link link txt_att" href="">“Лучшая Life”</a>
-          <a class="menu__link link" href="">Отзывы</a>
-          <a class="menu__link link" href="">Контакты</a>
+          <a class="menu__link link js-scroll" href="" data-section="#rules">Правила участия</a>
+          <a class="menu__link link js-scroll" href="" data-section="#diagnostic">Самодиагностика</a>
+          <a class="menu__link link txt_att" href="https://l-life.ru/">“Лучшая Life”</a>
+          <a class="menu__link link js-scroll" href="" data-section="#reviews">Отзывы</a>
+          <a class="menu__link link js-modal" href="" data-modal="modal-contact">Контакты</a>
         </nav>
-        <button class="btn btn_primery">Войти
-          <svg class="icon">
-            <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
-          </svg>
-        </button>
         <p class="caption">Идея и воплощение АНО "НПИ ФМ" в рамках гуманитарного проекта "Школа долгожития и здравомыслия"</p>
       </div>
       <p class="copy caption">© 2000 – 2016 Самодиагностика организма. Все права защищены</p>

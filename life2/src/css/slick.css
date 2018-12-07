@@ -179,6 +179,7 @@ li.slick-active {
 
 .slick__prev .icon,
 .slick__next .icon {
+    fill: #4D79FF;
     width: 18px;
     height: 30px;
 }

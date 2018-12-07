@@ -21,6 +21,7 @@
 
     &_half {
       width: 48%;
+      max-width: 335px;
     }
 
     p {
@@ -63,6 +64,7 @@
     top: 0;
     bottom: 0;
     margin: auto;
+    fill: @c-prim;
   }
 
   select::-ms-expand {
@@ -133,7 +135,7 @@
       }
     }
   }
-
+  
   &__inner {
     display: flex;
     align-items: center;
@@ -146,6 +148,7 @@
     box-sizing: border-box;
     border-radius: 7px;
     margin-right: 10px;
+    
     
     .icon {
       fill: #fff;
@@ -162,6 +165,20 @@
       background: #fff;
       border-radius: 5px;
       text-align: center;
+    }
+    &_circle {
+      border-radius: 50%;
+      line-height: 10px;
+
+      span {
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+      }
+
+      .icon {
+        vertical-align: sub;
+      }
     }
   }
 }
