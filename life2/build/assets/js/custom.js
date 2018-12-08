@@ -4,6 +4,12 @@ jQuery(document).ready(function () {
 
   new ClipboardJS('.js-copy');
 
+  $('.menu-toggle').on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $('.header__controls, .header__contacts').fadeToggle();
+  });
+
   // modal
   var modal = $('.modal-block');
 
@@ -50,7 +56,14 @@ jQuery(document).ready(function () {
     dots: true,
     slidesToShow: 2,
     prevArrow: ".slider .slick__prev",
-    nextArrow: ".slider .slick__next"
+    nextArrow: ".slider .slick__next",
+    responsive: [{
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
   });
 
   // function initModalSlide() {

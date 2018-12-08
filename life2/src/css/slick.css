@@ -173,6 +173,16 @@ li.slick-active {
     transition: all .5s;
 }
 
+@media all and (max-width: 576px) {
+    .slick__next {
+        right: -25px;
+    }
+
+    .slick__prev {
+        left: -25px;
+    }
+}
+
 .slick__next:hover {
     opacity: 1;
 }

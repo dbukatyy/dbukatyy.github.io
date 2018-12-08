@@ -1,15 +1,25 @@
 header.header
   .container
-    .logo
-      h1.h3.logo__top живая игра
-      span.caption выбывает слабейший
-    nav.menu
-      a(href="" data-section="#rules").menu__link.link.js-scroll Правила участия
-      a(href="" data-section="#diagnostic").menu__link.link.js-scroll Самодиагностика
-      a(href="https://l-life.ru/").menu__link.link.txt_att “Лучшая Life”
-      a(href="" data-section="#reviews").menu__link.link.js-scroll Отзывы
-      a(href="" data-modal="modal-contact").menu__link.link.js-modal Контакты
+    button.menu-toggle
+      img.icon-open(src="assets/img/union.svg", alt="union")
+      img.icon-close(src="assets/img/union2.svg", alt="union2")
+    a(href="/").link.logo
+      img(src="assets/img/logo.svg", alt="logo")
+    .header__controls
+      nav.menu
+        a(href="" data-section="#rules").menu__link.link.js-scroll Правила участия
+        a(href="" data-section="#diagnostic").menu__link.link.js-scroll Самодиагностика
+        a(href="https://l-life.ru/").menu__link.link.txt_att “Лучшая Life”
+        a(href="" data-section="#reviews").menu__link.link.js-scroll Отзывы
+        a(href="" data-modal="modal-contact").menu__link.link.js-modal Контакты
 
-    button.btn.btn_primery.js-modal(data-modal="modal-login") Войти
-      svg.icon
-        use(xlink:href="assets/img/sprite.svg#icon-shape")
+      button.btn.btn_primery.js-modal(data-modal="modal-login") Войти
+        svg.icon
+          use(xlink:href="assets/img/sprite.svg#icon-shape")
+  .header__contacts
+    .contact
+      strong.contact__name Телефон:
+        a.contact__val.link(href="tel:+79250467998 ") +7 925 046 79 98 
+    .contact
+      strong.contact__name E-mail:
+        a.contact__val.link(href="mailto:life@npifm.ru") life@npifm.ru 

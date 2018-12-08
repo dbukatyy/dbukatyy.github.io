@@ -7,6 +7,13 @@
     <meta name="keywords" content="Test">
     <meta name="description" content="Test">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/site.webmanifest">
+    <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="assets/css/vendor.css">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
@@ -14,22 +21,39 @@
     <!--header-->
     <header class="header">
       <div class="container">
-        <div class="logo">
-          <h1 class="h3 logo__top">живая игра</h1>
-          <span class="caption">выбывает слабейший</span>
-        </div>
-        <nav class="menu">
-          <a class="menu__link link js-scroll" href="" data-section="#rules">Правила участия</a>
-          <a class="menu__link link js-scroll" href="" data-section="#diagnostic">Самодиагностика</a>
-          <a class="menu__link link txt_att" href="https://l-life.ru/">“Лучшая Life”</a>
-          <a class="menu__link link js-scroll" href="" data-section="#reviews">Отзывы</a>
-          <a class="menu__link link js-modal" href="" data-modal="modal-contact">Контакты</a>
-        </nav>
-        <button class="btn btn_primery js-modal" data-modal="modal-login">Войти
-          <svg class="icon">
-            <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
-          </svg>
+        <button class="menu-toggle">
+          <img class="icon-open" src="assets/img/union.svg" alt="union">
+          <img class="icon-close" src="assets/img/union2.svg" alt="union2">
         </button>
+        <a class="link logo" href="/">
+          <img src="assets/img/logo.svg" alt="logo">
+        </a>
+        <div class="header__controls">
+          <nav class="menu">
+            <a class="menu__link link js-scroll" href="" data-section="#rules">Правила участия</a>
+            <a class="menu__link link js-scroll" href="" data-section="#diagnostic">Самодиагностика</a>
+            <a class="menu__link link txt_att" href="https://l-life.ru/">“Лучшая Life”</a>
+            <a class="menu__link link js-scroll" href="" data-section="#reviews">Отзывы</a>
+            <a class="menu__link link js-modal" href="" data-modal="modal-contact">Контакты</a>
+          </nav>
+          <button class="btn btn_primery js-modal" data-modal="modal-login">Войти
+            <svg class="icon">
+              <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="header__contacts">
+        <div class="contact">
+          <strong class="contact__name">Телефон:
+            <a class="contact__val link" href="tel:+79250467998 ">+7 925 046 79 98 </a>
+          </strong>
+        </div>
+        <div class="contact">
+          <strong class="contact__name">E-mail:
+            <a class="contact__val link" href="mailto:life@npifm.ru">life@npifm.ru </a>
+          </strong>
+        </div>
       </div>
     </header>
     <!--main-->
@@ -49,8 +73,10 @@
       <!--rules-->
       <section class="rules" id="rules">
         <div class="container">
+          <h2 class="h2 rules__title"> 
+            <span>Правило игры: вышибают слабейшего</span>
+          </h2>
           <div class="rules__info">
-            <h2 class="h2 rules__title">Правило игры: вышибают слабейшего</h2>
             <p>Став участником “Живой игры” можно узнать величину своего стресса - 
               <strong>психоэмоционального напряжения</strong>, и понять, почему ты слаб. Тебя ожидает соревнование по “эффективности” твоих Жизненных сил!
             </p>
@@ -107,9 +133,9 @@
       <!--stress-->
       <section class="stress">
         <div class="container">
+          <h2 class="h2 stress__title">Стресс – это "слабость" нашего организма</h2>
           <div class="stress__item">
             <div class="stress__info">
-              <h2 class="h2">Стресс – это "слабость" нашего организма</h2>
               <p> 
                 <strong>Стресс - это психоэмоционального напряжения. Мы часто слышим о вреде стресса для здоровья. </strong>
               </p>
@@ -138,6 +164,7 @@
       </section>
       <!--form-block-->
       <section class="form-block" id="diagnostic">
+        <div class="form-block__bg"></div>
         <div class="form-block__inner">
           <h2 class="h2">Измерь свой стресс</h2>
           <p>Став участником “Живой игры” можно узнать величину своего стресса - 
@@ -838,71 +865,73 @@
             <div class="relation">
               <h3 class="txt_gradient txt_centr txt_upper">соотношения неприятных переживаний</h3>
               <div class="bars">
-                <div class="deadline"></div>
-                <div class="bars__axis-y">
-                  <p class="bars-y">
-                    <span>1</span>
-                    <i></i>
-                  </p>
-                  <p class="bars-y">
-                    <span>0.8</span>
-                    <i></i>
-                  </p>
-                  <p class="bars-y"> 
-                    <span>0.6</span>
-                    <i></i>
-                  </p>
-                  <p class="bars-y">
-                    <span>0.4</span>
-                    <i></i>
-                  </p>
-                  <p class="bars-y"> 
-                    <span>0.2</span>
-                    <i></i>
-                  </p>
-                  <p class="bars-y"> 
-                    <span>0</span>
-                    <i></i>
-                  </p>
-                </div>
-                <div class="bars__axis-x">
-                  <p class="bars-x">
-                    <span>0</span>
-                    <i></i>
-                  </p>
-                  <p class="bars-x">
-                    <span>20%</span>
-                    <i></i>
-                  </p>
-                  <p class="bars-x"> 
-                    <span>40%</span>
-                    <i></i>
-                  </p>
-                  <p class="bars-x">
-                    <span>60%</span>
-                    <i></i>
-                  </p>
-                  <p class="bars-x"> 
-                    <span>80%</span>
-                    <i></i>
-                  </p>
-                  <p class="bars-x"> 
-                    <span>100%</span>
-                    <i></i>
-                  </p>
-                </div>
-                <div class="bars__chart">
-                  <div class="bar" data-y="65" data-x="28">
-                    <div class="bar__info">sds</div>
+                <div class="bars__inner">
+                  <div class="deadline"></div>
+                  <div class="bars__axis-y">
+                    <p class="bars-y">
+                      <span>1</span>
+                      <i></i>
+                    </p>
+                    <p class="bars-y">
+                      <span>0.8</span>
+                      <i></i>
+                    </p>
+                    <p class="bars-y"> 
+                      <span>0.6</span>
+                      <i></i>
+                    </p>
+                    <p class="bars-y">
+                      <span>0.4</span>
+                      <i></i>
+                    </p>
+                    <p class="bars-y"> 
+                      <span>0.2</span>
+                      <i></i>
+                    </p>
+                    <p class="bars-y"> 
+                      <span>0</span>
+                      <i></i>
+                    </p>
                   </div>
-                  <div class="bar" data-y="75" data-x="22">
-                    <div class="bar__info">sds</div>
+                  <div class="bars__axis-x">
+                    <p class="bars-x">
+                      <span>0</span>
+                      <i></i>
+                    </p>
+                    <p class="bars-x">
+                      <span>20%</span>
+                      <i></i>
+                    </p>
+                    <p class="bars-x"> 
+                      <span>40%</span>
+                      <i></i>
+                    </p>
+                    <p class="bars-x">
+                      <span>60%</span>
+                      <i></i>
+                    </p>
+                    <p class="bars-x"> 
+                      <span>80%</span>
+                      <i></i>
+                    </p>
+                    <p class="bars-x"> 
+                      <span>100%</span>
+                      <i></i>
+                    </p>
                   </div>
-                  <div class="bar" data-y="50" data-x="24">
-                    <div class="bar__info">sds</div>
-                  </div>
-                  <div class="bar" data-y="73" data-x="26">
-                    <div class="bar__info">sds</div>
+                  <div class="bars__chart">
+                    <div class="bar" data-y="65" data-x="28">
+                      <div class="bar__info">sds</div>
+                    </div>
+                    <div class="bar" data-y="75" data-x="22">
+                      <div class="bar__info">sds</div>
+                    </div>
+                    <div class="bar" data-y="50" data-x="24">
+                      <div class="bar__info">sds</div>
+                    </div>
+                    <div class="bar" data-y="73" data-x="26">
+                      <div class="bar__info">sds</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1455,10 +1484,9 @@
     <!--footer-->
     <footer class="footer">
       <div class="container">
-        <div class="logo">
-          <h1 class="h3 logo__top">живая игра</h1>
-          <span class="caption">выбывает слабейший</span>
-        </div>
+        <a class="link logo" href="/">
+          <img src="assets/img/logo.svg" alt="logo">
+        </a>
         <nav class="menu">
           <a class="menu__link link js-scroll" href="" data-section="#rules">Правила участия</a>
           <a class="menu__link link js-scroll" href="" data-section="#diagnostic">Самодиагностика</a>

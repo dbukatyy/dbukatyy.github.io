@@ -7,6 +7,13 @@
     <meta name="keywords" content="Test">
     <meta name="description" content="Test">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/site.webmanifest">
+    <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="assets/css/vendor.css">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
@@ -14,18 +21,22 @@
     <!--header-->
     <header class="header">
       <div class="container">
-        <div class="logo">
-          <h1 class="h3 logo__top">живая игра</h1>
-          <span class="caption">выбывает слабейший</span>
-        </div>
-        <nav class="menu">
-          <a class="menu__link link js-scroll" href="" data-section="#rules">Правила участия
+        <button class="menu-toggle">
+          <img class="icon-open" src="assets/img/union.svg" alt="union">
+          <img class="icon-close" src="assets/img/union2.svg" alt="union2">
+        </button>
+        <a class="link logo" href="/">
+          <img src="assets/img/logo.svg" alt="logo">
+        </a>
+        <div class="header__controls">
+          <nav class="menu">
+            <a class="menu__link link js-scroll" href="" data-section="#rules">Правила участия</a>
             <a class="menu__link link js-scroll" href="" data-section="#diagnostic">Самодиагностика</a>
             <a class="menu__link link txt_att" href="https://l-life.ru/">“Лучшая Life”</a>
             <a class="menu__link link js-scroll" href="" data-section="#reviews">Отзывы</a>
             <a class="menu__link link js-modal" href="" data-modal="modal-contact">Контакты</a>
-          </a>
-        </nav>
+          </nav>
+        </div>
         <div class="signin">
           <div class="signin__head">
             <div class="trend">
@@ -49,6 +60,18 @@
           </nav>
         </div>
       </div>
+      <div class="header__contacts">
+        <div class="contact">
+          <strong class="contact__name">Телефон:
+            <a class="contact__val link" href="tel:+79250467998 ">+7 925 046 79 98 </a>
+          </strong>
+        </div>
+        <div class="contact">
+          <strong class="contact__name">E-mail:
+            <a class="contact__val link" href="mailto:life@npifm.ru">life@npifm.ru </a>
+          </strong>
+        </div>
+      </div>
     </header>
     <!--main-->
     <main class="main">
@@ -58,54 +81,6 @@
             <a href="">Главная</a>
             <a class="breadcrumbs_active" href="">Личный кабинет</a>
           </nav>
-          <div class="panels">
-            <div class="profile">
-              <div class="profile__trend">
-                <div class="trend trend_xl">
-                  <span>19,2</span>
-                  <svg class="icon">
-                    <use xlink:href="assets/img/sprite.svg#icon-arr-t"></use>
-                  </svg>
-                </div>
-                <p class="caption">Увеличено на 1,8</p>
-              </div>
-              <div class="profile__info">
-                <h3 class="h3 profile__name">Филатов Константин</h3>
-                <a class="profile__mail" href="mailto:filatov224@mail.ru">filatov224@mail.ru</a>
-                <p class="caption">Приглашено: 4</p>
-              </div>
-            </div>
-            <a class="panel" href="members.html">
-              <img class="panel__img" src="assets/img/workers.svg" alt="workers">
-              <p class="panel__title">Ваши участники</p>
-            </a>
-            <div class="panel-block">
-              <a class="panel" href="invite.html">
-                <img class="panel__img" src="assets/img/hired.svg" alt="hired">
-                <p class="panel__title">Пригласить участников</p>
-              </a>
-              <a class="panel panel_off js-modal" href="" data-modal="modal-develop">
-                <img class="panel__img" src="assets/img/podium.svg" alt="podium">
-                <p class="panel__title">Чемпионат «Живая Игра»</p>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!--modal-develop-->
-        <div class="modal-block" id="modal-develop">
-          <div class="modal-wrapp">
-            <div class="modal">
-              <div class="modal__inner">
-                <div class="contacts">
-                  <h2 class="h2 contacts__title">Чемпионат «Живая Игра»</h2>
-                  <p>Данный раздел находится в разработке!</p>
-                </div>
-              </div>
-              <button class="modal__close">
-                <img src="assets/img/close.svg" alt="close">
-              </button>
-            </div>
-          </div>
         </div>
       </div>
       <div class="indicators">
@@ -146,10 +121,9 @@
     <!--footer-->
     <footer class="footer">
       <div class="container">
-        <div class="logo">
-          <h1 class="h3 logo__top">живая игра</h1>
-          <span class="caption">выбывает слабейший</span>
-        </div>
+        <a class="link logo" href="/">
+          <img src="assets/img/logo.svg" alt="logo">
+        </a>
         <nav class="menu">
           <a class="menu__link link js-scroll" href="" data-section="#rules">Правила участия</a>
           <a class="menu__link link js-scroll" href="" data-section="#diagnostic">Самодиагностика</a>
