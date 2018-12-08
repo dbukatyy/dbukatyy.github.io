@@ -7,7 +7,7 @@ jQuery(document).ready(function () {
   $('.menu-toggle').on('click', function (e) {
     e.preventDefault();
     $(this).toggleClass('active');
-    $('.header__controls, .header__contacts').fadeToggle();
+    $('.header__controls, .header__contacts, .signin').fadeToggle();
   });
 
   // modal

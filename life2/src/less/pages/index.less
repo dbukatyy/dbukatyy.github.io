@@ -2104,6 +2104,13 @@ p {
 		}
 	}
 
+	&__list {
+		@media @phone {
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+
 	&__title {
 		font-weight: bold;
 		.icon {
@@ -2127,10 +2134,20 @@ p {
 		display: none;
 		&.active {display: block;}
 
+		@media @phone {
+			margin-left: 0;
+			width: 100%;
+		}
+
 		&_all {
 			display: none;
 			max-height: 530px;
 			overflow-y: auto;
+
+			@media @phone {
+				margin-left: 0;
+				width: 100%;
+			}
 		}
 	}
 
@@ -2182,10 +2199,21 @@ p {
 		width: 200px;
 		position: relative;
 
+		@media @phone {
+			margin-left: 0;
+			width: 100%;
+			padding-bottom: 20px;
+		}
+
 		.btn {
 			position: absolute;
 			bottom: 0;
 			left: 0;
+
+			@media @phone {
+				position: static;
+				width: 100%;
+			}
 		}
 	}
 	
@@ -2291,6 +2319,13 @@ p {
 
 .indicators {
 	padding: 80px 0;
+
+
+	@media @phone {
+		.container {
+			padding: 0;
+		}
+	}
 
 	&__chart {
 		width: 75%;
@@ -2552,6 +2587,10 @@ p {
 		width: 100%;
 	}
 
+	@media @phone {
+		padding: 0 15px;
+	}
+
 	&__link {
 		display: inline-block;
 		width: 49%;
@@ -2569,6 +2608,12 @@ p {
 			width: 12px;
 			height: 12px;
 		}
+	}
+}
+
+.who {
+	@media @phone {
+		padding: 0 15px;
 	}
 }
 

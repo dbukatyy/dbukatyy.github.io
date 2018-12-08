@@ -126,6 +126,27 @@
   padding: 5px 12px;
   min-width: 190px;
 
+  @media @phone {
+    border-radius: 0;
+    position: static;
+    width: 100%;
+    background: none;
+    display: none;
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid @c-base3;
+  }
+
+  &__head {
+    @media @phone {
+      background: #F5F7FF;
+      padding: 5px 12px;
+      border-radius: 16px;
+      display: inline;
+    }
+  }
+
   &__name {
     font-size: 16px;
     font-weight: bold;
@@ -138,10 +159,24 @@
     border-top: 1px solid @c-base3;
     margin-top: 10px;
     padding-bottom: 5px;
+    
     a {
       display: block;
       margin-top: 12px;
       font-size: 14px;
+    }
+    @media @phone {
+     display: block !important;
+     text-align: center;
+     width: 100%;
+     max-width: 100%;
+     border-top: none;
+     
+     font-weight: bold;
+     a {
+      font-size: 16px;
+      margin-top: 24px;
+     }
     }
   }
 
@@ -151,6 +186,10 @@
     cursor: pointer;
     vertical-align: middle;
     padding: 0;
+
+    @media @phone {
+      display: none;
+    }
 
     &.active {
       .icon {

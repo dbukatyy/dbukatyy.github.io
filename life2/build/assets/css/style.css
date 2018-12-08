@@ -823,6 +823,27 @@ template {
   padding: 5px 12px;
   min-width: 190px;
 }
+@media all and (max-width: 576px) {
+  .signin {
+    border-radius: 0;
+    position: static;
+    width: 100%;
+    background: none;
+    display: none;
+    text-align: center;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #E1E6F5;
+  }
+}
+@media all and (max-width: 576px) {
+  .signin__head {
+    background: #F5F7FF;
+    padding: 5px 12px;
+    border-radius: 16px;
+    display: inline;
+  }
+}
 .signin__name {
   font-size: 16px;
   font-weight: bold;
@@ -840,12 +861,31 @@ template {
   margin-top: 12px;
   font-size: 14px;
 }
+@media all and (max-width: 576px) {
+  .signin__nav {
+    display: block !important;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    border-top: none;
+    font-weight: bold;
+  }
+  .signin__nav a {
+    font-size: 16px;
+    margin-top: 24px;
+  }
+}
 .signin__toggle {
   background: none;
   border: none;
   cursor: pointer;
   vertical-align: middle;
   padding: 0;
+}
+@media all and (max-width: 576px) {
+  .signin__toggle {
+    display: none;
+  }
 }
 .signin__toggle.active .icon {
   transform: rotate(-90deg);
@@ -2898,6 +2938,12 @@ p {
 .members__head .btn {
   text-transform: none;
 }
+@media all and (max-width: 576px) {
+  .members__list {
+    margin-left: 0;
+    width: 100%;
+  }
+}
 .members__title {
   font-weight: bold;
 }
@@ -2923,10 +2969,22 @@ p {
 .members__items.active {
   display: block;
 }
+@media all and (max-width: 576px) {
+  .members__items {
+    margin-left: 0;
+    width: 100%;
+  }
+}
 .members__items_all {
   display: none;
   max-height: 530px;
   overflow-y: auto;
+}
+@media all and (max-width: 576px) {
+  .members__items_all {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 .members__add {
   background: none;
@@ -2972,10 +3030,23 @@ p {
   width: 200px;
   position: relative;
 }
+@media all and (max-width: 576px) {
+  .members-categories {
+    margin-left: 0;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}
 .members-categories .btn {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+@media all and (max-width: 576px) {
+  .members-categories .btn {
+    position: static;
+    width: 100%;
+  }
 }
 .members-category {
   display: block;
@@ -3070,6 +3141,11 @@ p {
 }
 .indicators {
   padding: 80px 0;
+}
+@media all and (max-width: 576px) {
+  .indicators .container {
+    padding: 0;
+  }
 }
 .indicators__chart {
   width: 75%;
@@ -3334,6 +3410,11 @@ p {
 .social__title {
   width: 100%;
 }
+@media all and (max-width: 576px) {
+  .social {
+    padding: 0 15px;
+  }
+}
 .social__link {
   display: inline-block;
   width: 49%;
@@ -3353,6 +3434,11 @@ p {
   fill: #fff;
   width: 12px;
   height: 12px;
+}
+@media all and (max-width: 576px) {
+  .who {
+    padding: 0 15px;
+  }
 }
 .tw {
   background: url('../img/twitter.svg') no-repeat 90% -50%, linear-gradient(90deg, #0A99F1 0%, #59BDFB 100%);
