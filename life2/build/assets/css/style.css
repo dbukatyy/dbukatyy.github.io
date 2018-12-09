@@ -2517,11 +2517,25 @@ p {
 }
 .bar__info {
   position: absolute;
-  bottom: -70px;
+  bottom: -130px;
   left: 0;
   right: 0;
-  border-top: 1px solid #2E384D;
   text-align: center;
+}
+.bar__info img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.bar__title {
+  display: block;
+  margin-bottom: 10px;
+}
+.bar__title span {
+  display: block;
+  text-transform: uppercase;
+}
+.bar__subtitle {
+  color: #69758C;
 }
 .deadline {
   position: absolute;

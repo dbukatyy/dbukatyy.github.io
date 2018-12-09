@@ -1661,12 +1661,29 @@ p {
   
   &__info {
     position: absolute;
-    bottom: -70px;
+    bottom: -130px;
     left: 0;
     right: 0;
-    border-top: 1px solid @c-base;
-    text-align: center;
-  }
+		text-align: center;
+
+		img {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	}
+	
+	&__title {
+		display: block;
+		margin-bottom: 10px;
+		span {
+			display: block;
+			text-transform: uppercase;
+		}
+	}
+
+	&__subtitle {
+		color: @c-base2;
+	}
 }
 
 .deadline {
