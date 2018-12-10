@@ -11,17 +11,18 @@ jQuery(document).ready(function () {
   });
 
   // modal
-  var modal = $('.modal-block');
 
-  modal.on('click', function (e) {
+  $('.modal-block').on('click', function (e) {
     var el = $(e.target);
     var insideModal = el.closest('.modal').hasClass('modal');
+    var modal = el.closest('.modal-block');
     var isClose = el.hasClass('modal__close') || el.closest('.modal__close').hasClass('modal__close');
     if (!insideModal || isClose) {
       if (modal.hasClass('modal-block_hided')) {
         modal.removeClass('active');
+      } else {
+        modal.hide(300);
       }
-      modal.hide(300);
     }
   });
 
@@ -125,8 +126,6 @@ jQuery(document).ready(function () {
   });
 
   $('.toggle__head .icon').on('click', function () {
-    var topSpace = document.querySelector('.toggle').getBoundingClientRect().top + scrollY;
-    console.log(topSpace);
     $(this).toggleClass('active');
     $('.toggle__body').slideToggle();
     // $('html, body').animate({

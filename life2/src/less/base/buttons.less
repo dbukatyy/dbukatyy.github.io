@@ -68,6 +68,11 @@
       background:  @c-gradient2;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+				background:  transparent;
+				color: @c-att;
+			}
     }
 
     p {

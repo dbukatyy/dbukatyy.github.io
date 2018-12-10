@@ -515,6 +515,12 @@ template {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .btn_empty span {
+    background: transparent;
+    color: #FF794D;
+  }
+}
 .btn_empty p {
   min-width: 240px;
   margin: 0;
@@ -1023,6 +1029,17 @@ p {
 .txt_centr {
   text-align: center;
 }
+/* стили только для IE10 и IE11 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .txt_gradient {
+    background: transparent;
+    color: #4D79FF;
+  }
+  .txt_gradient-att {
+    background: transparent;
+    color: #FF794D;
+  }
+}
 .link {
   text-decoration: none;
   transition: all .3s;
@@ -1243,7 +1260,7 @@ p {
   padding-left: 135px;
   display: -ms-flexbox;
   display: flex;
-  min-height: 140px;
+  height: 140px;
   -ms-flex-align: center;
       align-items: center;
 }
@@ -1678,6 +1695,9 @@ p {
   -ms-flex-pack: center;
       justify-content: center;
 }
+.review__btn .btn:hover {
+  box-shadow: 0 6px 25px -5px #FF794D;
+}
 .idea {
   border-radius: 30px;
   padding: 48px 70px 32px;
@@ -1901,14 +1921,18 @@ p {
   z-index: 25;
 }
 .modal-block_hided {
-  display: block !important;
-  opacity: 0;
+  display: block;
   pointer-events: none;
+}
+.modal-block_hided .modal-wrapp {
   transition: all .3s;
+  opacity: 0;
 }
 .modal-block_hided.active {
-  opacity: 1;
   pointer-events: initial;
+}
+.modal-block_hided.active .modal-wrapp {
+  opacity: 1;
 }
 .modal-wrapp {
   position: fixed;
@@ -2003,6 +2027,12 @@ p {
   background: linear-gradient(to right, #4A75F8 0%, #94AFFF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .examples-item__num {
+    background: transparent;
+    color: #4D79FF;
+  }
 }
 .examples-item__txt {
   max-width: 94%;
@@ -2135,6 +2165,12 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .pagination__item {
+    background: transparent;
+    color: #4D79FF;
+  }
+}
 .pagination__item .icon {
   width: 14px;
   margin-bottom: -2px;
@@ -2145,6 +2181,12 @@ p {
   background: linear-gradient(to right, #FF5B4D 0%, #FF791A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .pagination__item_att {
+    background: transparent;
+    color: #FF794D;
+  }
 }
 .pagination__item_att .icon {
   fill: #FF794D;
@@ -2191,10 +2233,9 @@ p {
 .tests .pagination {
   position: absolute;
   top: -20px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  max-width: 265px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
 }
 @media all and (max-width: 576px) {
   .tests {
@@ -3415,7 +3456,7 @@ p {
   }
 }
 .get-link .btn p {
-  min-width: initial;
+  min-width: auto;
   padding: 8px 24px;
 }
 .social {

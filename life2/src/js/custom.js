@@ -9,17 +9,18 @@ jQuery(document).ready(function () {
   })
 
   // modal
-  const modal = $('.modal-block');
 
-  modal.on('click', (e) => {
+  $('.modal-block').on('click', (e) => {
     const el = $(e.target);
     const insideModal = el.closest('.modal').hasClass('modal');
+    const modal = el.closest('.modal-block');
     const isClose = el.hasClass('modal__close') || el.closest('.modal__close').hasClass('modal__close');
     if (!insideModal || isClose) {
       if (modal.hasClass('modal-block_hided')) {
         modal.removeClass('active');
-      } 
-      modal.hide(300);
+      } else {
+        modal.hide(300);
+      }
     }
   })
 
@@ -125,8 +126,6 @@ jQuery(document).ready(function () {
   })
 
   $('.toggle__head .icon').on('click', function() {
-    const topSpace = document.querySelector('.toggle').getBoundingClientRect().top + scrollY;
-    console.log(topSpace);
     $(this).toggleClass('active');
     $('.toggle__body').slideToggle();
     // $('html, body').animate({

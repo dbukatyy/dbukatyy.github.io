@@ -93,13 +93,27 @@ p {
 			-webkit-text-fill-color: transparent;
 		}
 	}
-
+	
 	&_upper {
-	 text-transform: uppercase;
+		text-transform: uppercase;
 	}
-
+	
 	&_centr {
 		text-align: center;
+	}
+}
+/* стили только для IE10 и IE11 */ 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+	.txt {
+		&_gradient {
+			background:  transparent;
+			color: @c-prim;
+
+			&-att {
+				background:  transparent;
+				color: @c-att;
+			}
+		}
 	}
 }
 
@@ -334,7 +348,7 @@ p {
 	background-size: auto, 104% auto;
 	padding-left: 135px;
 	display: flex;
-	min-height: 140px;
+	height: 140px;
 	align-items: center;
 
 	@media all and (max-width: 680px) {
@@ -777,6 +791,10 @@ p {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		.btn:hover {
+			box-shadow: 0 6px 25px -5px @c-att;
+		}
 	}
 
 }
@@ -1010,14 +1028,18 @@ p {
 		z-index: 25;
 		
 		&_hided {
-			display: block !important;
-			opacity: 0;
+			display: block;
 			pointer-events: none;
-			transition: all .3s;
+			.modal-wrapp {
+				transition: all .3s;
+				opacity: 0;
+			}
 			
 			&.active {
-				opacity: 1;
 				pointer-events: initial;
+				.modal-wrapp {
+					opacity: 1;
+				}
 			}
 		}
 	}
@@ -1112,7 +1134,11 @@ p {
 		&__num {
 			background:  @c-gradient;
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+			-webkit-text-fill-color: transparent;
+			@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+				background:  transparent;
+				color: @c-prim;
+			}
 		}
 
 		&__txt {
@@ -1256,6 +1282,10 @@ p {
 		background:  @c-gradient;
     -webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+			background:  transparent;
+			color: @c-prim;
+		}
 		
 		.icon {
 			width: 14px;
@@ -1268,6 +1298,11 @@ p {
 			background: @c-gradient2;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
+
+			@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+				background:  transparent;
+				color: @c-att;
+			}
 
 			.icon {
 				fill: @c-att;
@@ -1323,10 +1358,9 @@ p {
 	.pagination {
 		position: absolute;
 		top: -20px;
-		left: 0;
-		right: 0;
-		margin: auto;
-		max-width: 265px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: inline-block;
 	}
 
 	@media @phone {
@@ -2589,7 +2623,7 @@ p {
 			width: 100%;
 		}
 		p {
-			min-width: initial;
+			min-width: auto;
 			padding: 8px 24px;
 		}
 	}
