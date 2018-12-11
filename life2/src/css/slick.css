@@ -175,11 +175,11 @@ li.slick-active {
 
 @media all and (max-width: 576px) {
     .slick__next {
-        right: -25px;
+        right: -20px;
     }
 
     .slick__prev {
-        left: -25px;
+        left: -20px;
     }
 }
 

@@ -38,17 +38,20 @@ body {
 
 	&:hover {
 		.tooltip__inner {
-			display: block;
+			opacity: 1;
+			pointer-events: initial;
 		}
 	}
 
 	&__inner {
 		font-weight: normal;
-		display: none;
-		position: absolute;
-		top: calc(~'100% + 20px');
-		width: 740px;
-		left: 0;
+		display: block;
+		position: fixed;
+		opacity: 0;
+		pointer-events: none;
+		// top: calc(~'100% + 20px');
+		// width: 740px;
+		// left: 0;
 		background: @c-white;
 		padding: 16px 24px;
 		border: 1px solid rgba(0, 54, 117, 0.1);
@@ -56,8 +59,7 @@ body {
 		box-shadow: 0px 16px 32px rgba(0, 54, 117, 0.1);
 		z-index: 3;
 
-		&:before {
-			content: '';
+		&-arr {
 			display: block;
 			width: 20px;
 			height: 20px;
@@ -360,6 +362,7 @@ p {
 		padding: 20px 16px;
 		position: relative;
 		margin-top: 50px;
+		height: auto;
 
 		&:before {
 			content: '';
@@ -573,8 +576,8 @@ p {
     z-index: 0;
 		width: 100%;
 		pointer-events: none;
-		background:url(../img/bg4.png) 50% 32% no-repeat, url(../img/bg3-t.png) 50% 30% no-repeat;
-		background-size: 100% auto, 110% auto;
+		background:url(../img/bg4-m.png) 50% 100% no-repeat, url(../img/bg4-c.png) 50% 100% no-repeat,url(../img/bg4-r.png) 100% 0 no-repeat, url(../img/bg4-l.png) 0 85% no-repeat, url(../img/bg3-t.png) 50% 28% no-repeat;
+		background-size: 1400px auto, 1000px auto, auto, auto, 110% auto;
 		
 		@media @landsc {
 			display: none;

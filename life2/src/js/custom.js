@@ -2,6 +2,20 @@ jQuery(document).ready(function () {
 
   new ClipboardJS('.js-copy');
 
+  $('.tooltip').on('mouseenter', function (e) {
+    const offsets = e.target.getBoundingClientRect();
+    const containerOffset = e.target.closest('.container_min').getBoundingClientRect();
+    console.log(containerOffset);
+    $(this).find('.tooltip__inner').css({
+      top: offsets.bottom + 15,
+      left: containerOffset.left,
+      right: window.innerWidth - containerOffset.right
+    });
+    $(this).find('.tooltip__inner-arr').css({
+      left: offsets.left - containerOffset.left
+    });
+  });
+
   $('.menu-toggle').on('click', function (e) {
     e.preventDefault();
     $(this).add('.header').toggleClass('active');
@@ -41,6 +55,10 @@ jQuery(document).ready(function () {
   $('.js-scroll').on('click', function (e) {
     e.preventDefault();
     const section = $(this).data('section');
+    if (window.innerWidth < 1100) {
+      $('.menu-toggle, .header').removeClass('active');
+      $('.header__controls, .header__contacts, .signin').fadeOut();
+    }
     $('html, body').animate({
       scrollTop: $(section).offset().top - 150
     }, 1000);
@@ -128,9 +146,6 @@ jQuery(document).ready(function () {
   $('.toggle__head .icon').on('click', function() {
     $(this).toggleClass('active');
     $('.toggle__body').slideToggle();
-    // $('html, body').animate({
-    //   scrollTop: 0
-    // }, 0);
   })
 
   $('.bar').each((i, el) => {
