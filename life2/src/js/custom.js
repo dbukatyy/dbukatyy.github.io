@@ -4,8 +4,8 @@ jQuery(document).ready(function () {
 
   $('.tooltip').on('mouseenter', function (e) {
     const offsets = e.target.getBoundingClientRect();
-    const containerOffset = e.target.closest('.container_min').getBoundingClientRect();
-    console.log(containerOffset);
+    const containerOffset = e.target.closest('.container_min') ?
+      e.target.closest('.container_min').getBoundingClientRect() : e.target.closest('section').getBoundingClientRect();
     $(this).find('.tooltip__inner').css({
       top: offsets.bottom + 15,
       left: containerOffset.left,

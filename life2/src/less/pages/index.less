@@ -1270,6 +1270,7 @@ p {
 	display: inline-block;
 	padding: 6px;
 	.shadow_c;
+	min-width: 260px;
 	
 	&__item {
 		padding: 0;
@@ -2372,10 +2373,16 @@ p {
 }
 
 .indicators {
-	padding: 80px 0;
+	padding: 65px 0 80px;
+	@media @laptop {
+		padding: 40px 0 65px;
+	}
 
 
 	@media @phone {
+		.members__title {
+			padding-left: 16px;
+		}
 		.container {
 			padding: 0;
 		}
@@ -2393,7 +2400,6 @@ p {
 		}
 
 		@media @phone {
-			width:320px;
 			padding: 24px 0;
 		}
 	}
@@ -2424,9 +2430,11 @@ p {
 			display: flex;
 			margin-bottom: 24px;
 			position: static;
+			padding: 0;
 		}
 		@media @phone {
 			padding: 0;
+			margin: 0 16px 24px;
 		}
 		.btn {
 			width: 230px;

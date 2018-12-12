@@ -2149,6 +2149,7 @@ p {
   display: inline-block;
   padding: 6px;
   box-shadow: 0 4px 16px rgba(0, 54, 117, 0.1);
+  min-width: 260px;
 }
 .pagination__item {
   padding: 0;
@@ -3201,9 +3202,17 @@ p {
   width: 100% !important;
 }
 .indicators {
-  padding: 80px 0;
+  padding: 65px 0 80px;
+}
+@media all and (max-width: 1200px) {
+  .indicators {
+    padding: 40px 0 65px;
+  }
 }
 @media all and (max-width: 576px) {
+  .indicators .members__title {
+    padding-left: 16px;
+  }
   .indicators .container {
     padding: 0;
   }
@@ -3222,7 +3231,6 @@ p {
 }
 @media all and (max-width: 576px) {
   .indicators__chart {
-    width: 320px;
     padding: 24px 0;
   }
 }
@@ -3260,11 +3268,13 @@ p {
     display: flex;
     margin-bottom: 24px;
     position: static;
+    padding: 0;
   }
 }
 @media all and (max-width: 576px) {
   .indicators__panels {
     padding: 0;
+    margin: 0 16px 24px;
   }
 }
 .indicators__panels .btn {
