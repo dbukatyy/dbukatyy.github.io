@@ -92,20 +92,21 @@ block content
 		.form-block__bg
 		.form-block__inner
 			h2.h2 Измерь свой стресс
-			p Став участником “Живой игры” можно узнать величину своего стресса - 
+			p Став участником “Живой игры” можно узнать величину своей Жизненной силы и стресса - 
 				strong психоэмоционального напряжения
 				| , и понять, почему ты слаб. Тебя ожидает соревнование по “эффективности” твоих Жизненных сил!
 			form.form(action="")
-				label.form__field
+				label.form__field.err
 					p Имя
-					input.input(type="text" name="name")
+					input.input(type="text" name="name" placeholder="Иван" required)
 				label.form__field
 					p Электронная почта
-					input.input(type="email" name="email")
+					input.input(type="email" name="email"  placeholder="ivan@mail.ru" required)
 				label.form__field.form__field_half
 					p Пол
 					.select
-						select(name="sex")
+						select(name="sex" required)
+							option(value="" disabled selected style='display:none;') Выбрать
 							option(value="m") Мужчина
 							option(value="fm") Женщина
 						svg.icon
@@ -113,7 +114,8 @@ block content
 				label.form__field.form__field_half
 					p Регоин
 					.select
-						select(name="locale")
+						select(name="locale" required)
+							option(value="" disabled selected style='display:none;') Выбрать
 							option(value="brest") Брест
 							option(value="minsk") Минск
 						svg.icon
@@ -568,11 +570,12 @@ block content
 		include ./section/result
 
 	//training
-	section.training
+	section#l-life.training
 		.container_min
 			header.training__head
 				h2.h2 Тренинг-мыслинг
-				img(src="assets/img/logo.png", alt="best life")
+				a.link(href="https://l-life.ru/")
+					img(src="assets/img/logo.png", alt="best life")
 			
 			p
 				strong
@@ -597,7 +600,7 @@ block content
 							| тренировка свойств мышления человека, направленная на реорганизацию опасных свойств с целью совершенствования полезных свойств и повышения психоэмоциональной стабильности.
 					| «Лучшая Life»: шесть недель совершенстования! 72 часа тренировок! 12 занятий со специалистами!
 			.txt_centr
-				button.btn.btn_att Перейти к мыслингу
+				a(href="" data-section="#diagnostic").link.btn.btn_att.js-scroll Перейти к мыслингу
 		button.to
 			svg.icon
 				use(xlink:href="assets/img/sprite.svg#icon-arr-b")
@@ -669,10 +672,10 @@ block content
 						h2.h2.contacts__title Контакты
 						.contact
 							strong.contact__name Телефон:
-							a.contact__val.link(href="tel:+79250467998 ") +7 925 046 79 98 
+							a.contact__val.link(href="tel:+79257084835 ") +7 925 708 48 35 
 						.contact
 							strong.contact__name E-mail:
-							a.contact__val.link(href="mailto:life@npifm.ru") life@npifm.ru 
+							a.contact__val.link(href="mailto:l-g@live-g.ru ") l-g@live-g.ru 
 
 				button.modal__close
 					img(src="assets/img/close.svg", alt="close")
@@ -713,11 +716,11 @@ block content
 						h2.h2.login__title Войти в личный кабент
 						label.form__field
 							p E-mail
-							input.input(type="email" name="email")
+							input.input(type="email" name="email" placeholder="ivan@mail.ru")
 						label.form__field
 							p Пароль
 							.password
-								input.input(type="password" name="pass")
+								input.input(type="password" name="pass" placeholder="")
 								button.password__toggle
 									img(src="assets/img/eay.svg", alt="eay")
 									span Показать пароль
@@ -779,7 +782,7 @@ block content
 
 	//modal-idea
 	#modal-idea.modal-block
-		.modal-wrapp
+		.modal-wrapp.modal-wrapp_full
 			.modal.modal_full
 				.modal__inner
 					article.modal-idea

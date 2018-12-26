@@ -32,7 +32,7 @@
           <nav class="menu">
             <a class="menu__link link js-scroll" href="" data-section="#rules">Правила участия</a>
             <a class="menu__link link js-scroll" href="" data-section="#diagnostic">Самодиагностика</a>
-            <a class="menu__link link txt_att" href="https://l-life.ru/">“Лучшая Life”</a>
+            <a class="menu__link link txt_att js-scroll" href="" data-section="#l-life">“Лучшая Life”</a>
             <a class="menu__link link js-scroll" href="" data-section="#reviews">Отзывы</a>
             <a class="menu__link link js-modal" href="" data-modal="modal-contact">Контакты</a>
           </nav>
@@ -167,22 +167,23 @@
         <div class="form-block__bg"></div>
         <div class="form-block__inner">
           <h2 class="h2">Измерь свой стресс</h2>
-          <p>Став участником “Живой игры” можно узнать величину своего стресса - 
+          <p>Став участником “Живой игры” можно узнать величину своей Жизненной силы и стресса - 
             <strong>психоэмоционального напряжения</strong>, и понять, почему ты слаб. Тебя ожидает соревнование по “эффективности” твоих Жизненных сил!
           </p>
           <form class="form" action="">
-            <label class="form__field">
+            <label class="form__field err">
               <p>Имя</p>
-              <input class="input" type="text" name="name">
+              <input class="input" type="text" name="name" placeholder="Иван" required>
             </label>
             <label class="form__field">
               <p>Электронная почта</p>
-              <input class="input" type="email" name="email">
+              <input class="input" type="email" name="email" placeholder="ivan@mail.ru" required>
             </label>
             <label class="form__field form__field_half">
               <p>Пол</p>
               <div class="select">
-                <select name="sex">
+                <select name="sex" required>
+                  <option value="" disabled selected style="display:none;">Выбрать</option>
                   <option value="m">Мужчина</option>
                   <option value="fm">Женщина</option>
                 </select>
@@ -194,7 +195,8 @@
             <label class="form__field form__field_half">
               <p>Регоин</p>
               <div class="select">
-                <select name="locale">
+                <select name="locale" required>
+                  <option value="" disabled selected style="display:none;">Выбрать</option>
                   <option value="brest">Брест</option>
                   <option value="minsk">Минск</option>
                 </select>
@@ -852,13 +854,13 @@
                   <strong>(обида)</strong>
                 </div>
                 <div class="radial__lable radial__lable_second">II-тип рассогласования
-                  <strong>(страх)</strong>
-                </div>
-                <div class="radial__lable radial__lable_third">III-тип рассогласования
                   <strong>(вина)</strong>
                 </div>
-                <div class="radial__lable radial__lable_four">IV-тип рассогласования
+                <div class="radial__lable radial__lable_third">III-тип рассогласования
                   <strong>(стыд)</strong>
+                </div>
+                <div class="radial__lable radial__lable_four">IV-тип рассогласования
+                  <strong>(страх)</strong>
                 </div>
               </div>
             </div>
@@ -923,7 +925,7 @@
                     <div class="bar" data-y="65" data-x="28">
                       <div class="bar__info">
                         <img src="assets/img/border.svg" alt="border">
-                        <strong class="bar__title">I-тип
+                        <strong class="bar__title">IV-тип 
                           <span>(Страх)</span>
                         </strong>
                         <span class="bar__subtitle">0.67 / 37%</span>
@@ -932,7 +934,7 @@
                     <div class="bar" data-y="75" data-x="22">
                       <div class="bar__info">
                         <img src="assets/img/border2.svg" alt="border">
-                        <strong class="bar__title">II-тип
+                        <strong class="bar__title">III-тип
                           <span>(Стыд)</span>
                         </strong>
                         <span class="bar__subtitle">0.88 / 20%</span>
@@ -941,7 +943,7 @@
                     <div class="bar" data-y="50" data-x="24">
                       <div class="bar__info">
                         <img src="assets/img/border.svg" alt="border">
-                        <strong class="bar__title">III-тип
+                        <strong class="bar__title">II-тип
                           <span>(Вина)</span>
                         </strong>
                         <span class="bar__subtitle">0.58 / 22%</span>
@@ -950,7 +952,7 @@
                     <div class="bar" data-y="73" data-x="26">
                       <div class="bar__info">
                         <img src="assets/img/border2.svg" alt="border">
-                        <strong class="bar__title">IV-тип
+                        <strong class="bar__title">I-тип
                           <span>(Обида)</span>
                         </strong>
                         <span class="bar__subtitle">0.75 / 48%</span>
@@ -977,10 +979,10 @@
                     <th>Элементы
                       <br>психоэмоционального напряжения
                     </th>
-                    <th>I-тип (Страх)</th>
-                    <th>II-тип (Стыд)</th>
-                    <th>III-тип (Вина)</th>
-                    <th>IV-тип (Обида)</th>
+                    <th>IV-тип (Страх)</th>
+                    <th>III-тип (Стыд)</th>
+                    <th>II-тип (Вина)</th>
+                    <th>I-тип (Обида)</th>
                     <th class="txt_gradient-att">Σ</th>
                   </tr>
                 </thead>
@@ -1029,7 +1031,9 @@
             </p>
           </div>
           <div class="results__footer txt_centr">
-            <img src="assets/img/logo.png" alt="best life">
+            <a class="link" href="https://l-life.ru/">
+              <img src="assets/img/logo.png" alt="best life">
+            </a>
             <p>Зная свой результат Вам будет интересно познакомиться
               <br>
               <strong>
@@ -1040,20 +1044,22 @@
                 </span>«Лучшая Life» 
               </strong>
             </p>
-            <button class="btn btn_empty">
+            <a class="link btn btn_empty" href="https://l-life.ru/">
               <p>
                 <span>ознакомиться</span>
               </p>
-            </button>
+            </a>
           </div>
         </section>
       </section>
       <!--training-->
-      <section class="training">
+      <section class="training" id="l-life">
         <div class="container_min">
           <header class="training__head">
             <h2 class="h2">Тренинг-мыслинг</h2>
-            <img src="assets/img/logo.png" alt="best life">
+            <a class="link" href="https://l-life.ru/">
+              <img src="assets/img/logo.png" alt="best life">
+            </a>
           </header>
           <p>
             <strong>
@@ -1081,7 +1087,7 @@
             </strong>
           </p>
           <div class="txt_centr">
-            <button class="btn btn_att">Перейти к мыслингу</button>
+            <a class="link btn btn_att js-scroll" href="" data-section="#diagnostic">Перейти к мыслингу</a>
           </div>
         </div>
         <button class="to">
@@ -1186,11 +1192,11 @@
                 <h2 class="h2 contacts__title">Контакты</h2>
                 <div class="contact">
                   <strong class="contact__name">Телефон:</strong>
-                  <a class="contact__val link" href="tel:+79250467998 ">+7 925 046 79 98 </a>
+                  <a class="contact__val link" href="tel:+79257084835 ">+7 925 708 48 35 </a>
                 </div>
                 <div class="contact">
                   <strong class="contact__name">E-mail:</strong>
-                  <a class="contact__val link" href="mailto:life@npifm.ru">life@npifm.ru </a>
+                  <a class="contact__val link" href="mailto:l-g@live-g.ru ">l-g@live-g.ru </a>
                 </div>
               </div>
             </div>
@@ -1244,12 +1250,12 @@
                 <h2 class="h2 login__title">Войти в личный кабент</h2>
                 <label class="form__field">
                   <p>E-mail</p>
-                  <input class="input" type="email" name="email">
+                  <input class="input" type="email" name="email" placeholder="ivan@mail.ru">
                 </label>
                 <label class="form__field">
                   <p>Пароль</p>
                   <div class="password">
-                    <input class="input" type="password" name="pass">
+                    <input class="input" type="password" name="pass" placeholder="">
                     <button class="password__toggle">
                       <img src="assets/img/eay.svg" alt="eay">
                       <span>Показать пароль</span>
@@ -1344,7 +1350,7 @@
       </div>
       <!--modal-idea-->
       <div class="modal-block" id="modal-idea">
-        <div class="modal-wrapp">
+        <div class="modal-wrapp modal-wrapp_full">
           <div class="modal modal_full">
             <div class="modal__inner">
               <article class="modal-idea">
@@ -1520,11 +1526,11 @@
         <nav class="menu">
           <a class="menu__link link js-scroll" href="" data-section="#rules">Правила участия</a>
           <a class="menu__link link js-scroll" href="" data-section="#diagnostic">Самодиагностика</a>
-          <a class="menu__link link txt_att" href="https://l-life.ru/">“Лучшая Life”</a>
+          <a class="menu__link link txt_att js-scroll" href="" data-section="#l-life">“Лучшая Life”</a>
           <a class="menu__link link js-scroll" href="" data-section="#reviews">Отзывы</a>
           <a class="menu__link link js-modal" href="" data-modal="modal-contact">Контакты</a>
         </nav>
-        <button class="btn btn_primery">Войти
+        <button class="btn btn_primery js-modal" data-modal="modal-login">Войти
           <svg class="icon">
             <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
           </svg>

@@ -156,6 +156,7 @@ li.slick-active {
     transform: rotate(90deg);
     /* opacity: 0.5; */
     transition: all .5s;
+    padding: 0;
 }
 .slick__prev:hover {
     opacity: 1;
@@ -171,6 +172,7 @@ li.slick-active {
     transform: rotate(-90deg);
     /* opacity: 0.5; */
     transition: all .5s;
+    padding: 0;
 }
 
 @media all and (max-width: 576px) {
@@ -190,6 +192,14 @@ li.slick-active {
 .slick__prev .icon,
 .slick__next .icon {
     fill: #4D79FF;
-    width: 18px;
+    width: 26px;
+    height: 30px;
+    transition: all .3s;
+}
+
+.slick__prev:hover .icon,
+.slick__next:hover .icon {
+    fill: #FF5B4D;
+    width: 26px;
     height: 30px;
 }

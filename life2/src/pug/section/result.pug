@@ -13,11 +13,11 @@ section.results
         .radial__lable.radial__lable_first I-тип рассогласования
           strong (обида)
         .radial__lable.radial__lable_second II-тип рассогласования
-          strong (страх)
-        .radial__lable.radial__lable_third III-тип рассогласования
           strong (вина)
-        .radial__lable.radial__lable_four IV-тип рассогласования
+        .radial__lable.radial__lable_third III-тип рассогласования
           strong (стыд)
+        .radial__lable.radial__lable_four IV-тип рассогласования
+          strong (страх)
         
     .relation
       h3.txt_gradient.txt_centr.txt_upper соотношения неприятных переживаний
@@ -67,25 +67,25 @@ section.results
             .bar(data-y="65" data-x="28")
               .bar__info
                 img(src="assets/img/border.svg", alt="border")
-                strong.bar__title I-тип
+                strong.bar__title IV-тип 
                   span (Страх)
                 span.bar__subtitle 0.67 / 37%
             .bar(data-y="75" data-x="22")
               .bar__info
                 img(src="assets/img/border2.svg", alt="border")
-                strong.bar__title II-тип
+                strong.bar__title III-тип
                   span (Стыд)
                 span.bar__subtitle 0.88 / 20%
             .bar(data-y="50" data-x="24")
               .bar__info
                 img(src="assets/img/border.svg", alt="border")
-                strong.bar__title III-тип
+                strong.bar__title II-тип
                   span (Вина)
                 span.bar__subtitle 0.58 / 22%
             .bar(data-y="73" data-x="26")
               .bar__info
                 img(src="assets/img/border2.svg", alt="border")
-                strong.bar__title IV-тип
+                strong.bar__title I-тип
                   span (Обида)
                 span.bar__subtitle 0.75 / 48%
       p 
@@ -104,10 +104,10 @@ section.results
             th Элементы
               br
               | психоэмоционального напряжения
-            th I-тип (Страх)
-            th II-тип (Стыд)
-            th III-тип (Вина)
-            th IV-тип (Обида)
+            th IV-тип (Страх)
+            th III-тип (Стыд)
+            th II-тип (Вина)
+            th I-тип (Обида)
             th.txt_gradient-att Σ
         tbody
           tr
@@ -144,7 +144,8 @@ section.results
     p Там же вы сможете посмотреть свой 
       strong логин и пароль от личного кабинета.
   .results__footer.txt_centr
-    img(src="assets/img/logo.png", alt="best life")
+    a.link(href="https://l-life.ru/")
+      img(src="assets/img/logo.png", alt="best life")
     p Зная свой результат Вам будет интересно познакомиться
       br
       strong
@@ -153,6 +154,6 @@ section.results
             span.tooltip__inner-arr
             | тренировка свойств мышления человека, направленная на реорганизацию опасных свойств с целью совершенствования полезных свойств и повышения психоэмоциональной стабильности.
         | «Лучшая Life» 
-    button.btn.btn_empty
+    a.link(href="https://l-life.ru/").btn.btn_empty
       p
         span ознакомиться

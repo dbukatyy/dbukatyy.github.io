@@ -23,6 +23,17 @@
     display: inline-block;
     width: 100%;
 
+    &.err {
+      p {
+        color: red;
+      }
+
+      .select,
+      .input {
+        border: 1px solid red;
+      }
+    }
+
     &_half {
       width: 48%;
       max-width: 335px;
@@ -57,6 +68,23 @@
   border: 1px solid #D8E2F0;
   border-radius: 5px;
   width: 100%;
+  color: @c-base;
+
+  &:hover {
+    border: 1px solid #AEC0F4;
+  }
+
+  &:focus {
+    border: 1px solid #AEC0F4;
+    color: @c-base;
+  }
+  &::-moz-placeholder {
+    color: rgba(46,56,77,.5); 
+  }
+  &::-webkit-input-placeholder { color: rgba(46,56,77,.5); }
+  &:-ms-input-placeholder { color: rgba(46,56,77,.5); }
+  &::-ms-input-placeholder { color: rgba(46,56,77,.5); }
+  &::placeholder { color: rgba(46,56,77,.5); } 
 }
 
 .input {
@@ -76,6 +104,7 @@
     bottom: 0;
     margin: auto;
     fill: @c-prim;
+    pointer-events: none;
   }
 
   select::-ms-expand {
@@ -91,6 +120,7 @@
     text-overflow: '';
     -ms-appearance: none;
     appearance: none!important;
+    color: rgba(46,56,77,.5);
   }
 
 }
@@ -150,6 +180,11 @@
   &__inner {
     display: flex;
     align-items: center;
+    margin-bottom: 12px;
+
+    p {
+      margin: 0;
+    }
   }
   
   &-view {

@@ -122,14 +122,22 @@ p {
 .link {
 	text-decoration: none;
 	transition: all .3s;
+	display: inline-block;
 	color: inherit;
 
+	
 	&_prim {
 		color: @c-prim;
 	}
 
 	&:hover {
 		color: @c-prim !important;
+	}
+	&.btn {
+		color: @c-white;
+		&:hover {
+			color:  @c-white !important;
+		}
 	}
 }
 
@@ -167,7 +175,7 @@ p {
 // banner
 .banner {
 	// .contain;
-	background: url(../img/top.png) 50% no-repeat;
+	background: url(../img/top.png) 50% 32% no-repeat;
 	background-size: 100%;
 
 	@media @desct {
@@ -352,6 +360,7 @@ p {
 	display: flex;
 	height: 140px;
 	align-items: center;
+	width: 102%;
 
 	@media all and (max-width: 680px) {
 		background: @c-white;
@@ -397,7 +406,7 @@ p {
 	}
 
 	.btn {
-		margin-left: 5px;
+		margin-left: 20px;
 		@media @landsc {
 			transform: translateY(10px) translateX(-25px);
 			width: 195px;
@@ -571,13 +580,13 @@ p {
 		content: '';
     display: inline-block;
     position: absolute;
-    top: -410px;
+    top: -380px;
     height: 1000px;
     z-index: 0;
 		width: 100%;
 		pointer-events: none;
-		background:url(../img/bg4-m.png) 50% 100% no-repeat, url(../img/bg4-c.png) 50% 100% no-repeat,url(../img/bg4-r.png) 100% 0 no-repeat, url(../img/bg4-l.png) 0 85% no-repeat, url(../img/bg3-t.png) 50% 28% no-repeat;
-		background-size: 1400px auto, 1000px auto, auto, auto, 110% auto;
+		background:url(../img/bg4-m.png) 50% 90% no-repeat, url(../img/bg4-c.png) 50% 100% no-repeat,url(../img/bg4-r.png) 100% 0 no-repeat, url(../img/bg4-l.png) 0 85% no-repeat, url(../img/bg3-t.png) 50% 28% no-repeat;
+		background-size: 1100px auto, 1000px auto, auto, auto, 110% auto;
 		
 		@media @landsc {
 			display: none;
@@ -983,7 +992,7 @@ p {
 	&_full {
 		width: 100%;
 		max-width: 100%;
-		max-height: 100vh;
+		min-height: 100vh;		
 		border-radius: 0;
 		padding: 60px 56px 20px;
 		@media @phone {
@@ -991,7 +1000,6 @@ p {
 			min-width: auto;
 			max-width: 100%;
 			max-height: initial;
-			min-height: 100vh;		
 			border-radius: 0;
 			padding: 80px 16px 5px;
 		}
@@ -1059,6 +1067,9 @@ p {
 		align-items: center;
 		justify-content: center;
 		overflow-y: auto;
+		&_full {
+			display: block;
+		}
 		@media @phone {
 			display: block;
 		}
@@ -1079,6 +1090,10 @@ p {
 	&__val {
 		color: @c-prim;
 		font-weight: bold;
+
+		&:hover, &:visited {
+			color: @c-att !important;
+		}
 	}
 }
 
@@ -1153,8 +1168,8 @@ p {
 }
 
 .modal-idea {
-	overflow-y: auto;
-	height: calc(~'96vh - 40px');
+	// overflow-y: auto;
+	// height: calc(~'96vh - 40px');
 
 	@media @phone {
 		overflow-y: visible;
@@ -1179,6 +1194,7 @@ p {
 .text-block {
 	padding: 50px 0;
 	background: url('../img/Group2-1.png') 25% 50% no-repeat, url('../img/Group2.png') 75% 50% no-repeat ;
+	font-size: 22px;
 
 	&__inner {
 		border-radius: 15px;

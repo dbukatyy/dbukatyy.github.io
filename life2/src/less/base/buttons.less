@@ -35,6 +35,7 @@
 
     &:hover {
       box-shadow: 0 9px 35px -5px @c-prim;
+      background: @c-gradient_i no-repeat;
     }
 
     .icon {
@@ -54,6 +55,7 @@
 
     &:hover {
       box-shadow: 0 9px 35px -5px @c-att;
+      background: @c-gradient2_i no-repeat;
     }
 
   }
@@ -64,6 +66,7 @@
     overflow: hidden;
     border: none;
 
+    
     span {
       background:  @c-gradient2;
       -webkit-background-clip: text;
@@ -73,6 +76,15 @@
 				background:  transparent;
 				color: @c-att;
 			}
+    }
+    &:hover {
+      background-image:  @c-gradient2_i;
+
+      span {
+        background:  @c-gradient2_i;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
 
     p {

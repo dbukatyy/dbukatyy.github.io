@@ -4,6 +4,10 @@ jQuery(document).ready(function () {
 
   new ClipboardJS('.js-copy');
 
+  $('select').on('change', function () {
+    $(this).css({ color: '#2E384D' });
+  });
+
   $('.tooltip').on('mouseenter', function (e) {
     var offsets = e.target.getBoundingClientRect();
     var containerOffset = e.target.closest('.container_min') ? e.target.closest('.container_min').getBoundingClientRect() : e.target.closest('section').getBoundingClientRect();
@@ -31,6 +35,7 @@ jQuery(document).ready(function () {
     var modal = el.closest('.modal-block');
     var isClose = el.hasClass('modal__close') || el.closest('.modal__close').hasClass('modal__close');
     if (!insideModal || isClose) {
+      $('body').css({ overflow: 'initial' });
       if (modal.hasClass('modal-block_hided')) {
         modal.removeClass('active');
       } else {
@@ -45,6 +50,7 @@ jQuery(document).ready(function () {
     var modal = $('#' + wind);
     var slide = $(this).data('slide');
 
+    $('body').css({ overflow: 'hidden' });
     if (modal.hasClass('modal-block_hided')) {
       $('.modal .slider-items').slick('slickGoTo', +slide);
       modal.addClass('active');
@@ -68,6 +74,9 @@ jQuery(document).ready(function () {
   $('.password__toggle').on('click', function (e) {
     e.preventDefault();
     $(e.currentTarget).siblings('input').attr('type', 'text');
+    setTimeout(function () {
+      $(e.currentTarget).siblings('input').attr('type', 'password');
+    }, 1000);
   });
 
   $('.reviews .slider-items').slick({
@@ -159,13 +168,13 @@ jQuery(document).ready(function () {
     $('.signin__nav').slideToggle();
   });
 
-  $('.js-test').on('click', function (e) {
+  $('.form').on('submit', function (e) {
     e.preventDefault();
     var scroll = window.scrollY;
     $(this).closest('.form-block__inner').hide();
     $('.tests').show();
     $('html, body').animate({
-      scrollTop: scroll
+      scrollTop: scroll - 100
     }, 0);
   });
 

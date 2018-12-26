@@ -15,6 +15,22 @@ html(lang="ru")
 		//main
 		main.main
 			block content
+			//modal-contact
+			#modal-contact.modal-block
+				.modal-wrapp
+					.modal
+						.modal__inner
+							.contacts
+								h2.h2.contacts__title Контакты
+								.contact
+									strong.contact__name Телефон:
+									a.contact__val.link(href="tel:+79257084835 ") +7 925 708 48 35 
+								.contact
+									strong.contact__name E-mail:
+									a.contact__val.link(href="mailto:l-g@live-g.ru ") l-g@live-g.ru 
+
+						button.modal__close
+							img(src="assets/img/close.svg", alt="close")
 		//footer
 		include ../section/footer-sigin
 		include ../section/scripts
