@@ -211,39 +211,29 @@
         <!--tests-->
         <div class="tests">
           <div class="pagination">
-            <button class="pagination__item" data-page="0">
-              <span>
-                <svg class="icon">
-                  <use xlink:href="assets/img/sprite.svg#icon-user"></use>
-                </svg>
-              </span>
+            <button class="pagination__item">
+              <a href="profile.html">
+                <span>
+                  <svg class="icon">
+                    <use xlink:href="assets/img/sprite.svg#icon-user"></use>
+                  </svg>
+                </span>
+              </a>
             </button>
-            <button class="pagination__item" data-page="1"> 
+            <button class="pagination__item js-pagination pagination__item_att" data-page="1"> 
               <span>1</span>
             </button>
-            <button class="pagination__item" data-page="2"> 
+            <button class="pagination__item js-pagination" data-page="2"> 
               <span>2</span>
             </button>
-            <button class="pagination__item" data-page="3"> 
+            <button class="pagination__item js-pagination" data-page="3"> 
               <span>3</span>
             </button>
-            <button class="pagination__item pagination__item_att" data-page="4"> 
+            <button class="pagination__item js-pagination" data-page="4"> 
               <span>4</span>
             </button>
           </div>
-          <section class="page" data-page="0">
-            <p>page 0</p>
-          </section>
-          <section class="page" data-page="1">
-            <p>page 1</p>
-          </section>
-          <section class="page" data-page="2">
-            <p>page 2</p>
-          </section>
-          <section class="page" data-page="3">
-            <p>page 3</p>
-          </section>
-          <section class="test page page_active" data-page="4">
+          <section class="test page page_active" data-page="1">
             <header class="test__head">
               <h2 class="h2 test__title">Рассогласование IV типа</h2>
               <h4 class="h4 test__subtitle">переживание “страха неудачи”</h4>
@@ -259,7 +249,7 @@
               <div class="info-line">
                 <img src="assets/img/info.svg" alt="info">Вспомните ситуацию, когда вы потерпели неудачу
               </div>
-              <p class="instruction__txt">Представьте отчетливо эту ситуацию, обстоятельства, людей, вовлеченных в нее, общение с ними, разговоры и так далее. отметьте в приведенном ниже списке все мысли, похожие нате, которые обычно у вас возникают в подобных ситуациях.</p>
+              <p class="instruction__txt">Представьте отчетливо эту ситуацию, обстоятельства, людей, вовлеченных в нее, общение с ними, разговоры и так далее. отметьте в приведенном ниже списке все мысли, похожие на те, которые обычно у вас возникают в подобных ситуациях.</p>
               <div class="steps">
                 <figure class="step">
                   <img src="assets/img/interview.svg" alt="interview">
@@ -832,6 +822,1670 @@
               </label>
             </form>
           </section>
+          <section class="page" data-page="2">
+            <header class="test__head">
+              <h2 class="h2 test__title">Рассогласование III типа</h2>
+              <h4 class="h4 test__subtitle">переживание “стыда”</h4>
+            </header>
+            <p> 
+              <strong>возникает когда параметры результата моих действий, состояния, облика не соответствуют моим ожиданиям.</strong>
+            </p>
+            <p>Чаще всего такое рассогласование называют переживанием стыда.
+              <strong>Такой тип рассогласования или «переживание стыда» формирует отрицательную биологическую эмоцию и сопровождается неприятными переживаниями.</strong>
+              <strong>Чувство стыда также переживается, когда мы смотрим на себя глазами других.</strong>
+            </p>
+            <div class="instruction">
+              <div class="info-line">
+                <img src="assets/img/info.svg" alt="info">Вспомните ситуацию, когда вы испытывали "ПЕРЕЖИВАНИЕ СТЫДА".
+              </div>
+              <p class="instruction__txt">Представьте отчетливо эту ситуацию, обстоятельства, людей, вовлеченных в нее, общение с ними, разговоры и так далее. отметьте в приведенном ниже списке все мысли, похожие нате, которые обычно у вас возникают в подобных ситуациях.</p>
+              <div class="steps">
+                <figure class="step">
+                  <img src="assets/img/interview.svg" alt="interview">
+                  <figcaption>1. Представте ситуацию</figcaption>
+                </figure>
+                <figure class="step">
+                  <img src="assets/img/happy.svg" alt="happy">
+                  <figcaption>2. Вспомните чувства</figcaption>
+                </figure>
+                <figure class="step">
+                  <img src="assets/img/check-list.svg" alt="check-list">
+                  <figcaption>3. Найдите похожее описание</figcaption>
+                </figure>
+                <figure class="step">
+                  <img src="assets/img/check.svg" alt="check">
+                  <figcaption>4. Отметьте подходящие</figcaption>
+                </figure>
+                <figure class="step">
+                  <img src="assets/img/share.svg" alt="share">
+                  <figcaption>5. Перейдите к следующему шагу</figcaption>
+                </figure>
+              </div>
+            </div>
+            <form class="tests__form" action="">
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>КАК Я ДОШЕЛ ДО ТАКОЙ ЖИЗНИ?...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я ИХ НЕНАВИЖУ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЛЮБОЙ ДРУГОЙ МОГ ОКАЗАТЬСЯ В ТАКОМ ЖЕ ПОЛОЖЕНИИ..</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>МНЕ ПОДСТРОИЛ ЭТО...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЛУЧШЕ БЫ Я С ЭТИМ НЕ СВЯЗЫВАЛСЯ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ДА, Я ТАКОЙ, СО МНОЮ ЭТО БЫВАЕТ, И Я ПРИНИМАЮ СЕБЯ ТАКИМ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НЕ ХОЧУ БЫТЬ С ТЕМИ, КТО ЗНАЕТ ОБ ЭТОМ СЛУЧАЕ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я ИХ НЕНАВИЖУ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ОНИ ВСЕ ТАКИЕ ЖЕ, КАК И Я, НО ХОРОШО ЭТО СКРЫВАЮТ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ОКАЖИСЬ ОНИ В ЭТОТ СИТУАЦИИ, НАВЕРНЯКА ВЕЛИ БЫ СЕБЯ ХУЖЕ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ХОТЕЛОСЬ БЫ СТАТЬ ИНЫМ, НО ВЕДЬ НЕ СМОГУ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЕСЛИ БЫ ЭТО ПОВТОРИЛОСЬ, Я ПОСТУПИЛ БЫ ИНАЧЕ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>БЫЛ БЫ ЭТО ЛИШЬ СОН...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ПУСТЬ МНЕ БУДЕТ ПЛОХО ЗА ЭТО...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ХОТЕЛ БЫ ИСЧЕЗНУТЬ, ПРОВАЛИТЬСЯ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я САМ В ЭТОМ ВИНОВАТ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НЕ ХОЧУ ОБ ЭТОМ ДУМАТЬ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ХОЧУ, ЧТОБЫ МЕНЯ ПОЖАЛЕЛИ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НО ЧТО ДЕЛАТЬ, ЕСЛИ ТАК ОБСТОИТ ДЕЛО, ТАК ПОЛУЧИЛОСЬ?...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ВСЕ ОНИ ТАКИЕ, ТАК ПОСТУПАЮТ, НЕ ТОЛЬКО Я...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я ТОЛЬКО КОЗЕЛ ОТПУЩЕНИЯ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>УЖЕ ЗАВТРА ПЕРЕСТАНУ ОБ ЭТОМ ДУМАТЬ И НАЧНУ ВСЕ ЗАНОВО...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ТАК МНЕ И НАДО, ДУМАТЬ НАДО БЫЛО...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЭХ, НАЧАТЬ БЫ ВСЕ СНАЧАЛА!...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЕСТЬ ЛЮДИ, КОТОРЫЕ ПОЙМУТ, КТО ПРАВ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ПОКАЮСЬ ПЕРЕД ДРУЗЬЯМИ ОБИЖЕННОГО, РАССКАЖУ, ПОЧЕМУ Я ЭТО СДЕЛАЛ.</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЕМУ ОБЪЯСНЯТ, ЧТО НЕ СЛЕДОВАЛО БЫ ОБИЖАТЬСЯ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ОНИ ЖЕ НЕПРАВЫ , ОЖИДАЯ ОТ МЕНЯ ЭТОГО...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>А КАК Я ДОЛЖЕН БЫЛ БЫ ВЕСТИ СЕБЯ, ЧТОБЫ МНЕ НЕ БЫЛО СТЫДНО?...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НЕ ВСЕГДА ЖЕ БЫТЬ ПРИЛИЧНЫМ, УМНЫМ, ЧЕСТНЫМ, ХОРОШИМ!...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НЕ ОДИН Я ТАКОЙ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ВСЕ ТАК ПОСТУПАЮТ, НО СОЗНАТЕЛЬНО И УСПЕШНО СКРЫВАЮТ ЭТО...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЗАТО Я УВАЖАЮ СЕБЯ В ЧЕМ-ТО ДРУГОМ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я ВАМ ЭТО ПРИПОМНЮ, ВЫ ВИДЕЛИ МЕНЯ В СТЫДЕ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ПОТОМ Я ПОКАЖУ СЕБЕ И ДРУГИМ, НА ЧТО Я СПОСОБЕН...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>СТАНУ ЛУЧШЕ, А СТЫД - МНЕ НАПОМИНАНИЕ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>А ПОЧЕМУ Я ДОЛЖЕН БЫТЬ ДРУГИМ?...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я ЗДЕСЬ НИ ПРИ ЧЕМ, ВСЕ ПРОИЗОШЛО СЛУЧАЙНО, ТАКОВЫ ОБСТОЯТЕЛЬСТВА..</p>
+                </div>
+              </label>
+            </form>
+          </section>
+          <section class="page" data-page="3">
+            <header class="test__head">
+              <h2 class="h2 test__title">Рассогласование II типа</h2>
+              <h4 class="h4 test__subtitle">переживание “ВИНЫ”</h4>
+            </header>
+            <p> 
+              <strong>возникает когда параметры результата моего не соответствуют ожиданиям другого, значимого для меня человека.</strong>
+            </p>
+            <p>Чаще всего такое рассогласование называют переживанием вины.
+              <strong>Такой тип рассогласования или «переживание вины» формирует отрицательную биологическую эмоцию и сопровождается неприятными переживаниями.</strong>
+              <strong>Чувство вины также переживается, когда обида причиняется другому человеку.</strong>
+            </p>
+            <div class="instruction">
+              <div class="info-line">
+                <img src="assets/img/info.svg" alt="info">Вспомните ситуацию, когда вы были виноваты.
+              </div>
+              <p class="instruction__txt">Представьте отчетливо эту ситуацию, обстоятельства, людей, вовлеченных в нее, общение с ними, разговоры и так далее. отметьте в приведенном ниже списке все мысли, похожие нате, которые обычно у вас возникают в подобных ситуациях.</p>
+              <div class="steps">
+                <figure class="step">
+                  <img src="assets/img/interview.svg" alt="interview">
+                  <figcaption>1. Представте ситуацию</figcaption>
+                </figure>
+                <figure class="step">
+                  <img src="assets/img/happy.svg" alt="happy">
+                  <figcaption>2. Вспомните чувства</figcaption>
+                </figure>
+                <figure class="step">
+                  <img src="assets/img/check-list.svg" alt="check-list">
+                  <figcaption>3. Найдите похожее описание</figcaption>
+                </figure>
+                <figure class="step">
+                  <img src="assets/img/check.svg" alt="check">
+                  <figcaption>4. Отметьте подходящие</figcaption>
+                </figure>
+                <figure class="step">
+                  <img src="assets/img/share.svg" alt="share">
+                  <figcaption>5. Перейдите к следующему шагу</figcaption>
+                </figure>
+              </div>
+            </div>
+            <form class="tests__form" action="">
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НЕ ХОЧУ БЫТЬ С ТЕМИ, КТО ЗНАЕТ ОБ ЭТОМ СЛУЧАЕ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>СДЕЛАЮ ВСЕ, ЧТО УГОДНО, ЧТОБЫ ЗАГЛАДИТЬ ВИНУ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НЕ ХОЧУ ОБ ЭТОМ ДУМАТЬ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ОНИ САМИ ВИНОВАТЫ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ОНИ ОТ МЕНЯ ХОТЯТ БОЛЬШЕ, ЧЕМ Я МОГУ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЧТО ЖЕ ДЕЛАТЬ, ЕСЛИ ОНИ НЕ ПРИНИМАЮТ МЕНЯ ТАКИМ, КАКОВ Я ЕСТЬ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>МЕНЯ ТАКИМ СДЕЛАЛА ЖИЗНЬ, ВОСПИТАНИЕ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я - ХОРОШИЙ, НО ОБСТОЯТЕЛЬСТВА...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЛЮБОЙ ДРУГОЙ ПОСТУПИЛ БЫ В ЭТИХ ОБСТОЯТЕЛЬСТВАХ ТАК ЖЕ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ДА, Я ТАКОЙ! НУ И ЧТО ЖЕ ТЕПЕРЬ?...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЕСЛИ БЫ ЭТО ПОВТОРИЛОСЬ, Я ПОСТУПИЛ БЫ ИНАЧЕ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЕСЛИ БЫ ЭТО БЫЛ ТОЛЬКО СОН!...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ТАК МНЕ И НАДО, ЕСЛИ Я ТАКОЙ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>СДЕЛАЛ БЫ ЧТО УГОДНО, ЧТОБЫ ЗАГЛАДИТЬ ВИНУ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ПУСТЬ МНЕ БУДЕТ ПЛОХО ИЛИ БОЛЬНО, Я ЗАСЛУЖИЛ ЭТО...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЧЕМ МНЕ ХУЖЕ, ТЕМ, НАВЕРНОЕ, ЛУЧШЕ, ЕСЛИ Я ТАКОЙ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ПУСТЬ БЫ ОНИ СДЕЛАЛИ СО МНОЙ ТО ЖЕ, ЧТО И Я С НИМИ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ГОРИ ОНО СИНИМ ОГНЕМ, МЕНЯ ЭТО НЕ КАСАЕТСЯ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>КАК МНЕ ПОСЛЕ ЭТОГО ОБЩАТЬСЯ С НИМИ?...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я СЕБЯ НЕНАВИЖУ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я ДОСТОИН ПРЕЗРЕНИЯ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ДУМАТЬ НАДО БЫЛО О ПОСЛЕДСТВИЯХ, О ТОМ, КАК ОНИ ОТНЕСУТСЯ К ЭТОМУ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ХОЧУ БЫТЬ ОДИН, И ТОГДА НИКТО НЕ БУДЕТ НА МЕНЯ ОБИЖАТЬСЯ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>В КАКОМ СЛУЧАЕ ОНИ НА МЕНЯ НЕ ОБИДЕЛИСЬ БЫ?...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>БЫСТРЕЕ БЫ ЭТО КОНЧИЛОСЬ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НАДО ЧТО-ТО СДЕЛАТЬ, ЧТОБЫ ЗАГЛАДИТЬ ВИНУ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>А КАК МНЕ СЛЕДОВАЛО БЫ ВЕСТИ СЕБЯ В ЭТОЙ СИТУАЦИИ, ЧТОБЫ НА МЕНЯ НЕ ОБИЖАЛИСЬ?...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я ВСЕ РАВНО НЕ СМОГ БЫ БЫТЬ ТАКИМ ЧЕЛОВЕКОМ, НА КОТОРОГО БЫ НЕ ОБИЖАЛИСЬ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ОТКУДА ОНИ ВЗЯЛИ, ЧТО Я ДОЛЖЕН БЫТЬ ТАКИМ, КАКИМ ОНИ ХОТЯТ МЕНЯ ВИДЕТЬ?...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ОНИ ТОЖЕ МЕНЯ ОБИЖАЛИ И НАВЕРНЯКА ЕЩЕ ОБИДЯТ, ЧТО ЖЕ Я ПЕРЕЖИВАЮ?...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ПУСТЬ ОНИ ПЕРЕВАРЯТ ЭТО. БЫВАЕТ ХУЖЕ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ТАК ИМИ НАДО, Я ПОСТУПИЛ ПРАВИЛЬНО...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>МИР ТАК УСТРОЕН, И НЕ Я ЕГО ПРИДУМАЛ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ПУСТЬ ОБИЖАЮТСЯ, ЕСЛИ ОНИ НЕ ПРИНИМАЮТ МЕНЯ И ПЛОХИМ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я В ЭТО ВРЕМЯ ПЛОХ, И ЭТИМ ВСЕ СКАЗАНО...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ДУМАЮ, КАК ПОПРОСИТЬ ПРОЩЕНИЯ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НЕТ МНЕ ПРОЩЕНИЯ...</p>
+                </div>
+              </label>
+            </form>
+          </section>
+          <section class="page" data-page="4">
+            <header class="test__head">
+              <h2 class="h2 test__title">Рассогласование I типа</h2>
+              <h4 class="h4 test__subtitle">переживание “обиды”</h4>
+            </header>
+            <p> 
+              <strong>возникает когда параметры результата действия другого, значимого человека, не соответствуют моим ожиданиям.</strong>
+            </p>
+            <p>Чаще всего такое рассогласование называют переживанием обиды.
+              <strong>Такой тип рассогласования или «переживание обиды» формирует отрицательную биологическую эмоцию и сопровождается неприятными переживаниями.</strong>
+              <strong>Чувство стыда также переживается, когда мы смотрим на себя глазами других.</strong>
+            </p>
+            <div class="instruction">
+              <div class="info-line">
+                <img src="assets/img/info.svg" alt="info">Вспомните ситуацию, когда вы были обижены на близких, на друга, на старшего.
+                <br>(руководителя, преподавателя и пр.)
+              </div>
+              <p class="instruction__txt">Представьте отчетливо эту ситуацию, обстоятельства, людей, вовлеченных в нее, общение с ними, разговоры и так далее. отметьте в приведенном ниже списке все мысли, похожие нате, которые обычно у вас возникают в подобных ситуациях.</p>
+              <div class="steps">
+                <figure class="step">
+                  <img src="assets/img/interview.svg" alt="interview">
+                  <figcaption>1. Представте ситуацию</figcaption>
+                </figure>
+                <figure class="step">
+                  <img src="assets/img/happy.svg" alt="happy">
+                  <figcaption>2. Вспомните чувства</figcaption>
+                </figure>
+                <figure class="step">
+                  <img src="assets/img/check-list.svg" alt="check-list">
+                  <figcaption>3. Найдите похожее описание</figcaption>
+                </figure>
+                <figure class="step">
+                  <img src="assets/img/check.svg" alt="check">
+                  <figcaption>4. Отметьте подходящие</figcaption>
+                </figure>
+                <figure class="step">
+                  <img src="assets/img/share.svg" alt="share">
+                  <figcaption>5. Перейдите к следующему шагу</figcaption>
+                </figure>
+              </div>
+            </div>
+            <form class="tests__form" action="">
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я НЕСЧАСТЕН...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ПОЖАЛУЮСЬ ДРУГУ ОБИДЧИКА...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>БУДУ МОЛИТЬСЯ, ЧТОБЫ БОГ ЕГО ВРАЗУМИЛ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НИКТО МЕНЯ НЕ ЛЮБИТ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НИКОМУ Я НЕ НУЖЕН...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>В СЛЕДУЮЩИЙ РАЗ Я С НИМИ ПОСТУПЛЮ ТАК ЖЕ, КАК ОНИ СО МНОЙ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я ИМ ЕЩЕ ПОКАЖУ!...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЛУЧШЕ БЫ ЕГО ЗДЕСЬ НЕ БЫЛО ВОВСЕ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>А КАК ЕМУ СЛЕДОВАЛО БЫ ВЕСТИ СЕБЯ, ЧТОБЫ Я НЕ ОБИДЕЛСЯ?...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ПОЧЕМУ ОН ВЕЛ СЕБЯ ТАК, А НЕ ИНАЧЕ?...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЕМУ СЛЕДОВАЛО БЫ ВЕСТИ СЕБЯ ИНАЧЕ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЭТО НА НЕГО НЕ ПОХОЖЕ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НЕ ОЖИДАЛ, ЧТО ОН БУДЕТ ВЕСТИ СЕБЯ ТАК...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЕМУ БУДЕТ СТЫДНО ПЕРЕД ЕГО РОДИТЕЛЯМИ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>У МЕНЯ ЕСТЬ КОМУ ТЕБЯ УБЕДИТЬ, ЧТО ТЫ НЕПРАВ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЗНАЙ, ЧТО У МЕНЯ ЕСТЬ КОМУ МЕНЯ ПОЖАЛЕТЬ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ОНИ НИКОГДА НЕ УВИДЯТ НА МОЕМ ЛИЦЕ РАДОСТИ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я ИМ НЕ ДАМ ПОРАДОВАТЬСЯ, ПОКАЗАВ СВОЮ ОБИДУ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НЕ ПОКАЖУ ИМ, ЧТО Я ОБИЖЕН, ПУСТЬ НЕ РАДУЮТСЯ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ИМ ТЕПЕРЬ ПРИДЕТСЯ ОБХОДИТЬСЯ БЕЗ МЕНЯ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ОНИ БУДУТ СТРАДАТЬ ОТ ЧУВСТВА ВИНЫ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>БОЛЬШЕ Я ЭТОГО НЕ ВЫНЕСУ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НИКОГДА НЕ БУДУ ДЛЯ НИХ СТАРАТЬСЯ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НЕ БУДУ ИМЕТЬ С НИМИ ДЕЛА...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>БОЖЕ! ПОЧЕМУ ОНИ ТАКИЕ?...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ОНИ МОГЛИ БЫ БЫТЬ ЛУЧШЕ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ПОЧЕМУ ДРУГИЕ ТАК НЕ ПОСТУПАЮТ СО МНОЙ?...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>МНЕ БОЛЬНО В ЛЮДЯХ РАЗОЧАРОВЫВАТЬСЯ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я НЕ НУЖДАЮСЬ В ЕГО УСЛУГАХ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ПУСТЬ МНЕ БУДЕТ ПЛОХО...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ОН ПОТОМ ПОЖАЛЕЕТ, НО БУДЕТ ПОЗДНО...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НЕ ТОЛЬКО МНЕ, НО И ИМ ПЛОХО ПУСТЬ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ИМ ПОТОМ БУДЕТ СТЫДНО, ЧТО ОНИ ТАК ПОСТУПИЛИ СО МНОЙ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я ПОЗАБОЧУСЬ О ТОМ, ЧТОБЫ ВСЕ ЗНАЛИ, КАК ОНИ МЕНЯ ОБИДЕЛИ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я ПОТОМ ПОЖАЛУЮСЬ НА ОБИДЧИКА ЕМУ ЖЕ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я ОБИДЕЛСЯ, А ВЕДЬ ОН СВОБОДЕН И ВПРАВЕ ПОСТУПАТЬ КАК ЕМУ УГОДНО...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>Я БЫ НЕ ХОТЕЛ, ЧТОБЫ ОН СТРАДАЛ ОТ ЧУВСТВА ВИНЫ, А СВОЮ ОБИДУ Я ПЕРЕЖИВУ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ПРИ СЛУЧАЕ Я С НИМИ ПОСТУПЛЮ ТАК ЖЕ, КАК И ОНИ СО МНОЙ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ПЕРЕСТАНУ С НИМИ ИМЕТЬ ДЕЛО...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>НЕ БУДУ ОБЩАТЬСЯ С НИМИ...	</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ВСЕ ПОЙМУТ, КАКОВЫ Я И ОНА...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>У МЕНЯ ВСЕ РАВНО ЕСТЬ ЗАЩИТА, И ОНИ МЕНЯ НЕ ОБИЖАЮТ...</p>
+                </div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="">
+                <div class="checkbox__inner">
+                  <div class="checkbox-view">
+                    <span>
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-check"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p>ЕСЛИ БЫ КТО ОБЪЯСНИЛ ЕМУ, КАК ОН НЕСПРАВЕДЛИВ КО МНЕ..		</p>
+                </div>
+              </label>
+            </form>
+          </section>
           <div class="tests__control">
             <button class="btn btn_primery js-page-prev" type="submit">Назад</button>
             <button class="btn btn_att js-page-next" type="submit">Далее</button>
@@ -1087,7 +2741,7 @@
             </strong>
           </p>
           <div class="txt_centr">
-            <a class="link btn btn_att js-scroll" href="" data-section="#diagnostic">Перейти к мыслингу</a>
+            <a class="link btn btn_att js-scroll" href="" data-section="#diagnostic">Начать самодиагностику</a>
           </div>
         </div>
         <button class="to">
@@ -1399,7 +3053,7 @@
                         <p class="txt_gradient-att">Для любознательных от учёных</p>
                       </div>
                       <blockquote>Цель уникальной способности человека "думать", изобретать – принести пользу себе и окружающим. Это одна из добродетелей человека – оказание помощи своему окружению. Это помогает выжить и самому человеку и всему человеческому роду. Назовем это ключевое условие успешности человеческого рода – 
-                        <strong>"взаимодействие" для достижения пользы.</strong>
+                        <strong>"взаимосодействие" для достижения пользы.</strong>
                       </blockquote>
                     </div>
                   </section>

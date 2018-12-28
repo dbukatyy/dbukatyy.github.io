@@ -103,7 +103,7 @@ jQuery(document).ready(function () {
     });
   // }
 
-  $('.pagination__item').on('click', function (e) {
+  $('.js-pagination').on('click', function (e) {
     e.preventDefault();
     const page = $(this).data('page');
     const selectPage = $(`.page[data-page=${page}]`);

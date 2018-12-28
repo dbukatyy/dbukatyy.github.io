@@ -102,7 +102,7 @@ jQuery(document).ready(function () {
   });
   // }
 
-  $('.pagination__item').on('click', function (e) {
+  $('.js-pagination').on('click', function (e) {
     e.preventDefault();
     var page = $(this).data('page');
     var selectPage = $('.page[data-page=' + page + ']');

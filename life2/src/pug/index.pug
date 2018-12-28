@@ -126,28 +126,21 @@ block content
 		//tests
 		.tests
 			.pagination
-				button.pagination__item(data-page="0")
-					span
-						svg.icon
-							use(xlink:href="assets/img/sprite.svg#icon-user")
-				button.pagination__item(data-page="1") 
+				button.pagination__item
+					a(href="profile.html")
+						span
+							svg.icon
+								use(xlink:href="assets/img/sprite.svg#icon-user")
+				button.pagination__item.js-pagination.pagination__item_att(data-page="1") 
 					span 1
-				button.pagination__item(data-page="2") 
+				button.pagination__item.js-pagination(data-page="2") 
 					span 2
-				button.pagination__item(data-page="3") 
+				button.pagination__item.js-pagination(data-page="3") 
 					span 3
-				button.pagination__item.pagination__item_att(data-page="4") 
+				button.pagination__item.js-pagination(data-page="4") 
 					span 4
 
-			section.page(data-page="0")
-				p page 0
-			section.page(data-page="1")
-				p page 1
-			section.page(data-page="2")
-				p page 2
-			section.page(data-page="3")
-				p page 3
-			section.test.page.page_active(data-page="4")
+			section.test.page.page_active(data-page="1")
 				header.test__head
 					h2.h2.test__title Рассогласование IV типа
 					h4.h4.test__subtitle переживание “страха неудачи”
@@ -165,7 +158,7 @@ block content
 						img(src="assets/img/info.svg", alt="info")
 						| Вспомните ситуацию, когда вы потерпели неудачу
 
-					p.instruction__txt Представьте отчетливо эту ситуацию, обстоятельства, людей, вовлеченных в нее, общение с ними, разговоры и так далее. отметьте в приведенном ниже списке все мысли, похожие нате, которые обычно у вас возникают в подобных ситуациях.
+					p.instruction__txt Представьте отчетливо эту ситуацию, обстоятельства, людей, вовлеченных в нее, общение с ними, разговоры и так далее. отметьте в приведенном ниже списке все мысли, похожие на те, которые обычно у вас возникают в подобных ситуациях.
 
 					.steps
 						figure.step
@@ -562,6 +555,1177 @@ block content
 											svg.icon
 												use(xlink:href="assets/img/sprite.svg#icon-check")
 									p Они изменят мнение обо мне в плохую сторону	
+			section.page(data-page="2")
+				header.test__head
+					h2.h2.test__title Рассогласование III типа
+					h4.h4.test__subtitle переживание “стыда”
+				
+				p 
+					strong возникает когда параметры результата моих действий, состояния, облика не соответствуют моим ожиданиям.
+				p Чаще всего такое рассогласование называют переживанием стыда.
+					strong Такой тип рассогласования или «переживание стыда» формирует отрицательную биологическую эмоцию и сопровождается неприятными переживаниями.
+					strong Чувство стыда также переживается, когда мы смотрим на себя глазами других.
+				
+				.instruction
+					.info-line
+						img(src="assets/img/info.svg", alt="info")
+						| Вспомните ситуацию, когда вы испытывали "ПЕРЕЖИВАНИЕ СТЫДА".
+
+					p.instruction__txt Представьте отчетливо эту ситуацию, обстоятельства, людей, вовлеченных в нее, общение с ними, разговоры и так далее. отметьте в приведенном ниже списке все мысли, похожие нате, которые обычно у вас возникают в подобных ситуациях.
+
+					.steps
+						figure.step
+							img(src="assets/img/interview.svg", alt="interview")
+							figcaption 1. Представте ситуацию
+						figure.step
+							img(src="assets/img/happy.svg", alt="happy")
+							figcaption 2. Вспомните чувства
+						figure.step
+							img(src="assets/img/check-list.svg", alt="check-list")
+							figcaption 3. Найдите похожее описание
+						figure.step
+							img(src="assets/img/check.svg", alt="check")
+							figcaption 4. Отметьте подходящие
+						figure.step
+							img(src="assets/img/share.svg", alt="share")
+							figcaption 5. Перейдите к следующему шагу
+
+				form(action="").tests__form
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p КАК Я ДОШЕЛ ДО ТАКОЙ ЖИЗНИ?...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я ИХ НЕНАВИЖУ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЛЮБОЙ ДРУГОЙ МОГ ОКАЗАТЬСЯ В ТАКОМ ЖЕ ПОЛОЖЕНИИ..
+							
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p МНЕ ПОДСТРОИЛ ЭТО...
+							
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЛУЧШЕ БЫ Я С ЭТИМ НЕ СВЯЗЫВАЛСЯ...
+							
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ДА, Я ТАКОЙ, СО МНОЮ ЭТО БЫВАЕТ, И Я ПРИНИМАЮ СЕБЯ ТАКИМ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НЕ ХОЧУ БЫТЬ С ТЕМИ, КТО ЗНАЕТ ОБ ЭТОМ СЛУЧАЕ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я ИХ НЕНАВИЖУ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ОНИ ВСЕ ТАКИЕ ЖЕ, КАК И Я, НО ХОРОШО ЭТО СКРЫВАЮТ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ОКАЖИСЬ ОНИ В ЭТОТ СИТУАЦИИ, НАВЕРНЯКА ВЕЛИ БЫ СЕБЯ ХУЖЕ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ХОТЕЛОСЬ БЫ СТАТЬ ИНЫМ, НО ВЕДЬ НЕ СМОГУ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЕСЛИ БЫ ЭТО ПОВТОРИЛОСЬ, Я ПОСТУПИЛ БЫ ИНАЧЕ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p БЫЛ БЫ ЭТО ЛИШЬ СОН...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ПУСТЬ МНЕ БУДЕТ ПЛОХО ЗА ЭТО...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ХОТЕЛ БЫ ИСЧЕЗНУТЬ, ПРОВАЛИТЬСЯ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я САМ В ЭТОМ ВИНОВАТ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НЕ ХОЧУ ОБ ЭТОМ ДУМАТЬ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ХОЧУ, ЧТОБЫ МЕНЯ ПОЖАЛЕЛИ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НО ЧТО ДЕЛАТЬ, ЕСЛИ ТАК ОБСТОИТ ДЕЛО, ТАК ПОЛУЧИЛОСЬ?...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ВСЕ ОНИ ТАКИЕ, ТАК ПОСТУПАЮТ, НЕ ТОЛЬКО Я...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я ТОЛЬКО КОЗЕЛ ОТПУЩЕНИЯ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p УЖЕ ЗАВТРА ПЕРЕСТАНУ ОБ ЭТОМ ДУМАТЬ И НАЧНУ ВСЕ ЗАНОВО...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ТАК МНЕ И НАДО, ДУМАТЬ НАДО БЫЛО...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЭХ, НАЧАТЬ БЫ ВСЕ СНАЧАЛА!...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЕСТЬ ЛЮДИ, КОТОРЫЕ ПОЙМУТ, КТО ПРАВ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ПОКАЮСЬ ПЕРЕД ДРУЗЬЯМИ ОБИЖЕННОГО, РАССКАЖУ, ПОЧЕМУ Я ЭТО СДЕЛАЛ.
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЕМУ ОБЪЯСНЯТ, ЧТО НЕ СЛЕДОВАЛО БЫ ОБИЖАТЬСЯ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ОНИ ЖЕ НЕПРАВЫ , ОЖИДАЯ ОТ МЕНЯ ЭТОГО...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p А КАК Я ДОЛЖЕН БЫЛ БЫ ВЕСТИ СЕБЯ, ЧТОБЫ МНЕ НЕ БЫЛО СТЫДНО?...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НЕ ВСЕГДА ЖЕ БЫТЬ ПРИЛИЧНЫМ, УМНЫМ, ЧЕСТНЫМ, ХОРОШИМ!...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НЕ ОДИН Я ТАКОЙ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ВСЕ ТАК ПОСТУПАЮТ, НО СОЗНАТЕЛЬНО И УСПЕШНО СКРЫВАЮТ ЭТО...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЗАТО Я УВАЖАЮ СЕБЯ В ЧЕМ-ТО ДРУГОМ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я ВАМ ЭТО ПРИПОМНЮ, ВЫ ВИДЕЛИ МЕНЯ В СТЫДЕ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ПОТОМ Я ПОКАЖУ СЕБЕ И ДРУГИМ, НА ЧТО Я СПОСОБЕН...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p СТАНУ ЛУЧШЕ, А СТЫД - МНЕ НАПОМИНАНИЕ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p А ПОЧЕМУ Я ДОЛЖЕН БЫТЬ ДРУГИМ?...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я ЗДЕСЬ НИ ПРИ ЧЕМ, ВСЕ ПРОИЗОШЛО СЛУЧАЙНО, ТАКОВЫ ОБСТОЯТЕЛЬСТВА..
+
+			section.page(data-page="3")
+				header.test__head
+					h2.h2.test__title Рассогласование II типа
+					h4.h4.test__subtitle переживание “ВИНЫ”
+				
+				p 
+					strong возникает когда параметры результата моего не соответствуют ожиданиям другого, значимого для меня человека.
+				p Чаще всего такое рассогласование называют переживанием вины.
+					strong Такой тип рассогласования или «переживание вины» формирует отрицательную биологическую эмоцию и сопровождается неприятными переживаниями.
+					strong Чувство вины также переживается, когда обида причиняется другому человеку.
+				
+				.instruction
+					.info-line
+						img(src="assets/img/info.svg", alt="info")
+						| Вспомните ситуацию, когда вы были виноваты.
+
+					p.instruction__txt Представьте отчетливо эту ситуацию, обстоятельства, людей, вовлеченных в нее, общение с ними, разговоры и так далее. отметьте в приведенном ниже списке все мысли, похожие нате, которые обычно у вас возникают в подобных ситуациях.
+
+					.steps
+						figure.step
+							img(src="assets/img/interview.svg", alt="interview")
+							figcaption 1. Представте ситуацию
+						figure.step
+							img(src="assets/img/happy.svg", alt="happy")
+							figcaption 2. Вспомните чувства
+						figure.step
+							img(src="assets/img/check-list.svg", alt="check-list")
+							figcaption 3. Найдите похожее описание
+						figure.step
+							img(src="assets/img/check.svg", alt="check")
+							figcaption 4. Отметьте подходящие
+						figure.step
+							img(src="assets/img/share.svg", alt="share")
+							figcaption 5. Перейдите к следующему шагу
+
+				form(action="").tests__form
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НЕ ХОЧУ БЫТЬ С ТЕМИ, КТО ЗНАЕТ ОБ ЭТОМ СЛУЧАЕ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p СДЕЛАЮ ВСЕ, ЧТО УГОДНО, ЧТОБЫ ЗАГЛАДИТЬ ВИНУ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НЕ ХОЧУ ОБ ЭТОМ ДУМАТЬ...
+							
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ОНИ САМИ ВИНОВАТЫ...
+							
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ОНИ ОТ МЕНЯ ХОТЯТ БОЛЬШЕ, ЧЕМ Я МОГУ...
+							
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЧТО ЖЕ ДЕЛАТЬ, ЕСЛИ ОНИ НЕ ПРИНИМАЮТ МЕНЯ ТАКИМ, КАКОВ Я ЕСТЬ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p МЕНЯ ТАКИМ СДЕЛАЛА ЖИЗНЬ, ВОСПИТАНИЕ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я - ХОРОШИЙ, НО ОБСТОЯТЕЛЬСТВА...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЛЮБОЙ ДРУГОЙ ПОСТУПИЛ БЫ В ЭТИХ ОБСТОЯТЕЛЬСТВАХ ТАК ЖЕ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ДА, Я ТАКОЙ! НУ И ЧТО ЖЕ ТЕПЕРЬ?...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЕСЛИ БЫ ЭТО ПОВТОРИЛОСЬ, Я ПОСТУПИЛ БЫ ИНАЧЕ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЕСЛИ БЫ ЭТО БЫЛ ТОЛЬКО СОН!...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ТАК МНЕ И НАДО, ЕСЛИ Я ТАКОЙ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p СДЕЛАЛ БЫ ЧТО УГОДНО, ЧТОБЫ ЗАГЛАДИТЬ ВИНУ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ПУСТЬ МНЕ БУДЕТ ПЛОХО ИЛИ БОЛЬНО, Я ЗАСЛУЖИЛ ЭТО...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЧЕМ МНЕ ХУЖЕ, ТЕМ, НАВЕРНОЕ, ЛУЧШЕ, ЕСЛИ Я ТАКОЙ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ПУСТЬ БЫ ОНИ СДЕЛАЛИ СО МНОЙ ТО ЖЕ, ЧТО И Я С НИМИ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ГОРИ ОНО СИНИМ ОГНЕМ, МЕНЯ ЭТО НЕ КАСАЕТСЯ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p КАК МНЕ ПОСЛЕ ЭТОГО ОБЩАТЬСЯ С НИМИ?...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я СЕБЯ НЕНАВИЖУ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я ДОСТОИН ПРЕЗРЕНИЯ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ДУМАТЬ НАДО БЫЛО О ПОСЛЕДСТВИЯХ, О ТОМ, КАК ОНИ ОТНЕСУТСЯ К ЭТОМУ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ХОЧУ БЫТЬ ОДИН, И ТОГДА НИКТО НЕ БУДЕТ НА МЕНЯ ОБИЖАТЬСЯ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p В КАКОМ СЛУЧАЕ ОНИ НА МЕНЯ НЕ ОБИДЕЛИСЬ БЫ?...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p БЫСТРЕЕ БЫ ЭТО КОНЧИЛОСЬ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НАДО ЧТО-ТО СДЕЛАТЬ, ЧТОБЫ ЗАГЛАДИТЬ ВИНУ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p А КАК МНЕ СЛЕДОВАЛО БЫ ВЕСТИ СЕБЯ В ЭТОЙ СИТУАЦИИ, ЧТОБЫ НА МЕНЯ НЕ ОБИЖАЛИСЬ?...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я ВСЕ РАВНО НЕ СМОГ БЫ БЫТЬ ТАКИМ ЧЕЛОВЕКОМ, НА КОТОРОГО БЫ НЕ ОБИЖАЛИСЬ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ОТКУДА ОНИ ВЗЯЛИ, ЧТО Я ДОЛЖЕН БЫТЬ ТАКИМ, КАКИМ ОНИ ХОТЯТ МЕНЯ ВИДЕТЬ?...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ОНИ ТОЖЕ МЕНЯ ОБИЖАЛИ И НАВЕРНЯКА ЕЩЕ ОБИДЯТ, ЧТО ЖЕ Я ПЕРЕЖИВАЮ?...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ПУСТЬ ОНИ ПЕРЕВАРЯТ ЭТО. БЫВАЕТ ХУЖЕ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ТАК ИМИ НАДО, Я ПОСТУПИЛ ПРАВИЛЬНО...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p МИР ТАК УСТРОЕН, И НЕ Я ЕГО ПРИДУМАЛ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ПУСТЬ ОБИЖАЮТСЯ, ЕСЛИ ОНИ НЕ ПРИНИМАЮТ МЕНЯ И ПЛОХИМ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я В ЭТО ВРЕМЯ ПЛОХ, И ЭТИМ ВСЕ СКАЗАНО...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ДУМАЮ, КАК ПОПРОСИТЬ ПРОЩЕНИЯ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НЕТ МНЕ ПРОЩЕНИЯ...
+
+			section.page(data-page="4")
+				header.test__head
+					h2.h2.test__title Рассогласование I типа
+					h4.h4.test__subtitle переживание “обиды”
+				
+				p 
+					strong возникает когда параметры результата действия другого, значимого человека, не соответствуют моим ожиданиям.
+				p Чаще всего такое рассогласование называют переживанием обиды.
+					strong Такой тип рассогласования или «переживание обиды» формирует отрицательную биологическую эмоцию и сопровождается неприятными переживаниями.
+					strong Чувство стыда также переживается, когда мы смотрим на себя глазами других.
+				
+				.instruction
+					.info-line
+						img(src="assets/img/info.svg", alt="info")
+						| Вспомните ситуацию, когда вы были обижены на близких, на друга, на старшего.
+						br
+						| (руководителя, преподавателя и пр.)
+
+					p.instruction__txt Представьте отчетливо эту ситуацию, обстоятельства, людей, вовлеченных в нее, общение с ними, разговоры и так далее. отметьте в приведенном ниже списке все мысли, похожие нате, которые обычно у вас возникают в подобных ситуациях.
+
+					.steps
+						figure.step
+							img(src="assets/img/interview.svg", alt="interview")
+							figcaption 1. Представте ситуацию
+						figure.step
+							img(src="assets/img/happy.svg", alt="happy")
+							figcaption 2. Вспомните чувства
+						figure.step
+							img(src="assets/img/check-list.svg", alt="check-list")
+							figcaption 3. Найдите похожее описание
+						figure.step
+							img(src="assets/img/check.svg", alt="check")
+							figcaption 4. Отметьте подходящие
+						figure.step
+							img(src="assets/img/share.svg", alt="share")
+							figcaption 5. Перейдите к следующему шагу
+
+				form(action="").tests__form
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я НЕСЧАСТЕН...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ПОЖАЛУЮСЬ ДРУГУ ОБИДЧИКА...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p БУДУ МОЛИТЬСЯ, ЧТОБЫ БОГ ЕГО ВРАЗУМИЛ...
+							
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НИКТО МЕНЯ НЕ ЛЮБИТ...
+							
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НИКОМУ Я НЕ НУЖЕН...
+							
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p В СЛЕДУЮЩИЙ РАЗ Я С НИМИ ПОСТУПЛЮ ТАК ЖЕ, КАК ОНИ СО МНОЙ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я ИМ ЕЩЕ ПОКАЖУ!...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЛУЧШЕ БЫ ЕГО ЗДЕСЬ НЕ БЫЛО ВОВСЕ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p А КАК ЕМУ СЛЕДОВАЛО БЫ ВЕСТИ СЕБЯ, ЧТОБЫ Я НЕ ОБИДЕЛСЯ?...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ПОЧЕМУ ОН ВЕЛ СЕБЯ ТАК, А НЕ ИНАЧЕ?...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЕМУ СЛЕДОВАЛО БЫ ВЕСТИ СЕБЯ ИНАЧЕ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЭТО НА НЕГО НЕ ПОХОЖЕ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НЕ ОЖИДАЛ, ЧТО ОН БУДЕТ ВЕСТИ СЕБЯ ТАК...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЕМУ БУДЕТ СТЫДНО ПЕРЕД ЕГО РОДИТЕЛЯМИ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p У МЕНЯ ЕСТЬ КОМУ ТЕБЯ УБЕДИТЬ, ЧТО ТЫ НЕПРАВ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЗНАЙ, ЧТО У МЕНЯ ЕСТЬ КОМУ МЕНЯ ПОЖАЛЕТЬ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ОНИ НИКОГДА НЕ УВИДЯТ НА МОЕМ ЛИЦЕ РАДОСТИ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я ИМ НЕ ДАМ ПОРАДОВАТЬСЯ, ПОКАЗАВ СВОЮ ОБИДУ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НЕ ПОКАЖУ ИМ, ЧТО Я ОБИЖЕН, ПУСТЬ НЕ РАДУЮТСЯ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ИМ ТЕПЕРЬ ПРИДЕТСЯ ОБХОДИТЬСЯ БЕЗ МЕНЯ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ОНИ БУДУТ СТРАДАТЬ ОТ ЧУВСТВА ВИНЫ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p БОЛЬШЕ Я ЭТОГО НЕ ВЫНЕСУ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НИКОГДА НЕ БУДУ ДЛЯ НИХ СТАРАТЬСЯ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НЕ БУДУ ИМЕТЬ С НИМИ ДЕЛА...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p БОЖЕ! ПОЧЕМУ ОНИ ТАКИЕ?...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ОНИ МОГЛИ БЫ БЫТЬ ЛУЧШЕ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ПОЧЕМУ ДРУГИЕ ТАК НЕ ПОСТУПАЮТ СО МНОЙ?...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p МНЕ БОЛЬНО В ЛЮДЯХ РАЗОЧАРОВЫВАТЬСЯ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я НЕ НУЖДАЮСЬ В ЕГО УСЛУГАХ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ПУСТЬ МНЕ БУДЕТ ПЛОХО...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ОН ПОТОМ ПОЖАЛЕЕТ, НО БУДЕТ ПОЗДНО...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НЕ ТОЛЬКО МНЕ, НО И ИМ ПЛОХО ПУСТЬ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ИМ ПОТОМ БУДЕТ СТЫДНО, ЧТО ОНИ ТАК ПОСТУПИЛИ СО МНОЙ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я ПОЗАБОЧУСЬ О ТОМ, ЧТОБЫ ВСЕ ЗНАЛИ, КАК ОНИ МЕНЯ ОБИДЕЛИ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я ПОТОМ ПОЖАЛУЮСЬ НА ОБИДЧИКА ЕМУ ЖЕ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я ОБИДЕЛСЯ, А ВЕДЬ ОН СВОБОДЕН И ВПРАВЕ ПОСТУПАТЬ КАК ЕМУ УГОДНО...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p Я БЫ НЕ ХОТЕЛ, ЧТОБЫ ОН СТРАДАЛ ОТ ЧУВСТВА ВИНЫ, А СВОЮ ОБИДУ Я ПЕРЕЖИВУ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ПРИ СЛУЧАЕ Я С НИМИ ПОСТУПЛЮ ТАК ЖЕ, КАК И ОНИ СО МНОЙ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ПЕРЕСТАНУ С НИМИ ИМЕТЬ ДЕЛО...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p НЕ БУДУ ОБЩАТЬСЯ С НИМИ...	
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ВСЕ ПОЙМУТ, КАКОВЫ Я И ОНА...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p У МЕНЯ ВСЕ РАВНО ЕСТЬ ЗАЩИТА, И ОНИ МЕНЯ НЕ ОБИЖАЮТ...
+
+							label.checkbox
+								input(type="checkbox" name="" value="")
+								.checkbox__inner
+									.checkbox-view
+										span
+											svg.icon
+												use(xlink:href="assets/img/sprite.svg#icon-check")
+									p ЕСЛИ БЫ КТО ОБЪЯСНИЛ ЕМУ, КАК ОН НЕСПРАВЕДЛИВ КО МНЕ..		
 
 			.tests__control
 				button(type="submit").btn.btn_primery.js-page-prev Назад
@@ -600,7 +1764,7 @@ block content
 							| тренировка свойств мышления человека, направленная на реорганизацию опасных свойств с целью совершенствования полезных свойств и повышения психоэмоциональной стабильности.
 					| «Лучшая Life»: шесть недель совершенстования! 72 часа тренировок! 12 занятий со специалистами!
 			.txt_centr
-				a(href="" data-section="#diagnostic").link.btn.btn_att.js-scroll Перейти к мыслингу
+				a(href="" data-section="#diagnostic").link.btn.btn_att.js-scroll Начать самодиагностику
 		button.to
 			svg.icon
 				use(xlink:href="assets/img/sprite.svg#icon-arr-b")
@@ -830,7 +1994,7 @@ block content
 										img(src="assets/img/mortarboard.png", alt="mortarboard")
 										p.txt_gradient-att Для любознательных от учёных
 									blockquote Цель уникальной способности человека "думать", изобретать – принести пользу себе и окружающим. Это одна из добродетелей человека – оказание помощи своему окружению. Это помогает выжить и самому человеку и всему человеческому роду. Назовем это ключевое условие успешности человеческого рода – 
-										strong "взаимодействие" для достижения пользы.
+										strong "взаимосодействие" для достижения пользы.
 
 							section.section
 								h2.h2.section__title Мысли: польза или вред 
