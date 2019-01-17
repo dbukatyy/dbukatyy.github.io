@@ -416,6 +416,7 @@ p {
 		}
 		@media @phone {
 			width: 100%;
+			margin-left: 0;
 		}
 		p {
 			min-width: 180px;
@@ -534,12 +535,12 @@ p {
 
 	@media @landsc {
 		padding: 40px 0 60px;
-		background: url(../img/bg10.png) 50%  35% no-repeat,  url(../img/bg10-b.png) 0 100% no-repeat, #F5F7FF;
+		background: url(../img/bg10-b.png) 0 100% no-repeat, #F5F7FF;
 		background-size: 90%;
 	}
 
 	@media @phone {
-		background: url(../img/bg10.png) 50%  43% no-repeat,  url(../img/bg10-b.png) 0 100% no-repeat, #F5F7FF;
+		background:  url(../img/bg10-b.png) 0 100% no-repeat, #F5F7FF;
 		background-size: 160%;
 		margin-bottom: 0;
 	}
@@ -585,10 +586,10 @@ p {
     z-index: 0;
 		width: 100%;
 		pointer-events: none;
-		background:url(../img/bg4-m.png) 50% 90% no-repeat, url(../img/bg4-c.png) 50% 100% no-repeat,url(../img/bg4-r.png) 100% 0 no-repeat, url(../img/bg4-l.png) 0 85% no-repeat, url(../img/bg3-t.png) 50% 28% no-repeat;
-		background-size: 1100px auto, 1000px auto, auto, auto, 110% auto;
+		background:url(../img/bg4-m.png) 50% 90% no-repeat, url(../img/bg4-r.png) 100% 0 no-repeat, url(../img/bg4-l.png) 0 85% no-repeat, url(../img/bg3-t.png) 50% 28% no-repeat;
+		background-size: 1100px auto, auto, auto, 110% auto;
 		
-		@media @landsc {
+		@media @tablet {
 			display: none;
 		}
 	}
@@ -604,32 +605,58 @@ p {
 		height: 500px;
 		pointer-events: none;
 			
-		@media @landsc {
+		@media @tablet {
 			display: none;
 		}
 	}
 
+	&__title {
+		width: 100%;
+	}
+
+	&__header {
+		width: 45%;
+		order: 1;
+		text-align: left;
+
+		@media @tablet {
+			order: 0;
+			width: 100%;
+			max-width: 540px;
+			text-align: center;
+		}
+	}
+
 	&__inner {
-		max-width: 550px;
+		width: 96%;
+		max-width: 1100px;
 		margin: 100px auto 0;
 		position: relative;
-		z-index: 1;
+		z-index: 2;
 		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
 
+		.form {
+			width: 50%;
+			order: 0;
+		}
+
+		@media @tablet {
+			justify-content: center;
+			.form {
+				order: 1;
+				width: auto;
+				max-width: 540px;
+			}
+		}
 		
 		@media @landsc {
 			margin: 0 auto;
-
-			.form {
-				margin-top: 290px;
-			}
 		}
 
-		@media @phone {
-			.form {
-				margin-top: 200px;
-			}
-		}
 	}
 }
 

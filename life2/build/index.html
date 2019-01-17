@@ -166,10 +166,19 @@
       <section class="form-block" id="diagnostic">
         <div class="form-block__bg"></div>
         <div class="form-block__inner">
-          <h2 class="h2">Измерь свой стресс</h2>
-          <p>Став участником “Живой игры” можно узнать величину своей Жизненной силы и стресса - 
-            <strong>психоэмоционального напряжения</strong>, и понять, почему ты слаб. Тебя ожидает соревнование по “эффективности” твоих Жизненных сил!
-          </p>
+          <h2 class="h2 form-block__title">Измерь свой стресс</h2>
+          <div class="form-block__header">
+            <p class="h4"> 
+              <strong>Пройди Самодиагностику и стань участником Живая Игра!</strong>
+            </p>
+            <p> 
+              <strong>Узнай про свои слабости! </strong>Полученный твой результат будет автоматически сравниваться с результатами Самодиагностики приглашенных тобой участников из твоего окружения и всё время формировать актуальную 
+              <strong>твою Жизненную Силу.</strong>Чем больше сравнений с приглашенными тобой участниками, тем выше ранг твоей Жизненной силы. Чем больше психоэмоциональное напряжение у твоих приглашенных участников игры, тем больше величина твоей Жизненной силы.
+            </p>
+            <p>
+              <strong>Тебя ожидает соревнование по “эффективности” твоих Жизненных сил!</strong>
+            </p>
+          </div>
           <form class="form" action="">
             <label class="form__field err">
               <p>Имя</p>
@@ -194,12 +203,29 @@
             </label>
             <label class="form__field form__field_half">
               <p>Регоин</p>
-              <div class="select">
-                <select name="locale" required>
-                  <option value="" disabled selected style="display:none;">Выбрать</option>
-                  <option value="brest">Брест</option>
-                  <option value="minsk">Минск</option>
-                </select>
+              <div class="select js-select">
+                <div class="js-select-field">
+                  <input class="input" name="locale" required placeholder="Выбрать" disabled>
+                </div>
+                <div class="select__list">
+                  <input class="input js-search" name="search" placeholder="Искать...">
+                  <ul class="select__items">
+                    <li class="select__item">Брест</li>
+                    <li class="select__item">Минск</li>
+                    <li class="select__item">Брест</li>
+                    <li class="select__item">Минск</li>
+                    <li class="select__item">Брест</li>
+                    <li class="select__item">Минск</li>
+                    <li class="select__item">Брест</li>
+                    <li class="select__item">Минск</li>
+                    <li class="select__item">Брест</li>
+                    <li class="select__item">Минск</li>
+                    <li class="select__item">Брест</li>
+                    <li class="select__item">Минск</li>
+                    <li class="select__item">Брест</li>
+                    <li class="select__item">Минск</li>
+                  </ul>
+                </div>
                 <svg class="icon">
                   <use xlink:href="assets/img/sprite.svg#icon-arr-b"></use>
                 </svg>

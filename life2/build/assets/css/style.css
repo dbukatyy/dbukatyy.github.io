@@ -594,7 +594,7 @@ template {
 }
 @media all and (max-width: 576px) {
   .form .btn {
-    width: 92%;
+    width: 95%;
   }
 }
 .input {
@@ -644,6 +644,31 @@ template {
   margin: auto;
   fill: #4D79FF;
   pointer-events: none;
+}
+.select__list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 3;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 16px 24px rgba(0, 54, 117, 0.1);
+  border-radius: 10px;
+  display: none;
+}
+.select__items {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow: auto;
+}
+.select__item {
+  padding: 10px 5px;
+  cursor: pointer;
+}
+.select__item:hover {
+  background: #E1E6F5;
 }
 .select select::-ms-expand {
   display: none;
@@ -721,7 +746,7 @@ template {
 .password__toggle {
   position: absolute;
   right: 15px;
-  top: calc(50% - 7px);
+  top: 16px;
   background: none;
   border: none;
   cursor: pointer;
@@ -1435,6 +1460,7 @@ p {
 @media all and (max-width: 576px) {
   .example .btn {
     width: 100%;
+    margin-left: 0;
   }
 }
 .example .btn p {
@@ -1553,13 +1579,13 @@ p {
 @media all and (max-width: 769px) {
   .form-block {
     padding: 40px 0 60px;
-    background: url(../img/bg10.png) 50% 35% no-repeat, url(../img/bg10-b.png) 0 100% no-repeat, #F5F7FF;
+    background: url(../img/bg10-b.png) 0 100% no-repeat, #F5F7FF;
     background-size: 90%;
   }
 }
 @media all and (max-width: 576px) {
   .form-block {
-    background: url(../img/bg10.png) 50% 43% no-repeat, url(../img/bg10-b.png) 0 100% no-repeat, #F5F7FF;
+    background: url(../img/bg10-b.png) 0 100% no-repeat, #F5F7FF;
     background-size: 160%;
     margin-bottom: 0;
   }
@@ -1607,10 +1633,10 @@ p {
   z-index: 0;
   width: 100%;
   pointer-events: none;
-  background: url(../img/bg4-m.png) 50% 90% no-repeat, url(../img/bg4-c.png) 50% 100% no-repeat, url(../img/bg4-r.png) 100% 0 no-repeat, url(../img/bg4-l.png) 0 85% no-repeat, url(../img/bg3-t.png) 50% 28% no-repeat;
-  background-size: 1100px auto, 1000px auto, auto, auto, 110% auto;
+  background: url(../img/bg4-m.png) 50% 90% no-repeat, url(../img/bg4-r.png) 100% 0 no-repeat, url(../img/bg4-l.png) 0 85% no-repeat, url(../img/bg3-t.png) 50% 28% no-repeat;
+  background-size: 1100px auto, auto, auto, 110% auto;
 }
-@media all and (max-width: 769px) {
+@media all and (max-width: 992px) {
   .form-block:before {
     display: none;
   }
@@ -1626,29 +1652,65 @@ p {
   height: 500px;
   pointer-events: none;
 }
-@media all and (max-width: 769px) {
+@media all and (max-width: 992px) {
   .form-block:after {
     display: none;
   }
 }
+.form-block__title {
+  width: 100%;
+}
+.form-block__header {
+  width: 45%;
+  -ms-flex-order: 1;
+      order: 1;
+  text-align: left;
+}
+@media all and (max-width: 992px) {
+  .form-block__header {
+    -ms-flex-order: 0;
+        order: 0;
+    width: 100%;
+    max-width: 540px;
+    text-align: center;
+  }
+}
 .form-block__inner {
-  max-width: 550px;
+  width: 96%;
+  max-width: 1100px;
   margin: 100px auto 0;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.form-block__inner .form {
+  width: 50%;
+  -ms-flex-order: 0;
+      order: 0;
+}
+@media all and (max-width: 992px) {
+  .form-block__inner {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .form-block__inner .form {
+    -ms-flex-order: 1;
+        order: 1;
+    width: auto;
+    max-width: 540px;
+  }
 }
 @media all and (max-width: 769px) {
   .form-block__inner {
     margin: 0 auto;
-  }
-  .form-block__inner .form {
-    margin-top: 290px;
-  }
-}
-@media all and (max-width: 576px) {
-  .form-block__inner .form {
-    margin-top: 200px;
   }
 }
 .training {

@@ -2,8 +2,46 @@ jQuery(document).ready(function () {
 
   new ClipboardJS('.js-copy');
 
+
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('.js-select').hasClass('js-select')) {
+      $('.select__list').slideUp();
+    }
+  });
+
   $('select').on('change', function(){
     $(this).css({color: '#2E384D'});
+  });
+
+  $('.js-select-field').on('click', function(e) {
+    $(this).siblings('.select__list').slideToggle();
+  });
+
+  $('.js-search').on('keydown', function(e) {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+    }
+  });
+
+  $('.js-search').on('keyup', function(e) {
+    const value =  $(this).val().toLowerCase();
+    if (e.keyCode === 13) {
+      e.preventDefault();
+    }
+    
+    $('.select__item').show();
+    $('.select__item').each(function() {
+      if(!$(this).text().toLowerCase().includes(value)) {
+        $(this).hide();
+      }
+    })
+  });
+
+  $('.select__item').on('click', function(e) {
+    e.stopPropagation();
+    const value =  $(this).html();
+    $(this).closest('.js-select').find('.js-select-field input').val(value);
+    $(this).closest('.select__list').slideUp();
   });
 
   $('.tooltip').on('mouseenter', function (e) {

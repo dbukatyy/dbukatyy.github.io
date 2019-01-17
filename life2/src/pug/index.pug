@@ -91,10 +91,17 @@ block content
 	section#diagnostic.form-block
 		.form-block__bg
 		.form-block__inner
-			h2.h2 Измерь свой стресс
-			p Став участником “Живой игры” можно узнать величину своей Жизненной силы и стресса - 
-				strong психоэмоционального напряжения
-				| , и понять, почему ты слаб. Тебя ожидает соревнование по “эффективности” твоих Жизненных сил!
+			h2.h2.form-block__title Измерь свой стресс
+			.form-block__header
+				p.h4 
+					strong Пройди Самодиагностику и стань участником Живая Игра!
+				p 
+					strong Узнай про свои слабости! 
+					| Полученный твой результат будет автоматически сравниваться с результатами Самодиагностики приглашенных тобой участников из твоего окружения и всё время формировать актуальную 
+					strong твою Жизненную Силу.
+					| Чем больше сравнений с приглашенными тобой участниками, тем выше ранг твоей Жизненной силы. Чем больше психоэмоциональное напряжение у твоих приглашенных участников игры, тем больше величина твоей Жизненной силы.
+				p
+					strong Тебя ожидает соревнование по “эффективности” твоих Жизненных сил!
 			form.form(action="")
 				label.form__field.err
 					p Имя
@@ -113,11 +120,30 @@ block content
 							use(xlink:href="assets/img/sprite.svg#icon-arr-b")
 				label.form__field.form__field_half
 					p Регоин
-					.select
-						select(name="locale" required)
-							option(value="" disabled selected style='display:none;') Выбрать
-							option(value="brest") Брест
-							option(value="minsk") Минск
+					.select.js-select
+						.js-select-field
+							input.input(name="locale" required placeholder="Выбрать" disabled)
+						.select__list
+							input.input.js-search(name="search" placeholder="Искать...")
+							ul.select__items
+								li.select__item Брест
+								li.select__item Минск
+								li.select__item Брест
+								li.select__item Минск
+								li.select__item Брест
+								li.select__item Минск
+								li.select__item Брест
+								li.select__item Минск
+								li.select__item Брест
+								li.select__item Минск
+								li.select__item Брест
+								li.select__item Минск
+								li.select__item Брест
+								li.select__item Минск
+						//- select(name="locale" required)
+						//- 	option(value="" disabled selected style='display:none;') Выбрать
+						//- 	option(value="brest") Брест
+						//- 	option(value="minsk") Минск
 						svg.icon
 							use(xlink:href="assets/img/sprite.svg#icon-arr-b")
 							
