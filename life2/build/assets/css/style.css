@@ -1067,6 +1067,10 @@ template {
   width: 16px;
   height: 20px;
 }
+.trend_sm {
+  font-size: 23px;
+  font-weight: bold;
+}
 .trend_less .icon {
   transform: rotate(180deg);
   fill: #E51D29;
@@ -1626,6 +1630,7 @@ p {
 }
 .form-block:before {
   content: '';
+  opacity: 0.5;
   display: inline-block;
   position: absolute;
   top: -380px;
@@ -2936,7 +2941,22 @@ p {
   .profile__trend {
     margin-right: 0;
     width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #E6EBF0;
   }
+}
+.profile__trend p {
+  margin: 0;
+}
+.profile__value {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-bottom: 10px;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 .profile__name {
   margin: 0;
@@ -3728,4 +3748,89 @@ p {
 }
 .collapse__body {
   display: none;
+}
+.value {
+  border: 1px solid #E1E6F5;
+  box-sizing: border-box;
+  /* LK */
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 10px 24px;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 16px;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  max-width: 550px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.value__info {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.value__title {
+  font-weight: bold;
+  color: #69758C;
+  margin: 0;
+}
+@media all and (max-width: 1200px) {
+  .value__title {
+    margin-bottom: 10px;
+  }
+}
+.value .caption {
+  margin: 0 0 0 12px;
+  color: #A3A3A3;
+}
+@media all and (max-width: 1200px) {
+  .value {
+    max-width: 100%;
+  }
+}
+.health {
+  display: inline-block;
+  min-width: 40px;
+  height: 44px;
+  background: url('../img/polygon.png') 50% no-repeat;
+  background-size: contain;
+  line-height: 44px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 18px;
+  color: #fff;
+  margin-right: 20px;
+}
+.health_lg {
+  height: 56px;
+  width: 50px;
+  line-height: 56px;
+}
+@media all and (max-width: 576px) {
+  .health {
+    margin-right: 5px;
+  }
+}
+.border_r {
+  display: inline-block;
+  padding-right: 20px;
+  margin-right: 20px;
+  border-right: 1px solid #E6EBF0;
+}
+.border_r .trend {
+  margin-right: 0;
+}
+@media all and (max-width: 576px) {
+  .border_r {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .border_r .trend {
+    margin-right: 10px;
+  }
 }

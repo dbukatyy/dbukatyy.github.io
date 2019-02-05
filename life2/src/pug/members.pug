@@ -13,10 +13,33 @@ block content
             use(xlink:href="assets/img/sprite.svg#icon-shape")
           | Ваши участники
         .members__control
+          .signin
+            .signin__head
+              .trend
+                span 19,2
+                svg.icon
+                  use(xlink:href="assets/img/sprite.svg#icon-arr-t")
+              a(href="profile.html").link.signin__name Константин
+              button.signin__toggle
+                svg.icon
+                  use(xlink:href="assets/img/sprite.svg#icon-shape")
+            nav.signin__nav
+              a(href="profile.html").link Личный кабинет
+              a(href="results.html").link Результаты самодиагностики
+              a(href="settings.html").link Настройки профиля
+              a(href="").link Выйти
           button.btn.btn_primery.js-modal(data-modal="modal-members")
             svg.icon
               use(xlink:href="assets/img/sprite.svg#icon-list") 
             | Списки участников
+      .value
+        p.value__title Значение списка “Одногруппники”
+        .value__info
+          .trend.trend_md
+              span 18,4
+              svg.icon
+                use(xlink:href="assets/img/sprite.svg#icon-arr-t")
+          p.caption Увеличено на 2
       .members__panels
         .member
           p.member__title Петров Максим
