@@ -106,6 +106,7 @@ block content
 				label.form__field.err
 					p Имя
 					input.input(type="text" name="name" placeholder="Иван" required)
+					.help-block Необходимо заполнить «Имя»
 				label.form__field
 					p Электронная почта
 					input.input(type="email" name="email"  placeholder="ivan@mail.ru" required)
@@ -122,28 +123,18 @@ block content
 					p Регоин
 					.select.js-select
 						.js-select-field
-							input.input(name="locale" required placeholder="Выбрать" disabled)
+							input(name="locale" required="" placeholder="Выбрать" style="display: none")
+							.input
+								span Выбрать
 						.select__list
 							input.input.js-search(name="search" placeholder="Искать...")
 							ul.select__items
-								li.select__item Брест
-								li.select__item Минск
-								li.select__item Брест
-								li.select__item Минск
-								li.select__item Брест
-								li.select__item Минск
-								li.select__item Брест
-								li.select__item Минск
-								li.select__item Брест
-								li.select__item Минск
-								li.select__item Брест
-								li.select__item Минск
-								li.select__item Брест
-								li.select__item Минск
-						//- select(name="locale" required)
-						//- 	option(value="" disabled selected style='display:none;') Выбрать
-						//- 	option(value="brest") Брест
-						//- 	option(value="minsk") Минск
+								li.select__item(data-id="1") Брест
+								li.select__item(data-id="2") Минск
+								li.select__item(data-id="3") Брест
+								li.select__item(data-id="4") Минск
+								li.select__item(data-id="5") Брест
+								li.select__item(data-id="6") Минск
 						svg.icon
 							use(xlink:href="assets/img/sprite.svg#icon-arr-b")
 							

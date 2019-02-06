@@ -595,6 +595,7 @@ template {
 @media all and (max-width: 576px) {
   .form .btn {
     width: 95%;
+    bottom: -35px;
   }
 }
 .input {
@@ -629,6 +630,14 @@ template {
   color: rgba(46, 56, 77, 0.5);
 }
 .input::placeholder {
+  color: rgba(46, 56, 77, 0.5);
+}
+.input span {
+  width: 85%;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: rgba(46, 56, 77, 0.5);
 }
 .select {
@@ -738,6 +747,14 @@ template {
   color: rgba(46, 56, 77, 0.5);
 }
 .select select::placeholder {
+  color: rgba(46, 56, 77, 0.5);
+}
+.select select span {
+  width: 85%;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: rgba(46, 56, 77, 0.5);
 }
 .password {
@@ -3833,4 +3850,15 @@ p {
   .border_r .trend {
     margin-right: 10px;
   }
+}
+.help-block {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #FF794D;
+}
+#diagnostics_form .help-block {
+  position: static;
+}
+#diagnostics_form .js-select .help-block {
+  position: absolute;
 }

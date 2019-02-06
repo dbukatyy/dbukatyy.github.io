@@ -183,6 +183,7 @@
             <label class="form__field err">
               <p>Имя</p>
               <input class="input" type="text" name="name" placeholder="Иван" required>
+              <div class="help-block">Необходимо заполнить «Имя»</div>
             </label>
             <label class="form__field">
               <p>Электронная почта</p>
@@ -205,25 +206,20 @@
               <p>Регоин</p>
               <div class="select js-select">
                 <div class="js-select-field">
-                  <input class="input" name="locale" required placeholder="Выбрать" disabled>
+                  <input name="locale" required="" placeholder="Выбрать" style="display: none">
+                  <div class="input">
+                    <span>Выбрать</span>
+                  </div>
                 </div>
                 <div class="select__list">
                   <input class="input js-search" name="search" placeholder="Искать...">
                   <ul class="select__items">
-                    <li class="select__item">Брест</li>
-                    <li class="select__item">Минск</li>
-                    <li class="select__item">Брест</li>
-                    <li class="select__item">Минск</li>
-                    <li class="select__item">Брест</li>
-                    <li class="select__item">Минск</li>
-                    <li class="select__item">Брест</li>
-                    <li class="select__item">Минск</li>
-                    <li class="select__item">Брест</li>
-                    <li class="select__item">Минск</li>
-                    <li class="select__item">Брест</li>
-                    <li class="select__item">Минск</li>
-                    <li class="select__item">Брест</li>
-                    <li class="select__item">Минск</li>
+                    <li class="select__item" data-id="1">Брест</li>
+                    <li class="select__item" data-id="2">Минск</li>
+                    <li class="select__item" data-id="3">Брест</li>
+                    <li class="select__item" data-id="4">Минск</li>
+                    <li class="select__item" data-id="5">Брест</li>
+                    <li class="select__item" data-id="6">Минск</li>
                   </ul>
                 </div>
                 <svg class="icon">

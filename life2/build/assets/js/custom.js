@@ -14,8 +14,8 @@ jQuery(document).ready(function () {
     $(this).css({ color: '#2E384D' });
   });
 
-  $('.js-select-field').on('click', function (e) {
-    $(this).siblings('.select__list').slideToggle();
+  $('.js-select-field .input').on('click', function (e) {
+    $(this).closest('.js-select-field').siblings('.select__list').slideDown();
   });
 
   $('.js-search').on('keydown', function (e) {
@@ -40,8 +40,10 @@ jQuery(document).ready(function () {
 
   $('.select__item').on('click', function (e) {
     e.stopPropagation();
-    var value = $(this).html();
+    var value = $(this).data('id');
+    var label = $(this).html();
     $(this).closest('.js-select').find('.js-select-field input').val(value);
+    $(this).closest('.js-select').find('.js-select-field .input span').html(label);
     $(this).closest('.select__list').slideUp();
   });
 
