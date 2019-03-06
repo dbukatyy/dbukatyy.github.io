@@ -148,28 +148,6 @@
               </svg>Ваши участники
             </a>
             <div class="members__control">
-              <div class="signin">
-                <div class="signin__head">
-                  <div class="trend">
-                    <span>19,2</span>
-                    <svg class="icon">
-                      <use xlink:href="assets/img/sprite.svg#icon-arr-t"></use>
-                    </svg>
-                  </div>
-                  <a class="link signin__name" href="profile.html">Константин</a>
-                  <button class="signin__toggle">
-                    <svg class="icon">
-                      <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
-                    </svg>
-                  </button>
-                </div>
-                <nav class="signin__nav">
-                  <a class="link" href="profile.html">Личный кабинет</a>
-                  <a class="link" href="results.html">Результаты самодиагностики</a>
-                  <a class="link" href="settings.html">Настройки профиля</a>
-                  <a class="link" href="">Выйти</a>
-                </nav>
-              </div>
               <button class="btn btn_primery js-modal" data-modal="modal-members">
                 <svg class="icon">
                   <use xlink:href="assets/img/sprite.svg#icon-list"> </use>
@@ -220,6 +198,84 @@
             </div>
           </div>
         </div>
+        <!--modal-add-->
+        <div class="modal-block" id="modal-add">
+          <div class="modal-wrapp">
+            <div class="modal modal_fill">
+              <div class="modal__inner">
+                <form class="login" action="">
+                  <div class="return">
+                    <h4 class="h4">Добавление списка</h4>
+                    <a class="js-modal link txt_gradient members__title" href="" data-modal="modal-members">
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+                      </svg>Вернуться назад
+                    </a>
+                  </div>
+                  <label class="form__field">
+                    <p>Введите название</p>
+                    <input class="input" name="name">
+                  </label>
+                  <button class="btn btn_att">Создать список</button>
+                </form>
+              </div>
+              <button class="modal__close">
+                <img src="assets/img/close.svg" alt="close">
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--modal-edit-->
+        <div class="modal-block" id="modal-edit">
+          <div class="modal-wrapp">
+            <div class="modal modal_fill">
+              <div class="modal__inner">
+                <form class="login" action="">
+                  <div class="return">
+                    <h4 class="h4">Переименовать список</h4>
+                    <a class="js-modal link txt_gradient members__title" href="" data-modal="modal-members">
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+                      </svg>Вернуться назад
+                    </a>
+                  </div>
+                  <label class="form__field">
+                    <p>Введите новое название</p>
+                    <input class="input" name="name">
+                  </label>
+                  <button class="btn btn_att">Переименовать</button>
+                </form>
+              </div>
+              <button class="modal__close">
+                <img src="assets/img/close.svg" alt="close">
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--modal-del-->
+        <div class="modal-block" id="modal-del">
+          <div class="modal-wrapp">
+            <div class="modal modal_fill">
+              <div class="modal__inner">
+                <form class="login" action="">
+                  <div class="return">
+                    <h4 class="h4">Удаление списка</h4>
+                    <a class="js-modal link txt_gradient members__title" href="" data-modal="modal-members">
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+                      </svg>Вернуться назад
+                    </a>
+                  </div>
+                  <p class="agree">Вы уверены, что хотите удалить список?</p>
+                  <button class="btn btn_att">Удалить</button>
+                </form>
+              </div>
+              <button class="modal__close">
+                <img src="assets/img/close.svg" alt="close">
+              </button>
+            </div>
+          </div>
+        </div>
         <!--modal-members-->
         <div class="modal-block" id="modal-members">
           <div class="modal-wrapp">
@@ -228,20 +284,59 @@
                 <div class="members-control">
                   <h2 class="h4 members-control__title">Списки участников</h2>
                   <div class="members-categories">
-                    <button class="members-category" data-category="#members-relatives">
-                      <span class="members-category__count">5</span>Родственники
-                    </button>
-                    <button class="members-category active" data-category="#members-colleague">
-                      <span class="members-category__count">3</span>Коллеги
-                    </button>
-                    <button class="members-category" data-category="#members-groupmates">
-                      <span class="members-category__count">2</span>Одногруппники
-                    </button>
-                    <button class="members-category" data-category="#members-neighborhood">Соседи</button>
-                    <button class="members-category" data-category="#members-frends">Друзья</button>
-                    <button class="members-category" data-category="#members-comrads">Товарищи</button>
-                    <button class="members-category" data-category="#members-school">Школьные друзья</button>
-                    <button class="members-category" data-category="#members-university">Друзья по вузу</button>
+                    <div class="members-categories-control">
+                      <button class="members-category" data-category="#members-relatives">
+                        <svg class="icon">
+                          <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+                        </svg>
+                        <div class="members-category__count">5</div>
+                        <span>Родственники</span>
+                      </button>
+                      <button class="members-category active" data-category="#members-colleague">
+                        <svg class="icon">
+                          <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+                        </svg>
+                        <div class="members-category__count">3</div>
+                        <span>Коллеги</span>
+                      </button>
+                      <button class="members-category" data-category="#members-groupmates">
+                        <svg class="icon">
+                          <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+                        </svg>
+                        <div class="members-category__count">2</div>
+                        <span>Одногруппники</span>
+                      </button>
+                      <button class="members-category" data-category="#members-neighborhood">
+                        <svg class="icon">
+                          <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+                        </svg>
+                        <span>Соседи</span>
+                      </button>
+                      <button class="members-category" data-category="#members-frends">
+                        <svg class="icon">
+                          <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+                        </svg>
+                        <span>Друзья</span>
+                      </button>
+                      <button class="members-category" data-category="#members-comrads">
+                        <svg class="icon">
+                          <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+                        </svg>
+                        <span>Товарищи</span>
+                      </button>
+                      <button class="members-category" data-category="#members-school">
+                        <svg class="icon">
+                          <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+                        </svg>
+                        <span>Школьные друзья</span>
+                      </button>
+                      <button class="members-category" data-category="#members-university">
+                        <svg class="icon">
+                          <use xlink:href="assets/img/sprite.svg#icon-shape"></use>
+                        </svg>
+                        <span>Друзья по вузу</span>
+                      </button>
+                    </div>
                     <button class="btn btn_primery members-save">Сохранить</button>
                   </div>
                   <div class="members__list">
@@ -473,6 +568,21 @@
                     <form class="members__items" action="" id="members-university">
                       <p>Друзья по вузу</p>
                     </form>
+                  </div>
+                  <div class="members__buttons">
+                    <button class="txt_gradient js-modal" data-modal="modal-add">+ Добавить список</button>
+                    <div class="members__buttons-group">
+                      <button class="js-modal" data-modal="modal-edit">
+                        <svg class="icon">
+                          <use xlink:href="assets/img/sprite.svg#icon-edit"></use>
+                        </svg>Переименовать список
+                      </button>
+                      <button class="js-modal" data-modal="modal-del">
+                        <svg class="icon">
+                          <use xlink:href="assets/img/sprite.svg#icon-delete"></use>
+                        </svg>Удалить список
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

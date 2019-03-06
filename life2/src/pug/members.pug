@@ -13,21 +13,6 @@ block content
             use(xlink:href="assets/img/sprite.svg#icon-shape")
           | Ваши участники
         .members__control
-          .signin
-            .signin__head
-              .trend
-                span 19,2
-                svg.icon
-                  use(xlink:href="assets/img/sprite.svg#icon-arr-t")
-              a(href="profile.html").link.signin__name Константин
-              button.signin__toggle
-                svg.icon
-                  use(xlink:href="assets/img/sprite.svg#icon-shape")
-            nav.signin__nav
-              a(href="profile.html").link Личный кабинет
-              a(href="results.html").link Результаты самодиагностики
-              a(href="settings.html").link Настройки профиля
-              a(href="").link Выйти
           button.btn.btn_primery.js-modal(data-modal="modal-members")
             svg.icon
               use(xlink:href="assets/img/sprite.svg#icon-list") 
@@ -63,6 +48,65 @@ block content
           p.member__title Петров Максим
           a(href="mailto: petrov_av@gmail.com").caption petrov_av@gmail.com
 
+    //modal-add
+    #modal-add.modal-block
+      .modal-wrapp
+        .modal.modal_fill
+          .modal__inner
+            form(action="").login
+              .return
+                h4.h4 Добавление списка
+                a(href="" data-modal="modal-members").js-modal.link.txt_gradient.members__title
+                  svg.icon
+                    use(xlink:href="assets/img/sprite.svg#icon-shape")
+                  | Вернуться назад
+              label.form__field
+                p Введите название
+                input.input( name="name" )
+              button.btn.btn_att Создать список
+
+          button.modal__close
+            img(src="assets/img/close.svg", alt="close")
+
+    //modal-edit
+    #modal-edit.modal-block
+      .modal-wrapp
+        .modal.modal_fill
+          .modal__inner
+            form(action="").login
+              .return
+                h4.h4 Переименовать список
+                a(href="" data-modal="modal-members").js-modal.link.txt_gradient.members__title
+                  svg.icon
+                    use(xlink:href="assets/img/sprite.svg#icon-shape")
+                  | Вернуться назад
+              label.form__field
+                p Введите новое название
+                input.input( name="name" )
+              button.btn.btn_att Переименовать
+
+          button.modal__close
+            img(src="assets/img/close.svg", alt="close")
+
+            
+    //modal-del
+    #modal-del.modal-block
+      .modal-wrapp
+        .modal.modal_fill
+          .modal__inner
+            form(action="").login
+              .return
+                h4.h4 Удаление списка
+                a(href="" data-modal="modal-members").js-modal.link.txt_gradient.members__title
+                  svg.icon
+                    use(xlink:href="assets/img/sprite.svg#icon-shape")
+                  | Вернуться назад
+              p.agree Вы уверены, что хотите удалить список?
+              button.btn.btn_att Удалить
+
+          button.modal__close
+            img(src="assets/img/close.svg", alt="close")
+
     //modal-members
     #modal-members.modal-block
       .modal-wrapp
@@ -71,25 +115,42 @@ block content
             .members-control
               h2.h4.members-control__title Списки участников
               .members-categories
-                button(data-category="#members-relatives").members-category
-                  span.members-category__count 5
-                  | Родственники
-                button(data-category="#members-colleague").members-category.active
-                  span.members-category__count 3
-                  | Коллеги
-                button(data-category="#members-groupmates").members-category
-                  span.members-category__count 2
-                  | Одногруппники
-                button(data-category="#members-neighborhood").members-category
-                  | Соседи
-                button(data-category="#members-frends").members-category
-                  | Друзья
-                button(data-category="#members-comrads").members-category
-                  | Товарищи
-                button(data-category="#members-school").members-category
-                  | Школьные друзья
-                button(data-category="#members-university").members-category
-                  | Друзья по вузу
+                .members-categories-control
+                  button(data-category="#members-relatives").members-category
+                    svg.icon
+                      use(xlink:href="assets/img/sprite.svg#icon-shape")
+                    .members-category__count 5
+                    span Родственники
+                  button(data-category="#members-colleague").members-category.active
+                    svg.icon
+                      use(xlink:href="assets/img/sprite.svg#icon-shape")
+                    .members-category__count 3
+                    span Коллеги
+                  button(data-category="#members-groupmates").members-category
+                    svg.icon
+                      use(xlink:href="assets/img/sprite.svg#icon-shape")
+                    .members-category__count 2
+                    span Одногруппники
+                  button(data-category="#members-neighborhood").members-category
+                    svg.icon
+                      use(xlink:href="assets/img/sprite.svg#icon-shape")
+                    span Соседи
+                  button(data-category="#members-frends").members-category
+                    svg.icon
+                      use(xlink:href="assets/img/sprite.svg#icon-shape")
+                    span Друзья
+                  button(data-category="#members-comrads").members-category
+                    svg.icon
+                      use(xlink:href="assets/img/sprite.svg#icon-shape")
+                    span Товарищи
+                  button(data-category="#members-school").members-category
+                    svg.icon
+                      use(xlink:href="assets/img/sprite.svg#icon-shape")
+                    span Школьные друзья
+                  button(data-category="#members-university").members-category
+                    svg.icon
+                      use(xlink:href="assets/img/sprite.svg#icon-shape")
+                    span Друзья по вузу
 
                 button.btn.btn_primery.members-save Сохранить
 
@@ -233,5 +294,16 @@ block content
                 form(action="")#members-university.members__items
                   p Друзья по вузу
 
+              .members__buttons
+                button.txt_gradient.js-modal(data-modal="modal-add") + Добавить список
+                .members__buttons-group
+                  button.js-modal(data-modal="modal-edit")
+                    svg.icon
+                      use(xlink:href="assets/img/sprite.svg#icon-edit")
+                    |Переименовать список
+                  button.js-modal(data-modal="modal-del")
+                    svg.icon
+                      use(xlink:href="assets/img/sprite.svg#icon-delete")
+                    | Удалить список
           button.modal__close
             img(src="assets/img/close.svg", alt="close")

@@ -85,9 +85,9 @@ p {
 	}
 
 	&_gradient {
-		background:  @c-gradient;
-    -webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		background:  @c-gradient !important;
+    -webkit-background-clip: text !important;
+		-webkit-text-fill-color: transparent !important;
 		
 		&-att {
 			background: @c-gradient2;
@@ -1039,6 +1039,13 @@ p {
 		overflow: hidden;
 	}
 
+	&_fill {
+		border-radius: 5px;
+		@media @phone {
+			background: #F5F7FF;
+		}
+	}
+
 	&_md {
 		max-width: 1120px;
 	}
@@ -1138,6 +1145,7 @@ p {
 		position: absolute;
 		width: 160px;
 		margin: auto;
+		padding: 10px 20px;
 		left: 0;
 		right: 0;
 		bottom: -24px;
@@ -2202,6 +2210,48 @@ p {
 .members {
 	padding: 65px 0 100px;
 
+	&__buttons {
+		border-top: 1px solid #E1E6F5;
+		padding-top: 16px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		margin-top: 10px;
+
+		@media @phone {
+			justify-content: center;
+		}
+
+		&-group {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			@media @phone {
+				display: none;
+
+				button {
+					font-size: 12px !important;
+				}
+			}
+		}
+		button {
+			font-size: 14px;
+			border: none;
+			background: none;
+			color: #A3A3A3;
+			cursor: pointer;
+
+			.icon {
+				fill: #A3A3A3;
+				width: 14px;
+				height: 14px;
+				margin-right: 8px;
+			}
+		}
+	}
+
 	&-save {
 		display: none;
 	}
@@ -2222,6 +2272,7 @@ p {
 		@media @phone {
 			margin-left: 0;
 			width: 100%;
+			display: none;
 		}
 	}
 
@@ -2247,15 +2298,20 @@ p {
 		margin-left: 32px;
 		display: none;
 		&.active {display: block;}
-
+		
 		@media @phone {
 			margin-left: 0;
 			width: 100%;
 		}
 
+		&_active {
+			max-height: 40vh;
+			overflow-y: auto;
+		}
+
 		&_all {
 			display: none;
-			max-height: 530px;
+			max-height: 50vh;
 			overflow-y: auto;
 
 			@media @phone {
@@ -2272,6 +2328,11 @@ p {
 		cursor:pointer;
 		padding: 29px;
 		margin-bottom: 12px;
+
+		@media @phone {
+			padding: 15px 10px;
+			width: 100%;
+		}
 	}
 
 	&-control {
@@ -2312,17 +2373,22 @@ p {
 		border-top: 1px solid @c-base3;
 		width: 200px;
 		position: relative;
-
+		
 		@media @phone {
 			margin-left: 0;
 			width: 100%;
 			padding-bottom: 20px;
 		}
+		
+		&-control {
+			max-height: 50vh;
+			overflow-y: auto;
+		}
 
 		.btn {
 			position: absolute;
-			bottom: 0;
-			left: 0;
+			bottom: 16px;
+			left: 8px;
 
 			@media @phone {
 				position: static;
@@ -2343,6 +2409,30 @@ p {
 
 		&.active {
 			font-weight: bold;
+			color: @c-att;
+		}
+
+		&.singl {
+			padding: 5px 5px 5px 52px;
+			.icon {
+				position: absolute;
+				left: 0;
+				display: inline-block;
+			}
+
+			.members-category__count {
+				left: 20px;
+			}
+		}
+
+		.icon {
+			transform: rotate(180deg);
+			margin-right: 10px;
+			vertical-align: unset;
+			fill: #4D79FF;
+			width: 13px;
+			height: 13px;
+			display: none;
 		}
 
 		&__count {
@@ -2881,4 +2971,15 @@ p {
 
 #diagnostics_form .js-select .help-block {
 	position: absolute;
+}
+
+.return {
+	margin-bottom: 30px;
+	.h4 {
+		margin: 0 0 12px;
+	}
+}
+
+.agree {
+	margin-bottom: 40px;
 }

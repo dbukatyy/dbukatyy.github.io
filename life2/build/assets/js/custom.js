@@ -88,13 +88,20 @@ jQuery(document).ready(function () {
     var wind = $(this).data('modal');
     var modal = $('#' + wind);
     var slide = $(this).data('slide');
+    var isEdit = 'modal-edit' === wind;
+
+    if (isEdit) {
+      var category = $('.members-category.active span').html();
+      modal.find('input').val(category);
+    }
 
     $('body').css({ overflow: 'hidden' });
     if (modal.hasClass('modal-block_hided')) {
       $('.modal .slider-items').slick('slickGoTo', +slide);
       modal.addClass('active');
     } else {
-      $('#' + wind).show(300);
+      $('.modal-block').hide();
+      modal.show();
     }
   });
 
@@ -232,9 +239,26 @@ jQuery(document).ready(function () {
     e.preventDefault();
     var category = $(this);
     var categoryId = $(this).data('category');
+
     $('.members-category, .members__items').removeClass('active');
     category.add(categoryId).addClass('active');
+    $(categoryId).find('.members__items_active').show();
+    $(categoryId).find('.members__add').show();
+    $(categoryId).find('.members__items_all').add('.members-save').hide();
     $('.members-save').hide();
+
+    if (category.hasClass('singl')) {
+      $('.members__list').hide();
+      $('.members-category').show().removeClass('singl active');
+      $('.members__buttons-group').hide();
+      $('.members__buttons > button').show();
+    } else if (window.innerWidth < 600) {
+      $('.members__list').show();
+      $('.members-category').hide().removeClass('singl');
+      category.show().addClass('singl');
+      $('.members__buttons-group').css('display', 'flex');
+      $('.members__buttons > button').hide();
+    }
   });
 
   initRadialChart();
